@@ -4,18 +4,25 @@ using DG.Tweening;
 
 public class OxygenUI : MonoBehaviour
 {
-    private Slider slider;
+    [Header("Main Oxygen slider")]
+    private Slider mainSlider;
     public float updateInterval = 4;
     public float slideSpeed = 1;
     private float timer;
     private PlayerOxygen playerOxygen;
+    private bool started;
+
+    [Header("Replenish Oxygen slider")] public Slider replenishSlider;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        slider = GetComponent<Slider>();
+        started = false;
+        mainSlider = GetComponent<Slider>();
         playerOxygen = GetComponentInParent<PlayerOxygen>();
-        slider.DOValue(playerOxygen.currentOxygen, slideSpeed);
+        mainSlider.DOValue(playerOxygen.currentOxygen, slideSpeed);
+
+        replenishSlider.maxValue = playerOxygen.replenishAmount;
     }
 
     // Update is called once per frame
@@ -25,8 +32,19 @@ public class OxygenUI : MonoBehaviour
 
         if (timer > updateInterval)
         {
-            slider.DOValue(playerOxygen.currentOxygen, slideSpeed);
+            mainSlider.DOValue(playerOxygen.currentOxygen, slideSpeed);
             timer = 0;
+        }
+
+        if (playerOxygen.replenish && !started) 
+        {
+            replenishSlider.DOValue(playerOxygen.replenishAmount, playerOxygen.replenishTimeThreshold);
+            started = true;
+        }
+        else if (!playerOxygen.replenish && started)
+        {
+            replenishSlider.DOValue(0, .5f);
+            started = false;
         }
     }
 }

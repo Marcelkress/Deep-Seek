@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,5 +27,5 @@ public class LightFade : MonoBehaviour
             light.DOIntensity(minIntensity, fadeTime);
             yield return new WaitForSeconds(fadeTime + waitTime);
         }
-    }
+    }   
 }
