@@ -10,9 +10,11 @@ public class PlayerOxygen : MonoBehaviour
     private int currentLoss;
     private float timer;
     private StarterAssetsInputs input;
+    private bool replenish;
 
     void Awake()
     {
+        replenish = false;
         currentOxygen = maxOxygen;
         input = GetComponent<StarterAssetsInputs>();
         currentLoss = oxygenLossPrSWalk;
@@ -40,6 +42,11 @@ public class PlayerOxygen : MonoBehaviour
         {
             currentLoss = oxygenLossPrSWalk;
         }
+    }
+
+    public void OnReplenish(InputValue value)
+    {
+        replenish = value.isPressed;
     }
 
     public void AddOxygen(int amount)
