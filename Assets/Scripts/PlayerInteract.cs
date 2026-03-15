@@ -10,8 +10,8 @@ public class PlayerInteract : MonoBehaviour
     public float interactionDistance = 2f;
     private bool hit;
     private RaycastHit hitObj;
-    public Image uiMarker;
-    public float markerFadeValue = 0.5f, fadeDuration = 0.2f;
+    public Image UIMarker;
+    public float fadeDuration = 0.2f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,14 +28,16 @@ public class PlayerInteract : MonoBehaviour
 
         if (!hit)
         {
-            uiMarker.DOFade(markerFadeValue, fadeDuration);
+            UIMarker.DOFade(0, fadeDuration);
             return;
         }
 
         hitObj = newInfo;
-        
+
         if (hitObj.transform.GetComponent<IInteractable>() != null)
-            uiMarker.DOFade(1, fadeDuration);
+        {
+            UIMarker.DOFade(1, fadeDuration);
+        }
     }
 
     public void OnInteract(InputValue value)
