@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class PlayerInteract : MonoBehaviour
     private RaycastHit hitObj;
     public Image UIMarker;
     public float fadeDuration = 0.2f;
+    public UnityEvent GenericInteractionEvent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,6 +50,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Interact with something 
                 hitObj.transform.GetComponent<IInteractable>().Interact(this.gameObject);
+                GenericInteractionEvent.Invoke();
             }
         }
     }
