@@ -10,19 +10,22 @@ public class OxygenUI : MonoBehaviour
     public float slideSpeed = 1;
     private float timer;
     private PlayerOxygen playerOxygen;
-    private bool started;
 
     [Header("Replenish Oxygen slider")] public Slider replenishSlider;
+    public Slider replenishCooldownSlider;
+    public float cooldownSlideSpeed = 0.1f;
+    private Tween replenishTween;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        started = false;
         mainSlider = GetComponent<Slider>();
         playerOxygen = GetComponentInParent<PlayerOxygen>();
         mainSlider.DOValue(playerOxygen.currentOxygen, slideSpeed);
+        replenishCooldownSlider.DOValue(replenishCooldownSlider.maxValue, cooldownSlideSpeed);
 
-        replenishSlider.maxValue = playerOxygen.replenishAmount;
+        //playerOxygen.ReplenishStart.AddListener(StartReplenish);
+        //playerOxygen.ReplenishEnd.AddListener(EndReplenish);
     }
 
     // Update is called once per frame
@@ -35,16 +38,31 @@ public class OxygenUI : MonoBehaviour
             mainSlider.DOValue(playerOxygen.currentOxygen, slideSpeed);
             timer = 0;
         }
+    }
 
-        if (playerOxygen.replenish && !started) 
-        {
-            replenishSlider.DOValue(playerOxygen.replenishAmount, playerOxygen.replenishTimeThreshold);
-            started = true;
-        }
-        else if (!playerOxygen.replenish && started)
-        {
-            replenishSlider.DOValue(0, .5f);
-            started = false;
-        }
+    public void StartCoolDownSlider()
+    {
+        replenishCooldownSlider.DOValue(replenishCooldownSlider.maxValue, playerOxygen.replenishCoolDown)
+            .SetEase(Ease.Linear);
+    }
+
+    public void ResetCooldownSlider()
+    {
+        replenishCooldownSlider.DOValue(0, cooldownSlideSpeed).OnComplete(StartCoolDownSlider)
+            .SetEase(Ease.Linear);
+    }
+
+    public void StartReplenish()
+    {
+        replenishTween?.Kill();
+        replenishTween = replenishSlider.DOValue(replenishSlider.maxValue, playerOxygen.thirdThreshold)
+            .SetEase(Ease.Linear);
+    }
+
+    public void EndReplenish()
+    {
+        replenishTween?.Kill();
+        replenishTween = replenishSlider.DOValue(replenishSlider.minValue, slideSpeed)
+            .SetEase(Ease.Linear);
     }
 }
