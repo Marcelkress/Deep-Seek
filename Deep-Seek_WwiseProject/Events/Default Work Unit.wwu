@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Underwater_Ambience_B" ID="{B4A900B0-C23B-41E5-9E77-828ED500BD96}">
+					<ChildrenList>
+						<Action Name="" ID="{0D3ABEEA-02A8-484A-89FC-D2ED24201E87}" ShortID="446736197">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Underwater Ambience B" ID="{4677351F-6024-42A8-B79B-A693C06B7DE9}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

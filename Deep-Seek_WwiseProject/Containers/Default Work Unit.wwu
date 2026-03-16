@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Underwater Ambience B" ID="{4677351F-6024-42A8-B79B-A693C06B7DE9}" ShortID="711583210">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Underwater Ambience B" ID="{B9E4EF77-3568-4BDF-8A0C-9DC8EF532F92}">
+							<Language>SFX</Language>
+							<AudioFile>Underwater Ambience B.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1028068659"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Underwater Ambience B" ID="{B9E4EF77-3568-4BDF-8A0C-9DC8EF532F92}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
