@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -11,15 +12,88 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		[Header("Player")]
+		public enum SurgeState
+		{
+			None,
+			Charge,
+			Ignition,
+			Sustain,
+			Cooldown
+		}
+
+		[Serializable]
+		public struct StepImpactData
+		{
+			public float pulse;
+			public float planarSpeed;
+			public float downwardSpeed;
+			public bool wasLanding;
+		}
+
+		public event Action<StepImpactData> StepLanded;
+		public event Action<SurgeState> SurgeStateChanged;
+
+		[Header("Movement Speeds")]
 		[Tooltip("Move speed of the character in m/s")]
-		public float MoveSpeed = 4.0f;
+		public float MoveSpeed = 2.2f;
 		[Tooltip("Sprint speed of the character in m/s")]
-		public float SprintSpeed = 6.0f;
+		public float SprintSpeed = 3.6f;
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
-		[Tooltip("Acceleration and deceleration")]
-		public float SpeedChangeRate = 10.0f;
+
+		[Header("Mech Inertia")]
+		[Tooltip("Forward acceleration in m/s²")]
+		public float ForwardAcceleration = 2.4f;
+		[Tooltip("Reverse acceleration in m/s²")]
+		public float ReverseAcceleration = 1.0f;
+		[Tooltip("Lateral acceleration in m/s²")]
+		public float LateralAcceleration = 1.5f;
+		[Tooltip("Deceleration when no input is provided")]
+		public float BrakeDeceleration = 0.9f;
+		[Tooltip("Extra deceleration when changing to opposite direction")]
+		public float DirectionChangeDragBoost = 1.6f;
+
+		[Header("Underwater Resistance")]
+		[Tooltip("Forward drag applied to planar velocity")]
+		public float WaterDragForward = 1.2f;
+		[Tooltip("Lateral drag applied to planar velocity")]
+		public float WaterDragLateral = 2.0f;
+		[Tooltip("Max world-space drift speed caused by ocean current")]
+		public float CurrentDriftAmplitude = 0.2f;
+		[Tooltip("How quickly drift direction changes over time")]
+		public float CurrentDriftFrequency = 0.06f;
+		[Tooltip("How quickly current drift blends to its target value")]
+		public float CurrentDriftResponsiveness = 0.6f;
+		[Tooltip("Multiplier applied to current drift while grounded")]
+		public float GroundedDriftMultiplier = 0.1f;
+
+		[Header("Ground Traction")]
+		[Tooltip("How strongly the mech adheres to desired velocity while grounded")]
+		public float GroundTraction = 16f;
+		[Tooltip("Aggressive stop deceleration at low/medium speed")]
+		public float GroundStopDeceleration = 12f;
+		[Tooltip("Deceleration used when stopping from top speed to allow slight slide")]
+		public float HighSpeedSlideDeceleration = 3.2f;
+		[Tooltip("Speed above which stopping allows slight slide")]
+		public float HighSpeedSlideThreshold = 3.8f;
+
+		[Header("Step Feedback")]
+		[Tooltip("Distance between step pulses while grounded")]
+		public float StepDistance = 2.2f;
+		[Tooltip("Minimum horizontal speed required to generate step pulses")]
+		public float StepMinSpeed = 0.9f;
+		[Tooltip("How much landing speed contributes to step pulse")]
+		public float LandingPulseScale = 0.12f;
+
+		[Header("Surge")]
+		public float SurgeChargeDuration = 0.16f;
+		public float SurgeIgnitionDuration = 0.10f;
+		public float SurgeSustainDuration = 1.15f;
+		public float SurgeCooldownDuration = 0.55f;
+		[Tooltip("Speed multiplier while surge sustain is active")]
+		public float SurgeSustainSpeedMultiplier = 1.35f;
+		[Tooltip("Forward impulse applied during surge ignition")]
+		public float SurgeIgnitionImpulse = 1.4f;
 
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
@@ -55,10 +129,17 @@ namespace StarterAssets
 		private float _cinemachineTargetPitch;
 
 		// player
-		private float _speed;
 		private float _rotationVelocity;
 		private float _verticalVelocity;
-		private float _terminalVelocity = 53.0f;
+		private readonly float _terminalVelocity = 53.0f;
+		private Vector3 _planarVelocity;
+		private Vector3 _currentDriftVelocity;
+		private float _distanceSinceStep;
+		private bool _wasGroundedLastFrame;
+		private bool _wasSprintingLastFrame;
+		private float _surgeTimer;
+		private bool _surgeIgnitionImpulseApplied;
+		private SurgeState _surgeState;
 
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
@@ -108,13 +189,19 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+			_wasGroundedLastFrame = Grounded;
+			SetSurgeState(SurgeState.None);
 		}
 
 		private void Update()
 		{
-			JumpAndGravity();
 			GroundedCheck();
+			UpdateSurgeState(Time.deltaTime);
+			UpdateCurrentDrift(Time.deltaTime);
+			JumpAndGravity();
 			Move();
+			HandleLandingPulse();
+			UpdateStepCycle(Time.deltaTime);
 		}
 
 		private void LateUpdate()
@@ -153,49 +240,268 @@ namespace StarterAssets
 
 		private void Move()
 		{
-			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			float dt = Time.deltaTime;
+			Vector2 input = _input.move;
+			float inputMagnitude = _input.analogMovement ? Mathf.Clamp01(input.magnitude) : (input == Vector2.zero ? 0f : 1f);
 
-			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
-
-			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
-
-			// a reference to the players current horizontal velocity
-			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
-
-			float speedOffset = 0.1f;
-			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
-
-			// accelerate or decelerate to target speed
-			if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
+			Vector3 desiredDirection = Vector3.zero;
+			if (inputMagnitude > _threshold)
 			{
-				// creates curved result rather than a linear one giving a more organic speed change
-				// note T in Lerp is clamped, so we don't need to clamp our speed
-				_speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
-
-				// round speed to 3 decimal places
-				_speed = Mathf.Round(_speed * 1000f) / 1000f;
-			}
-			else
-			{
-				_speed = targetSpeed;
+				desiredDirection = (transform.right * input.x + transform.forward * input.y).normalized;
 			}
 
-			// normalise input direction
-			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+			float targetSpeed = GetTargetSpeed(inputMagnitude);
+			Vector3 desiredPlanarVelocity = desiredDirection * targetSpeed;
 
-			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-			// if there is a move input rotate player when the player is moving
-			if (_input.move != Vector2.zero)
+			AccelerateTowardDesiredVelocity(desiredPlanarVelocity, dt);
+			ApplyWaterDrag(dt);
+			ApplyGroundTraction(desiredPlanarVelocity, inputMagnitude, dt);
+
+			Vector3 finalPlanarVelocity = _planarVelocity + GetEffectiveCurrentDrift();
+			Vector3 verticalMove = new Vector3(0.0f, _verticalVelocity, 0.0f);
+			_controller.Move((finalPlanarVelocity + verticalMove) * dt);
+		}
+
+		private void ApplyGroundTraction(Vector3 desiredPlanarVelocity, float inputMagnitude, float dt)
+		{
+			if (!Grounded)
 			{
-				// move
-				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+				return;
 			}
 
-			// move the player
-			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			if (inputMagnitude > _threshold)
+			{
+				_planarVelocity = Vector3.MoveTowards(_planarVelocity, desiredPlanarVelocity, GroundTraction * dt);
+				return;
+			}
+
+			float currentSpeed = new Vector3(_planarVelocity.x, 0f, _planarVelocity.z).magnitude;
+			float stopDeceleration = currentSpeed >= HighSpeedSlideThreshold
+				? HighSpeedSlideDeceleration
+				: GroundStopDeceleration;
+
+			_planarVelocity = Vector3.MoveTowards(_planarVelocity, Vector3.zero, stopDeceleration * dt);
+		}
+
+		private Vector3 GetEffectiveCurrentDrift()
+		{
+			return Grounded ? _currentDriftVelocity * GroundedDriftMultiplier : _currentDriftVelocity;
+		}
+
+		private void AccelerateTowardDesiredVelocity(Vector3 desiredVelocity, float dt)
+		{
+			Vector3 current = _planarVelocity;
+
+			if (desiredVelocity.sqrMagnitude <= _threshold)
+			{
+				_planarVelocity = Vector3.MoveTowards(current, Vector3.zero, BrakeDeceleration * dt);
+				return;
+			}
+
+			float alignment = current.sqrMagnitude > _threshold
+				? Vector3.Dot(current.normalized, desiredVelocity.normalized)
+				: 1f;
+
+			float accelRate = ForwardAcceleration;
+
+			Vector3 desiredLocal = transform.InverseTransformDirection(desiredVelocity);
+			if (desiredLocal.z < -0.01f)
+			{
+				accelRate = ReverseAcceleration;
+			}
+			else if (Mathf.Abs(desiredLocal.x) > Mathf.Abs(desiredLocal.z))
+			{
+				accelRate = LateralAcceleration;
+			}
+
+			if (alignment < -0.15f)
+			{
+				accelRate *= DirectionChangeDragBoost;
+			}
+
+			_planarVelocity = Vector3.MoveTowards(current, desiredVelocity, accelRate * dt);
+		}
+
+		private void ApplyWaterDrag(float dt)
+		{
+			if (_planarVelocity.sqrMagnitude <= _threshold)
+			{
+				return;
+			}
+
+			Vector3 localVelocity = transform.InverseTransformDirection(_planarVelocity);
+			localVelocity.x = Mathf.MoveTowards(localVelocity.x, 0f, WaterDragLateral * dt);
+			localVelocity.z = Mathf.MoveTowards(localVelocity.z, 0f, WaterDragForward * dt);
+			_planarVelocity = transform.TransformDirection(localVelocity);
+		}
+
+		private float GetTargetSpeed(float inputMagnitude)
+		{
+			if (inputMagnitude <= _threshold)
+			{
+				return 0f;
+			}
+
+			float baseSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			float surgeMultiplier = GetSurgeSpeedMultiplier();
+			return baseSpeed * inputMagnitude * surgeMultiplier;
+		}
+
+		private void UpdateCurrentDrift(float dt)
+		{
+			float t = Time.time * CurrentDriftFrequency;
+			float x = Mathf.PerlinNoise(t, 37.71f) - 0.5f;
+			float z = Mathf.PerlinNoise(91.43f, t) - 0.5f;
+			Vector3 targetDrift = new Vector3(x, 0f, z) * (CurrentDriftAmplitude * 2f);
+
+			float blend = 1f - Mathf.Exp(-CurrentDriftResponsiveness * dt);
+			_currentDriftVelocity = Vector3.Lerp(_currentDriftVelocity, targetDrift, blend);
+		}
+
+		private void UpdateStepCycle(float dt)
+		{
+			if (!Grounded)
+			{
+				_distanceSinceStep = 0f;
+				return;
+			}
+
+			float planarSpeed = new Vector3(_planarVelocity.x, 0f, _planarVelocity.z).magnitude;
+			if (planarSpeed < StepMinSpeed)
+			{
+				_distanceSinceStep = 0f;
+				return;
+			}
+
+			_distanceSinceStep += planarSpeed * dt;
+			if (_distanceSinceStep < StepDistance)
+			{
+				return;
+			}
+
+			_distanceSinceStep -= StepDistance;
+			float normalizedSpeed = Mathf.InverseLerp(StepMinSpeed, SprintSpeed * SurgeSustainSpeedMultiplier, planarSpeed);
+			RaiseStepEvent(GetStepPulse(normalizedSpeed, 0f), planarSpeed, 0f, false);
+		}
+
+		private void HandleLandingPulse()
+		{
+			if (Grounded && !_wasGroundedLastFrame)
+			{
+				float landingSpeed = Mathf.Max(0f, -_verticalVelocity);
+				float normalizedLanding = Mathf.Clamp01(landingSpeed * LandingPulseScale);
+				float planarSpeed = new Vector3(_planarVelocity.x, 0f, _planarVelocity.z).magnitude;
+				RaiseStepEvent(GetStepPulse(0.4f, normalizedLanding), planarSpeed, landingSpeed, true);
+			}
+
+			_wasGroundedLastFrame = Grounded;
+		}
+
+		private float GetStepPulse(float normalizedSpeed, float normalizedLanding)
+		{
+			float locomotionPulse = Mathf.Lerp(0.35f, 1.0f, Mathf.Clamp01(normalizedSpeed));
+			float landingPulse = Mathf.Lerp(0f, 1.25f, Mathf.Clamp01(normalizedLanding));
+			return locomotionPulse + landingPulse;
+		}
+
+		private void RaiseStepEvent(float pulse, float planarSpeed, float downwardSpeed, bool wasLanding)
+		{
+			StepImpactData data = new StepImpactData
+			{
+				pulse = pulse,
+				planarSpeed = planarSpeed,
+				downwardSpeed = downwardSpeed,
+				wasLanding = wasLanding
+			};
+
+			StepLanded?.Invoke(data);
+		}
+
+		private void UpdateSurgeState(float dt)
+		{
+			bool hasMoveInput = _input.move.sqrMagnitude > _threshold;
+			bool sprintPressed = _input.sprint && hasMoveInput;
+
+			if (sprintPressed && !_wasSprintingLastFrame && _surgeState == SurgeState.None)
+			{
+				SetSurgeState(SurgeState.Charge);
+			}
+
+			_wasSprintingLastFrame = sprintPressed;
+
+			if (_surgeState == SurgeState.None)
+			{
+				return;
+			}
+
+			_surgeTimer += dt;
+
+			switch (_surgeState)
+			{
+				case SurgeState.Charge:
+					if (_surgeTimer >= SurgeChargeDuration)
+					{
+						SetSurgeState(SurgeState.Ignition);
+					}
+					break;
+
+				case SurgeState.Ignition:
+					if (!_surgeIgnitionImpulseApplied)
+					{
+						_planarVelocity += transform.forward * SurgeIgnitionImpulse;
+						_surgeIgnitionImpulseApplied = true;
+					}
+
+					if (_surgeTimer >= SurgeIgnitionDuration)
+					{
+						SetSurgeState(SurgeState.Sustain);
+					}
+					break;
+
+				case SurgeState.Sustain:
+					if (!sprintPressed || _surgeTimer >= SurgeSustainDuration)
+					{
+						SetSurgeState(SurgeState.Cooldown);
+					}
+					break;
+
+				case SurgeState.Cooldown:
+					if (_surgeTimer >= SurgeCooldownDuration)
+					{
+						SetSurgeState(SurgeState.None);
+					}
+					break;
+			}
+		}
+
+		private float GetSurgeSpeedMultiplier()
+		{
+			switch (_surgeState)
+			{
+				case SurgeState.Charge:
+					return 0.9f;
+				case SurgeState.Ignition:
+					return 1.15f;
+				case SurgeState.Sustain:
+					return SurgeSustainSpeedMultiplier;
+				case SurgeState.Cooldown:
+					return 0.95f;
+				default:
+					return 1f;
+			}
+		}
+
+		private void SetSurgeState(SurgeState state)
+		{
+			if (_surgeState == state)
+			{
+				return;
+			}
+
+			_surgeState = state;
+			_surgeTimer = 0f;
+			_surgeIgnitionImpulseApplied = false;
+			SurgeStateChanged?.Invoke(_surgeState);
 		}
 
 		private void JumpAndGravity()
