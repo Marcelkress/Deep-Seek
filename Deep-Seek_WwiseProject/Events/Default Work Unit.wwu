@@ -14,6 +14,43 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_OxygentankPickup" ID="{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}">
+					<ChildrenList>
+						<Action Name="" ID="{80D37A99-84F6-413F-B279-37B62E29E182}" ShortID="46402925">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OxygentankPickup" ID="{83252FF7-D0CB-4945-93F1-EF20DFED250F}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PickupScaleSound" ID="{A41527E5-8F30-4E85-A1E8-5789AFFF52AC}">
+					<ChildrenList>
+						<Action Name="" ID="{CC06E444-5B16-45A9-A296-A146B2F488BA}" ShortID="926504432">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PickupScaleSound" ID="{873C41CF-FB0C-4B28-885F-0F3980FB0581}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Footsteps" ID="{1032ED4F-ED29-4667-B9BD-CA9565A0DFC4}" ShortID="680016828">
+					<ChildrenList>
+						<Event Name="Play_Footsteps_Deepseek" ID="{9E2AFE22-7952-45F8-B670-5082EC063111}">
+							<ChildrenList>
+								<Action Name="" ID="{C29AA4EB-D734-4940-B700-A60BAC84EA05}" ShortID="283359482">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps Deepseek" ID="{56FAE832-A535-4CD4-975D-D55CBADDBF29}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

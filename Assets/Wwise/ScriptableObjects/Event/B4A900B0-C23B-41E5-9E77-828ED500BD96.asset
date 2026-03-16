@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Play_Underwater_Ambience_B
   id: 655760415
   guid: B4A900B0-C23B-41E5-9E77-828ED500BD96
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1

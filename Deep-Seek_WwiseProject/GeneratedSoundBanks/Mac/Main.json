@@ -10,12 +10,221 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{71F9CEB8-45DE-23D7-AC26-882EA609EB7A}",
+    "Hash": "{96B15F5F-67E5-2467-5696-D579962633CB}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
-    "Path": "Main.bnk"
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "48094280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "EE/{EEC85EBA-3DE6-0AEC-B284-AE3254C4D9CC}.wem"
+     },
+     {
+      "Id": "98165099",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "27/{2778AE1B-A91F-9065-3D26-6CCDAD50F080}.wem"
+     },
+     {
+      "Id": "237568392",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "freesound_community-pickupplasticobject-91036.wav",
+      "CachePath": "C5/{C581216D-B9F7-3BC1-C44E-E5F5B813CD48}.wem"
+     },
+     {
+      "Id": "375802478",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "19/{19C837F0-DECA-B893-9CEA-E75037BF7307}.wem"
+     },
+     {
+      "Id": "427778424",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "2B/{2B3942D8-75DF-D2E0-3285-738FA3A2955A}.wem"
+     },
+     {
+      "Id": "571400089",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "AC/{ACEDC4C3-522D-A300-EF10-361099E9244C}.wem"
+     },
+     {
+      "Id": "593026888",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "2F/{2F1E30C5-78B9-9CAA-8401-C60CBA3C763D}.wem"
+     },
+     {
+      "Id": "644998508",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "D0/{D0332DC5-9DB5-6A68-6543-BB2ED550D375}.wem"
+     },
+     {
+      "Id": "646366131",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "69/{69029124-2D37-FA53-E4E7-B983E2E33BDC}.wem"
+     },
+     {
+      "Id": "670368937",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "18/{18CE2842-3F1F-B01C-23D1-D21EBCAF2491}.wem"
+     },
+     {
+      "Id": "780315270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771.wav",
+      "CachePath": "DB/{DBCE0CA5-B832-C85A-C3D9-0AAE42A6A0A0}.wem"
+     },
+     {
+      "Id": "1006756753",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "freesound_community-scale-a6-106130.wav",
+      "CachePath": "A3/{A3AA2F22-824E-B8A8-3BEC-C76852498989}.wem"
+     },
+     {
+      "Id": "1028068659",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Underwater Ambience B.wav",
+      "CachePath": "D1/{D180EF04-7905-7F08-83A4-C3332FC9BC1C}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2995775460",
+       "Name": "Room_Small",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Small",
+       "GUID": "{577F1466-A63B-47F7-98BD-C56E433F8B5D}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "803189924",
+      "Name": "Play_Footsteps_Deepseek",
+      "ObjectPath": "\\Events\\Default Work Unit\\Footsteps\\Play_Footsteps_Deepseek",
+      "GUID": "{9E2AFE22-7952-45F8-B670-5082EC063111}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.61097866",
+      "DurationMax": "0.76978487",
+      "MediaRefs": [
+       {
+        "Id": "48094280"
+       },
+       {
+        "Id": "98165099"
+       },
+       {
+        "Id": "375802478"
+       },
+       {
+        "Id": "427778424"
+       },
+       {
+        "Id": "571400089"
+       },
+       {
+        "Id": "593026888"
+       },
+       {
+        "Id": "644998508"
+       },
+       {
+        "Id": "646366131"
+       },
+       {
+        "Id": "670368937"
+       },
+       {
+        "Id": "780315270"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2995775460"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "287033506",
+      "Name": "Play_OxygentankPickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_OxygentankPickup",
+      "GUID": "{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2083218",
+      "DurationMax": "1.2083218",
+      "MediaRefs": [
+       {
+        "Id": "237568392"
+       }
+      ]
+     },
+     {
+      "Id": "4271838925",
+      "Name": "Play_PickupScaleSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PickupScaleSound",
+      "GUID": "{A41527E5-8F30-4E85-A1E8-5789AFFF52AC}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.016",
+      "DurationMax": "2.016",
+      "MediaRefs": [
+       {
+        "Id": "1006756753"
+       }
+      ]
+     },
+     {
+      "Id": "655760415",
+      "Name": "Play_Underwater_Ambience_B",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Underwater_Ambience_B",
+      "GUID": "{B4A900B0-C23B-41E5-9E77-828ED500BD96}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1028068659"
+       }
+      ]
+     }
+    ]
    }
   ],
-  "FileHash": "{10B1DDB2-3DC1-B97B-F771-7A19B7B90F82}"
+  "FileHash": "{B6396A19-FAC6-30E6-E8FF-3C36A71A7A3E}"
  }
 }

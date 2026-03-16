@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	655760415	Play_Underwater_Ambience_B			\Default Work Unit\Play_Underwater_Ambience_B	
-

@@ -13,6 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_FOOTSTEPS_DEEPSEEK = 803189924U;
+        static const AkUniqueID PLAY_OXYGENTANKPICKUP = 287033506U;
+        static const AkUniqueID PLAY_PICKUPSCALESOUND = 4271838925U;
         static const AkUniqueID PLAY_UNDERWATER_AMBIENCE_B = 655760415U;
     } // namespace EVENTS
 
