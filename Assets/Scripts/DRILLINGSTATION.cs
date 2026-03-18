@@ -5,6 +5,7 @@ using UnityEngine;
 public class DRILLINGSTATION : MonoBehaviour
 {
     // Fuh' yeh' 
+    /*
     public enum Color
     {
         Red,
@@ -12,13 +13,18 @@ public class DRILLINGSTATION : MonoBehaviour
         Blue,
         Yellow
     }
+    */
+
+    //public List<UnityEngine.Color> colors;
 
     public List<Color> colorSequence;
     
-    public Light[] indicationLights;
+    public MeshRenderer[] indicationLights;
+    public Material lightMat;
 
     public bool[] levers;
     public Light[] leverLights;
+    public float emmissionLevel = 2;
     
     void Start()
     {
@@ -29,22 +35,49 @@ public class DRILLINGSTATION : MonoBehaviour
     {
         for (int  i = 0;  i < colorSequence.Count;  i++)
         {
+            var mesh = indicationLights[i];
+            
+            lightMat = new Material(lightMat);
+            lightMat.EnableKeyword("_EMISSION");
+            lightMat.SetColor("_EmissionColor", colorSequence[i] * emmissionLevel);
+            lightMat.color = colorSequence[i];
+            mesh.material = lightMat;
+            
+            
+            /*
             switch (colorSequence[i])
             {
                 case Color.Blue :
-                    indicationLights[i].color = UnityEngine.Color.cyan;
+                    lightMat = new Material(lightMat);
+                    lightMat.EnableKeyword("_EMISSION");
+                    lightMat.SetColor("_EmissionColor", UnityEngine.Color.cyan);
+                    lightMat.color = UnityEngine.Color.cyan;
+                    mesh.material = lightMat;
                     break;
                 case Color.Green :
-                    indicationLights[i].color = UnityEngine.Color.green;
+                    lightMat = new Material(lightMat);
+                    lightMat.EnableKeyword("_EMISSION");
+                    lightMat.SetColor("_EmissionColor", UnityEngine.Color.green);
+                    lightMat.color = UnityEngine.Color.green;
+                    mesh.material = lightMat;
                     break;
                 case Color.Red :
-                    indicationLights[i].color = UnityEngine.Color.red;
+                    lightMat = new Material(lightMat);
+                    lightMat.EnableKeyword("_EMISSION");
+                    lightMat.SetColor("_EmissionColor", UnityEngine.Color.red);
+                    lightMat.color = UnityEngine.Color.red;
+                    mesh.material = lightMat;
                     break;
                 case Color.Yellow :
-                    indicationLights[i].color = UnityEngine.Color.yellow;
+                    lightMat = new Material(lightMat);
+                    lightMat.EnableKeyword("_EMISSION");
+                    lightMat.SetColor("_EmissionColor", UnityEngine.Color.yellow);
+                    lightMat.color = UnityEngine.Color.yellow;
+                    mesh.material = lightMat;
                     break;
             }
-            
+            */
+
         }
     }
     

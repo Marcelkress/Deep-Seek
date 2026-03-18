@@ -63,7 +63,7 @@ Material:
     - _QueueOffset: 0
     - _Refraction_Strength: 1.5
     m_Colors:
-    - _Dirt_Color: {r: 0.20754719, g: 0.0499288, b: 0.0499288, a: 0.27058825}
-    - _Glass_Tint: {r: 0, g: 0.10196077, b: 0.10196077, a: 0.4627451}
+    - _Dirt_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Glass_Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
