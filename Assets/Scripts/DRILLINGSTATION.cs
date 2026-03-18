@@ -14,16 +14,39 @@ public class DRILLINGSTATION : MonoBehaviour
     }
 
     public List<Color> colorSequence;
+    
     public Light[] indicationLights;
+
+    public bool[] levers;
+    public Light[] leverLights;
     
     void Start()
     {
-        
+        Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Initialize()
     {
-        
+        for (int  i = 0;  i < colorSequence.Count;  i++)
+        {
+            switch (colorSequence[i])
+            {
+                case Color.Blue :
+                    indicationLights[i].color = UnityEngine.Color.cyan;
+                    break;
+                case Color.Green :
+                    indicationLights[i].color = UnityEngine.Color.green;
+                    break;
+                case Color.Red :
+                    indicationLights[i].color = UnityEngine.Color.red;
+                    break;
+                case Color.Yellow :
+                    indicationLights[i].color = UnityEngine.Color.yellow;
+                    break;
+            }
+            
+        }
     }
+    
+    
 }
