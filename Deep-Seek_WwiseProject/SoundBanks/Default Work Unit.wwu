@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F8EF8675-FCF8-41D7-9E39-D9023D347EC0}" SchemaVersion="133">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{F8EF8675-FCF8-41D7-9E39-D9023D347EC0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{1D996B7C-8506-41AA-BDA1-C95B98C54736}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Underwater_Ambience_B" ID="{B4A900B0-C23B-41E5-9E77-828ED500BD96}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footsteps_Deepseek" ID="{9E2AFE22-7952-45F8-B670-5082EC063111}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_OxygentankPickup" ID="{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PickupScaleSound" ID="{A41527E5-8F30-4E85-A1E8-5789AFFF52AC}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
