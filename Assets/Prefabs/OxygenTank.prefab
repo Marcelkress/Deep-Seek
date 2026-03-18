@@ -162,7 +162,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
-  m_Color: {r: 0.5707547, g: 0.83541906, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9749228, b: 0.6933962, a: 1}
   m_Intensity: 0.5
   m_Range: 1
   m_SpotAngle: 30
@@ -272,15 +272,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4b637ab878f294cea81077f6e4594201, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.54659
+      value: 39.73879
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b637ab878f294cea81077f6e4594201, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 100.336
+      value: 102.057304
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b637ab878f294cea81077f6e4594201, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 168.93488
+      value: 134.55196
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b637ab878f294cea81077f6e4594201, type: 3}
       propertyPath: m_LocalRotation.w

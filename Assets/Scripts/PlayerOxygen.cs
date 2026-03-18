@@ -1,3 +1,4 @@
+using Cinemachine;
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +15,8 @@ public class PlayerOxygen : MonoBehaviour
     private StarterAssetsInputs input;
     public float replenishCoolDown = 30;
     private float replenishCooldownTimer;
+
+    private CinemachineVirtualCamera virtualCamera;
         
     [Header("Replenishment amounts")] public int firstAmount = 100;
     public int secondAmount = 150, thirdAmount = 200;
@@ -31,6 +34,7 @@ public class PlayerOxygen : MonoBehaviour
         input = GetComponent<StarterAssetsInputs>();
         currentLoss = oxygenLossPrSWalk;
         replenishCooldownTimer = 30;
+        virtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
     
     // Update is called once per frame
@@ -146,7 +150,7 @@ public class PlayerOxygen : MonoBehaviour
             ReplenishStart.Invoke();
         }
         else
-        {
+        {   
             pressed = false;
             released = true;
         }

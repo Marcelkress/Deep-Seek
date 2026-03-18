@@ -17,6 +17,8 @@ namespace StarterAssets
 		[Header("Movement Settings")]
 		public bool analogMovement;
 
+		public bool canMove = true;
+
 		[Header("Mouse Cursor Settings")]
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
@@ -52,10 +54,21 @@ namespace StarterAssets
 		}
 #endif
 
+		public void CanMove(bool val)
+		{
+			canMove = val;
+
+			if (canMove == false) 
+				move = Vector2.zero;
+		}
+		
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
+			
+			if (canMove == false) 
+				move = Vector2.zero;
 		} 
 
 		public void LookInput(Vector2 newLookDirection)
