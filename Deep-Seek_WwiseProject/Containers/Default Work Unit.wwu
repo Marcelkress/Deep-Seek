@@ -233,6 +233,9 @@
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>350</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{A3D97EE6-AFC1-4883-8A4E-632887FFCD41}">
@@ -482,6 +485,284 @@
 								<ReferenceList>
 									<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 										<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="LandingSound" ID="{0A882E26-C047-4B56-9F3B-F4C50A74ABA6}" ShortID="965089012">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>71</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>580</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{91A247C4-A0B3-4FE8-A8A8-6E27C92327C1}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="250"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771" ID="{6C3B311F-B1F1-41B4-B21D-523925FE8A6E}" ShortID="701396088">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771" ID="{4652C91A-E73B-408E-AF4F-A8D8D9F6CB56}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="98165099"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771" ID="{4652C91A-E73B-408E-AF4F-A8D8D9F6CB56}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771" ID="{9FA6475A-EE40-4D42-84B4-B3150AA79611}" ShortID="682517772">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771" ID="{7E3156E1-5682-4A7D-A92C-A366DBD25266}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="427778424"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771" ID="{7E3156E1-5682-4A7D-A92C-A366DBD25266}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771" ID="{7E268627-4ED0-4D50-9245-23B663898120}" ShortID="368910731">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771" ID="{1F220177-0D19-4B0C-98FC-0A95C262ADE6}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="780315270"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771" ID="{1F220177-0D19-4B0C-98FC-0A95C262ADE6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771" ID="{8D532F1C-8FF3-46A0-A304-8F66239C1D33}" ShortID="585834384">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771" ID="{51DF23A0-D85E-439E-9D40-8D1D36B17683}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="48094280"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771" ID="{51DF23A0-D85E-439E-9D40-8D1D36B17683}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771" ID="{6D75AD64-10B5-4FD6-9739-BB3993D1B343}" ShortID="769246249">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771" ID="{D73AD37D-1117-4920-B428-E19E873BB060}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="375802478"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771" ID="{D73AD37D-1117-4920-B428-E19E873BB060}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771" ID="{B173C859-8271-4465-AE3C-4A98B2A48C15}" ShortID="748227424">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771" ID="{3349D1E6-FA6B-48D0-9616-9C21370BA764}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="644998508"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771" ID="{3349D1E6-FA6B-48D0-9616-9C21370BA764}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771" ID="{18F743BF-FD0B-41F6-B388-84B2476C1F23}" ShortID="1020131849">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771" ID="{5AE8BD2C-AE06-4B25-98A1-565F629EC1E5}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="670368937"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771" ID="{5AE8BD2C-AE06-4B25-98A1-565F629EC1E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771" ID="{70D51476-6B8C-4BAB-BEB5-298CB56D9737}" ShortID="816296170">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771" ID="{8EDF1C68-E71E-42C9-BE1C-B789EC646D04}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="646366131"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771" ID="{8EDF1C68-E71E-42C9-BE1C-B789EC646D04}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771" ID="{900F9DAF-A1C2-4BB1-93E2-43DC2F68FA1C}" ShortID="826703858">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771" ID="{54539948-D92E-487E-9A18-B6E7AF6079B5}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="571400089"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771" ID="{54539948-D92E-487E-9A18-B6E7AF6079B5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771" ID="{4C3AEF1F-9A4C-400F-A1F9-1C204B91860B}" ShortID="672049191">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771" ID="{27CC45B4-0DED-4C78-AB04-0AF6663ACC4C}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps Deepseek\Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="593026888"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771" ID="{27CC45B4-0DED-4C78-AB04-0AF6663ACC4C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<EffectSlot Name="" ID="{79E5923C-D9B6-4E19-994D-53155C8A77BF}" ShortID="561029266">
+								<ReferenceList>
+									<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+										<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+							<EffectSlot Name="" ID="{87E90466-9A51-4E57-BC5A-7578525B958A}" ShortID="154148544">
+								<ReferenceList>
+									<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+										<ObjectRef Name="New_Guitar_Distortion" ID="{31F65586-5FD4-4370-BB42-56C173E7B2F4}" WorkUnitID="{C468C745-34C3-4862-B06F-B90D9C3F9DB0}"/>
 									</Reference>
 								</ReferenceList>
 							</EffectSlot>

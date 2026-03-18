@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{96B15F5F-67E5-2467-5696-D579962633CB}",
+    "Hash": "{31214C77-EC08-F85C-B48A-838055AEF1D6}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "freesound_community-pickupplasticobject-91036.wav",
-      "CachePath": "C5/{C581216D-B9F7-3BC1-C44E-E5F5B813CD48}.wem"
+      "CachePath": "E3/{E3E42B78-C71D-A216-C2E7-CD67652144A3}.wem"
      },
      {
       "Id": "375802478",
@@ -129,6 +129,14 @@
        "GUID": "{577F1466-A63B-47F7-98BD-C56E433F8B5D}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "3435419520",
+       "Name": "New_Guitar_Distortion",
+       "ObjectPath": "\\Effects\\Default Work Unit\\New_Guitar_Distortion",
+       "GUID": "{31F65586-5FD4-4370-BB42-56C173E7B2F4}",
+       "LibName": "Wwise Guitar Distortion",
+       "LibId": "8257539"
       }
      ]
     },
@@ -139,8 +147,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Footsteps\\Play_Footsteps_Deepseek",
       "GUID": "{9E2AFE22-7952-45F8-B670-5082EC063111}",
       "DurationType": "OneShot",
-      "DurationMin": "0.61097866",
-      "DurationMax": "0.76978487",
+      "DurationMin": "0.49914372",
+      "DurationMax": "0.6288817",
       "MediaRefs": [
        {
         "Id": "48094280"
@@ -177,6 +185,57 @@
        "ShareSets": [
         {
          "Id": "2995775460"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "525953352",
+      "Name": "Play_LandingSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_LandingSound",
+      "GUID": "{CF2C3DDA-DB07-40E7-9F40-34BB9111043C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.43704706",
+      "DurationMax": "0.5506448",
+      "MediaRefs": [
+       {
+        "Id": "48094280"
+       },
+       {
+        "Id": "98165099"
+       },
+       {
+        "Id": "375802478"
+       },
+       {
+        "Id": "427778424"
+       },
+       {
+        "Id": "571400089"
+       },
+       {
+        "Id": "593026888"
+       },
+       {
+        "Id": "644998508"
+       },
+       {
+        "Id": "646366131"
+       },
+       {
+        "Id": "670368937"
+       },
+       {
+        "Id": "780315270"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2995775460"
+        },
+        {
+         "Id": "3435419520"
         }
        ]
       }
@@ -225,6 +284,6 @@
     ]
    }
   ],
-  "FileHash": "{5AC922DB-424A-EED5-4C04-C790F2E81823}"
+  "FileHash": "{8AC71FFE-B162-6441-77CC-D5DF6EB47664}"
  }
 }

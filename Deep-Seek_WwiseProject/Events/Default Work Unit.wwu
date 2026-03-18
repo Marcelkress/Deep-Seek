@@ -51,6 +51,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_LandingSound" ID="{CF2C3DDA-DB07-40E7-9F40-34BB9111043C}">
+					<ChildrenList>
+						<Action Name="" ID="{E5D49D6A-5976-4C3C-A3AF-52AFC8E9BB3F}" ShortID="238265242">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LandingSound" ID="{0A882E26-C047-4B56-9F3B-F4C50A74ABA6}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

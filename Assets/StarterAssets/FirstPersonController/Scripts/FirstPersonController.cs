@@ -2,6 +2,7 @@
 using System;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 #endif
 
 namespace StarterAssets
@@ -33,95 +34,112 @@ namespace StarterAssets
 		public event Action<StepImpactData> StepLanded;
 		public event Action<SurgeState> SurgeStateChanged;
 
-		[Header("Movement Speeds")]
-		[Tooltip("Move speed of the character in m/s")]
+		[Header("Movement Speeds")] [Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 2.2f;
+
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 3.6f;
+
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
 
-		[Header("Mech Inertia")]
-		[Tooltip("Forward acceleration in m/s²")]
+		[Header("Mech Inertia")] [Tooltip("Forward acceleration in m/s²")]
 		public float ForwardAcceleration = 2.4f;
+
 		[Tooltip("Reverse acceleration in m/s²")]
 		public float ReverseAcceleration = 1.0f;
+
 		[Tooltip("Lateral acceleration in m/s²")]
 		public float LateralAcceleration = 1.5f;
+
 		[Tooltip("Deceleration when no input is provided")]
 		public float BrakeDeceleration = 0.9f;
+
 		[Tooltip("Extra deceleration when changing to opposite direction")]
 		public float DirectionChangeDragBoost = 1.6f;
 
-		[Header("Underwater Resistance")]
-		[Tooltip("Forward drag applied to planar velocity")]
+		[Header("Underwater Resistance")] [Tooltip("Forward drag applied to planar velocity")]
 		public float WaterDragForward = 1.2f;
+
 		[Tooltip("Lateral drag applied to planar velocity")]
 		public float WaterDragLateral = 2.0f;
+
 		[Tooltip("Max world-space drift speed caused by ocean current")]
 		public float CurrentDriftAmplitude = 0.2f;
+
 		[Tooltip("How quickly drift direction changes over time")]
 		public float CurrentDriftFrequency = 0.06f;
+
 		[Tooltip("How quickly current drift blends to its target value")]
 		public float CurrentDriftResponsiveness = 0.6f;
+
 		[Tooltip("Multiplier applied to current drift while grounded")]
 		public float GroundedDriftMultiplier = 0.1f;
 
-		[Header("Ground Traction")]
-		[Tooltip("How strongly the mech adheres to desired velocity while grounded")]
+		[Header("Ground Traction")] [Tooltip("How strongly the mech adheres to desired velocity while grounded")]
 		public float GroundTraction = 16f;
+
 		[Tooltip("Aggressive stop deceleration at low/medium speed")]
 		public float GroundStopDeceleration = 12f;
+
 		[Tooltip("Deceleration used when stopping from top speed to allow slight slide")]
 		public float HighSpeedSlideDeceleration = 3.2f;
+
 		[Tooltip("Speed above which stopping allows slight slide")]
 		public float HighSpeedSlideThreshold = 3.8f;
 
-		[Header("Step Feedback")]
-		[Tooltip("Distance between step pulses while grounded")]
+		[Header("Step Feedback")] [Tooltip("Distance between step pulses while grounded")]
 		public float StepDistance = 2.2f;
+
 		[Tooltip("Minimum horizontal speed required to generate step pulses")]
 		public float StepMinSpeed = 0.9f;
+
 		[Tooltip("How much landing speed contributes to step pulse")]
 		public float LandingPulseScale = 0.12f;
 
-		[Header("Surge")]
-		public float SurgeChargeDuration = 0.16f;
+		[Header("Surge")] public float SurgeChargeDuration = 0.16f;
 		public float SurgeIgnitionDuration = 0.10f;
 		public float SurgeSustainDuration = 1.15f;
 		public float SurgeCooldownDuration = 0.55f;
+
 		[Tooltip("Speed multiplier while surge sustain is active")]
 		public float SurgeSustainSpeedMultiplier = 1.35f;
+
 		[Tooltip("Forward impulse applied during surge ignition")]
 		public float SurgeIgnitionImpulse = 1.4f;
 
-		[Space(10)]
-		[Tooltip("The height the player can jump")]
+		[Space(10)] [Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
+
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
 
 		[Space(10)]
 		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
 		public float JumpTimeout = 0.1f;
+
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
 
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 		public bool Grounded = true;
-		[Tooltip("Useful for rough ground")]
-		public float GroundedOffset = -0.14f;
+
+		[Tooltip("Useful for rough ground")] public float GroundedOffset = -0.14f;
+
 		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
 		public float GroundedRadius = 0.5f;
+
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
 
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 		public GameObject CinemachineCameraTarget;
+
 		[Tooltip("How far in degrees can you move the camera up")]
 		public float TopClamp = 90.0f;
+
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
@@ -145,7 +163,11 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+		//Wwise
+		[Header("Wwise")] 
+		public AK.Wwise.Event Footsteps;
+		public AK.Wwise.Event LandingSound;
+
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
 #endif
@@ -159,11 +181,11 @@ namespace StarterAssets
 		{
 			get
 			{
-				#if ENABLE_INPUT_SYSTEM
+#if ENABLE_INPUT_SYSTEM
 				return _playerInput.currentControlScheme == "KeyboardMouse";
-				#else
+#else
 				return false;
-				#endif
+#endif
 			}
 		}
 
@@ -202,6 +224,7 @@ namespace StarterAssets
 			Move();
 			HandleLandingPulse();
 			UpdateStepCycle(Time.deltaTime);
+
 		}
 
 		private void LateUpdate()
@@ -212,8 +235,10 @@ namespace StarterAssets
 		private void GroundedCheck()
 		{
 			// set sphere position, with offset
-			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
-			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
+				transform.position.z);
+			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
+				QueryTriggerInteraction.Ignore);
 		}
 
 		private void CameraRotation()
@@ -223,7 +248,7 @@ namespace StarterAssets
 			{
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
-				
+
 				_cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
 				_rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
 
@@ -242,7 +267,9 @@ namespace StarterAssets
 		{
 			float dt = Time.deltaTime;
 			Vector2 input = _input.move;
-			float inputMagnitude = _input.analogMovement ? Mathf.Clamp01(input.magnitude) : (input == Vector2.zero ? 0f : 1f);
+			float inputMagnitude = _input.analogMovement
+				? Mathf.Clamp01(input.magnitude)
+				: (input == Vector2.zero ? 0f : 1f);
 
 			Vector3 desiredDirection = Vector3.zero;
 			if (inputMagnitude > _threshold)
@@ -260,6 +287,7 @@ namespace StarterAssets
 			Vector3 finalPlanarVelocity = _planarVelocity + GetEffectiveCurrentDrift();
 			Vector3 verticalMove = new Vector3(0.0f, _verticalVelocity, 0.0f);
 			_controller.Move((finalPlanarVelocity + verticalMove) * dt);
+
 		}
 
 		private void ApplyGroundTraction(Vector3 desiredPlanarVelocity, float inputMagnitude, float dt)
@@ -380,7 +408,8 @@ namespace StarterAssets
 			}
 
 			_distanceSinceStep -= StepDistance;
-			float normalizedSpeed = Mathf.InverseLerp(StepMinSpeed, SprintSpeed * SurgeSustainSpeedMultiplier, planarSpeed);
+			float normalizedSpeed =
+				Mathf.InverseLerp(StepMinSpeed, SprintSpeed * SurgeSustainSpeedMultiplier, planarSpeed);
 			RaiseStepEvent(GetStepPulse(normalizedSpeed, 0f), planarSpeed, 0f, false);
 		}
 
@@ -443,6 +472,7 @@ namespace StarterAssets
 					{
 						SetSurgeState(SurgeState.Ignition);
 					}
+
 					break;
 
 				case SurgeState.Ignition:
@@ -456,6 +486,7 @@ namespace StarterAssets
 					{
 						SetSurgeState(SurgeState.Sustain);
 					}
+
 					break;
 
 				case SurgeState.Sustain:
@@ -463,6 +494,7 @@ namespace StarterAssets
 					{
 						SetSurgeState(SurgeState.Cooldown);
 					}
+
 					break;
 
 				case SurgeState.Cooldown:
@@ -470,6 +502,7 @@ namespace StarterAssets
 					{
 						SetSurgeState(SurgeState.None);
 					}
+
 					break;
 			}
 		}
@@ -568,7 +601,39 @@ namespace StarterAssets
 			else Gizmos.color = transparentRed;
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
-			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+			Gizmos.DrawSphere(
+				new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
+				GroundedRadius);
 		}
-	}
+
+		
+		//Wwise Footsteps Logic
+		
+		//Lytter på Evenet "Steplanded"
+		private void OnEnable()
+		{
+			StepLanded += OnStepLanded;
+		}
+		// Stopper med at Lytte på "Steplanded"
+		private void OnDisable()
+		{
+			StepLanded -= OnStepLanded;
+		}
+		
+		// Method der får data fra StepImpactData structen og bruger waslanding boolen til at finde ud af om vi går eller lander
+		private void OnStepLanded(StepImpactData data)
+		{
+			//Hvis vi lander efter et hop (kommer fra UpdateLandingPulse)
+			if (data.wasLanding)
+			{
+				LandingSound.Post(gameObject);
+				Debug.Log("Player landed!");
+			}
+			else
+			{
+				// Regular footstep — (kommer fra UpdateStepCycle)
+				Footsteps.Post(gameObject);
+			}
+		}
+}
 }

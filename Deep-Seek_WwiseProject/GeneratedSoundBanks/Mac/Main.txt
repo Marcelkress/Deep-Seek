@@ -1,18 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
 	287033506	Play_OxygentankPickup			\Default Work Unit\Play_OxygentankPickup	
+	525953352	Play_LandingSound			\Default Work Unit\Play_LandingSound	
 	655760415	Play_Underwater_Ambience_B			\Default Work Unit\Play_Underwater_Ambience_B	
 	803189924	Play_Footsteps_Deepseek			\Default Work Unit\Footsteps\Play_Footsteps_Deepseek	
 	4271838925	Play_PickupScaleSound			\Default Work Unit\Play_PickupScaleSound	
 
 Effect plug-ins	ID	Name	Type				Notes
 	2995775460	Room_Small	Wwise RoomVerb			
+	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	48094280	Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771	.cache\EE\{EEC85EBA-3DE6-0AEC-B284-AE3254C4D9CC}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771		135628
-	98165099	Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771	.cache\27\{2778AE1B-A91F-9065-3D26-6CCDAD50F080}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771		135628
-	237568392	OxygentankPickup	.cache\C5\{C581216D-B9F7-3BC1-C44E-E5F5B813CD48}.wem		\Containers\Default Work Unit\OxygentankPickup		77516
-	375802478	Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771	.cache\19\{19C837F0-DECA-B893-9CEA-E75037BF7307}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771		135628
-	427778424	Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771	.cache\2B\{2B3942D8-75DF-D2E0-3285-738FA3A2955A}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771		135628
+	98165099	Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771	.cache\27\{2778AE1B-A91F-9065-3D26-6CCDAD50F080}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771		135628
+	237568392	OxygentankPickup	.cache\E3\{E3E42B78-C71D-A216-C2E7-CD67652144A3}.wem		\Containers\Default Work Unit\OxygentankPickup		77516
+	375802478	Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771	.cache\19\{19C837F0-DECA-B893-9CEA-E75037BF7307}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771		135628
+	427778424	Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771	.cache\2B\{2B3942D8-75DF-D2E0-3285-738FA3A2955A}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771		135628
 	571400089	Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771	.cache\AC\{ACEDC4C3-522D-A300-EF10-361099E9244C}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771		135628
 	593026888	Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771	.cache\2F\{2F1E30C5-78B9-9CAA-8401-C60CBA3C763D}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771		135628
 	644998508	Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771	.cache\D0\{D0332DC5-9DB5-6A68-6543-BB2ED550D375}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771		135628

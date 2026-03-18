@@ -22174,6 +22174,14 @@ MonoBehaviour:
   CinemachineCameraTarget: {fileID: 4135013736984691059}
   TopClamp: 89
   BottomClamp: -89
+  Footsteps:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4e65e9b3f0cd24499a2155a91ea4be1f, type: 2}
+  LandingSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8b4349f82e2f5420eb6a206d8bcc0c27, type: 2}
 --- !u!1 &8617721896107773409
 GameObject:
   m_ObjectHideFlags: 0
