@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2667672688230621128}
   - component: {fileID: 7031013271142838943}
   - component: {fileID: 6650462993082320149}
+  - component: {fileID: 3163049395759012087}
   m_Layer: 0
   m_Name: Big_rock_1B
   m_TagString: Untagged
@@ -113,3 +114,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2839211399044367261, guid: 1dbeb8f8d71231b2ba00fb3f68b050cf, type: 3}
+--- !u!205 &3163049395759012087
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979692290639157429}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.46197045, y: 0.4104215, z: -0.21006107}
+  m_Size: 2.719893
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.41503522
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7031013271142838943}
+  m_Enabled: 1

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6647463409020745750}
   - component: {fileID: 6197295695644486977}
   - component: {fileID: -3219110257458123964}
+  - component: {fileID: 6791803041338005999}
   m_Layer: 0
   m_Name: pilar2
   m_TagString: Untagged
@@ -113,3 +114,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6375252227176259743, guid: 19dadd022d74933978cb88d40b32a4a2, type: 3}
+--- !u!205 &6791803041338005999
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464937167467379039}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.33458138, y: -3.6203938, z: -0.38101006}
+  m_Size: 8.8480015
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6197295695644486977}
+  m_Enabled: 1

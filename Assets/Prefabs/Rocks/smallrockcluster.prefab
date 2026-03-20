@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6888612932161064774}
   - component: {fileID: 6972292285141528521}
   - component: {fileID: -3495382105121589255}
+  - component: {fileID: 6125091651915663956}
   m_Layer: 0
   m_Name: smallrockcluster
   m_TagString: Untagged
@@ -113,3 +114,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7293889246591523301, guid: cec050a81acd48b32ae0614559a969e0, type: 3}
+--- !u!205 &6125091651915663956
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6933455714169026922}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 4.9711385
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6972292285141528521}
+  m_Enabled: 1

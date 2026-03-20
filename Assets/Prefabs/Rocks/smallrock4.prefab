@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8503512659498825146}
   - component: {fileID: 4977688390898945096}
   - component: {fileID: -643346588461079310}
+  - component: {fileID: 3239106834190031707}
   m_Layer: 0
   m_Name: smallrock4
   m_TagString: Untagged
@@ -113,3 +114,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7516865162399407546, guid: cec050a81acd48b32ae0614559a969e0, type: 3}
+--- !u!205 &3239106834190031707
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776771823467359849}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.025350034, y: 0.0037565231, z: 0.05671352}
+  m_Size: 0.830883
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4977688390898945096}
+  m_Enabled: 1

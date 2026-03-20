@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 309225558072870922}
   - component: {fileID: 936849734073287538}
   - component: {fileID: 57556732618008123}
+  - component: {fileID: 6100336566452176125}
   m_Layer: 0
   m_Name: cliff3
   m_TagString: Untagged
@@ -113,3 +114,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6820455575039028463, guid: cec050a81acd48b32ae0614559a969e0, type: 3}
+--- !u!205 &6100336566452176125
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779898393940704988}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -2.9510775, y: 3.5405319, z: 3.956849}
+  m_Size: 21.950657
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 936849734073287538}
+  m_Enabled: 1

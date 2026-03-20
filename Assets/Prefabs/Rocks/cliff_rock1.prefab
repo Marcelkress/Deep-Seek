@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3604164654338342908}
   - component: {fileID: 7682531419103432562}
   - component: {fileID: -1662683032225311778}
+  - component: {fileID: 4265866805639400039}
   m_Layer: 0
   m_Name: cliff_rock1
   m_TagString: Untagged
@@ -113,3 +114,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 547693198084442635, guid: 3b6ab12a6bace416aab1069bafb16030, type: 3}
+--- !u!205 &4265866805639400039
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8163287810613651676}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.000058631063, y: -0.00019920943, z: 0.0023403235}
+  m_Size: 0.0066162967
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7682531419103432562}
+  m_Enabled: 1
