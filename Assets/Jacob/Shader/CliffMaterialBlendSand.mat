@@ -66,7 +66,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlendDistance: 3
+    - _BlendDistance: 2
     - _Blend_End_Y: 0.41
     - _Blend_Start_Y: 0
     - _Metalic: 1
@@ -74,7 +74,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
-    - _TerrainHeight: 508
+    - _TerrainHeight: 516
     - _Terrain_Tiling: 1
     m_Colors:
     - _Terrain_SIze_Offset: {r: 400, g: 300, b: 0, a: 0}
