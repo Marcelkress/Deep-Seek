@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 103708811}
   - component: {fileID: 103708810}
   - component: {fileID: 103708812}
+  - component: {fileID: 103708813}
   m_Layer: 0
   m_Name: PlayerSpotLight
   m_TagString: Untagged
@@ -716,13 +717,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103708808}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00779797, y: -0.6042985, z: 0.05265557, w: 0.794978}
-  m_LocalPosition: {x: 106.79836, y: 104.225, z: 177.14238}
+  m_LocalRotation: {x: -0.032645088, y: 0.15640604, z: 0.042044263, w: 0.9862575}
+  m_LocalPosition: {x: 46.89, y: 103.39, z: 142.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 4.361, y: -74.317, z: 4.273}
+  m_LocalEulerAnglesHint: {x: -4.447, y: 17.86, z: 4.183}
 --- !u!114 &103708810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,10 +764,10 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 0.8334038, b: 0.4470588, a: 1}
-  m_Intensity: 20
+  m_Intensity: 15
   m_Range: 40
-  m_SpotAngle: 86.92874
-  m_InnerSpotAngle: 47.366745
+  m_SpotAngle: 54.658375
+  m_InnerSpotAngle: 0
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 0
@@ -794,7 +795,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 2800000, guid: 93b3e1a30e31f4168b25416ee8ae2be3, type: 3}
+  m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -830,6 +831,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightSlowFollow
   followSpeed: 3
+--- !u!114 &103708813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103708808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8bca95f7c947b4db5fb152a0d693d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.cqf.urpvolumetricfog.runtime::VolumetricAdditionalLight
+  anisotropy: 0.654
+  scattering: 0.75
+  radius: 1
 --- !u!1 &106992973
 GameObject:
   m_ObjectHideFlags: 0
@@ -35950,7 +35966,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8616685848238274600}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.5748824, z: -0, w: 0.81823605}
+  m_LocalRotation: {x: -0, y: 0.1935484, z: -0, w: 0.9810907}
   m_LocalPosition: {x: 47.3, y: 102.236, z: 142.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35960,7 +35976,7 @@ Transform:
   - {fileID: 1953850919}
   - {fileID: 2029845921}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -70.183, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 22.32, z: 0}
 --- !u!20 &9005220658617083769
 Camera:
   m_ObjectHideFlags: 0
