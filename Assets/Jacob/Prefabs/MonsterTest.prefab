@@ -591,10 +591,10 @@ MonoBehaviour:
   avoidanceMask:
     serializedVersion: 2
     m_Bits: 65
-  probeRadius: 2.79
-  forwardProbeDistance: 10
+  probeRadius: 3
+  forwardProbeDistance: 18
   sideProbeDistance: 5
-  sideProbeAngle: 30
+  sideProbeAngle: 20
   floorClearance: 2.15
   avoidanceForce: 10
 --- !u!1 &3173192073225034590

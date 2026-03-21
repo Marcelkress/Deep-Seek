@@ -1,4 +1,5 @@
 using DG.Tweening;
+using StarterAssets;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,6 +18,7 @@ public class DecentSystem : MonoBehaviour
     [SerializeField] private Image fadeImage;
     [SerializeField] private CameraShake cameraShake;
     [SerializeField] private GameObject monsterDirector;
+    [SerializeField] private CharacterController controller;
 
     [Header("Sequence Settings")]
     [SerializeField] private Vector3 doorOpenOffset = new Vector3(-1f, 0f, 0f);
@@ -24,7 +26,7 @@ public class DecentSystem : MonoBehaviour
     [SerializeField] private float waitBeforeFade = 3f;
     [SerializeField] private float fadeTime = 1f;
     [SerializeField] private float buildupTime = 10f; 
-    [SerializeField] private float moveDownTime = 5f; 
+    [SerializeField] private float moveDownSpeed = 5f; 
     [SerializeField] private float impactPause = 1f;
     [SerializeField] private float ascendSpeed = 4f;
     [SerializeField] private float ascendDistance = 80f;
@@ -46,9 +48,20 @@ public class DecentSystem : MonoBehaviour
 
     private void Awake()
     {
-        monsterDirector.SetActive(false);
-        playerLight.gameObject.SetActive(false);
-        playerVfx.gameObject.SetActive(false);
+        controller.enabled = false; // disable player controller at start
+        if (monsterDirector != null)
+        {
+             monsterDirector.SetActive(false);
+        }
+       
+         if (playerLight != null)
+            {
+                playerLight.gameObject.SetActive(false);     
+            }
+            if (playerVfx != null)
+            {
+                playerVfx.gameObject.SetActive(false);
+            }
         elevatorRoot = elevatorRoot ? elevatorRoot : transform;
         startPos = elevatorRoot.position + new Vector3(0, ascendDistance, 0);
         
@@ -72,7 +85,7 @@ public class DecentSystem : MonoBehaviour
         DOTween.To(() => 0f, x => cameraShake?.StartShake(x), maxShake, buildupTime).SetEase(Ease.InQuad);
         yield return new WaitForSeconds(buildupTime);
 
-        if (groundTarget) yield return elevatorRoot.DOMove(groundTarget.position, moveDownTime).SetEase(Ease.InQuad).WaitForCompletion();
+        if (groundTarget) yield return elevatorRoot.DOMove(groundTarget.position, Vector3.Distance(elevatorRoot.position, groundTarget.position) / moveDownSpeed).SetEase(Ease.InQuad).WaitForCompletion();
 
         cameraShake?.StartShake(impactShake);
         onImpact?.Invoke();
@@ -80,7 +93,14 @@ public class DecentSystem : MonoBehaviour
         DOTween.To(() => impactShake, x => cameraShake?.StartShake(x), 0f, impactPause);
         yield return new WaitForSeconds(impactPause);
         visualEffect.gameObject.SetActive(false); // stop vfx
-        playerVfx.gameObject.SetActive(true); // start player vfx
+        if (playerVfx != null)
+        {
+            playerVfx.gameObject.SetActive(true); // start player vfx
+
+        }
+
+        controller.enabled = true; 
+
 
         onDoorOpen?.Invoke();
 
@@ -111,8 +131,17 @@ public class DecentSystem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.SetParent(null);
-            playerLight.gameObject.SetActive(true);
-            monsterDirector.SetActive(true);
+
+            if (playerLight != null)
+            {
+                playerLight.gameObject.SetActive(true);     
+            }
+                
+                
+            if (monsterDirector != null)
+            {
+                monsterDirector.SetActive(true);
+            }
             playerInTrigger = false;
         }
     }

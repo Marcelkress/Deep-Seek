@@ -764,8 +764,8 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.4470588, g: 0.5231291, b: 1, a: 1}
-  m_Intensity: 25
-  m_Range: 35
+  m_Intensity: 10
+  m_Range: 18
   m_SpotAngle: 86.92874
   m_InnerSpotAngle: 47.366745
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -16725,7 +16725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1070725755
 Transform:
   m_ObjectHideFlags: 0
@@ -21755,6 +21755,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 564835703611831839, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: m_Intensity
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 648377141350093600, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 648377141350093600, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.53
+      objectReference: {fileID: 0}
     - target: {fileID: 5039082345663244048, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: far clip plane
       value: 5000
@@ -21765,7 +21777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5243610821387027760, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 128.77232
+      value: 141.77232
       objectReference: {fileID: 0}
     - target: {fileID: 5243610821387027760, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21799,6 +21811,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6101794410619105424, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: m_Size.x
+      value: 4.10774
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101794410619105424, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: m_Size.z
+      value: 2.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101794410619105424, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: m_Center.x
+      value: 0.44612986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101794410619105424, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: m_Center.z
+      value: -1.0000017
+      objectReference: {fileID: 0}
     - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: fadeImage
       value: 
@@ -21808,9 +21836,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2131323064}
     - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 8616685848238274594}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 9018249870695291753}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: maxVfxSpeed
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: playerLight
       value: 
@@ -21820,9 +21856,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1491706277}
     - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: doorTweenTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: moveDownSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: playerGravity
+      value: -2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: monsterDirector
       value: 
       objectReference: {fileID: 1296336918}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 8616685848238274607}
     - target: {fileID: 7766698513356787789, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000007629395
@@ -24660,7 +24712,7 @@ Transform:
   m_GameObject: {fileID: 1491706276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 142.00978, y: 108.77232, z: 184.79112}
+  m_LocalPosition: {x: 142.00978, y: 108.38, z: 184.79112}
   m_LocalScale: {x: 2.930009, y: 0.6560428, z: 2.9401}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31332,7 +31384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34241,13 +34293,13 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 20
+      - m_Value: 10
         m_Name: Bound X
         m_Overridden: 1
-      - m_Value: 20
+      - m_Value: 4
         m_Name: Bound Y
         m_Overridden: 1
-      - m_Value: 20
+      - m_Value: 10
         m_Name: Bound Z
         m_Overridden: 1
     m_Vector2f:
@@ -36245,11 +36297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1385085083420286467, guid: b97c9cf56b11d474f88f94c67c827a87, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1385085083420286467, guid: b97c9cf56b11d474f88f94c67c827a87, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1871269653471837076, guid: b97c9cf56b11d474f88f94c67c827a87, type: 3}
       propertyPath: m_UiScaleMode
@@ -38627,7 +38679,7 @@ MonoBehaviour:
   SurgeSustainSpeedMultiplier: 1.35
   SurgeIgnitionImpulse: 1.4
   JumpHeight: 1
-  Gravity: -2.75
+  Gravity: -4.22
   JumpTimeout: 0.1
   FallTimeout: 0.15
   Grounded: 1
