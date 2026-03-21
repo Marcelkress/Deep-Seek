@@ -209,15 +209,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226822701074423725}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.99978065, y: 0.0000010471697, z: -0.000049989056, w: -0.020943258}
-  m_LocalPosition: {x: 0.000048919883, y: 0.025833761, z: -0.00075513945}
+  m_LocalRotation: {x: -0.99978364, y: 0, z: 0, w: 0.020802924}
+  m_LocalPosition: {x: 0, y: 0.025833761, z: -0.00075513945}
   m_LocalScale: {x: 1, y: 1, z: 1.0000007}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8969846328480371353}
   - {fileID: 8259194272994771048}
   m_Father: {fileID: 7227927261690482142}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -177.616, y: 0, z: 0}
 --- !u!1 &1437075039365058743
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 4815701179232547197}
   - component: {fileID: 2909726162669735876}
   - component: {fileID: 3157799478842872827}
+  - component: {fileID: -844235082658824894}
   m_Layer: 0
   m_Name: UnderwaterMonsterFinalTest
   m_TagString: Untagged
@@ -636,6 +637,47 @@ MonoBehaviour:
   - {fileID: 5199460636402988323}
   - {fileID: 2868912011665392980}
   - {fileID: 8301892281294869596}
+--- !u!114 &-844235082658824894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989843728113466817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4927e1ee2eb80775fabe507eb870f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterMovement
+  maxSpeed: 15
+  acceleration: 6
+  maxTurnDegreesPerSecond: 120
+  minTargetForwardDistance: 7
+  maxTargetForwardDistance: 10
+  minTargetSideDistance: 7
+  maxTargetSideDistance: 12
+  targetHeightMin: 4
+  targetHeightMax: 7
+  swimPastDuration: 10
+  swimPastAggressionWeight: 0.2
+  overheadDuration: 10
+  passOverheadAggressionWeight: 0.2
+  chargeDuration: 10
+  fakeOutDuration: 2
+  fakeChargeAggressionWeight: 0.5
+  arrivalRadius: 1
+  retreatDistance: 40
+  despawnDistance: 55
+  retreatAggressionWeight: 0.1
+  avoidanceMask:
+    serializedVersion: 2
+    m_Bits: 65
+  probeRadius: 2
+  forwardProbeDistance: 4
+  sideProbeDistance: 4
+  sideProbeAngle: 30
+  floorClearance: 3
+  avoidanceForce: 5
 --- !u!1 &3005123256802045239
 GameObject:
   m_ObjectHideFlags: 0
