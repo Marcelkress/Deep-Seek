@@ -120,51 +120,51 @@ public class MonsterMovement : MonoBehaviour
     }
 
     private void EvaluateNextPhaseOrEnd()
-{
-    EncounterEvent[] events = new EncounterEvent[]
     {
-        EncounterEvent.SwimPastPOV,
-        EncounterEvent.PassOverhead,
-        EncounterEvent.FakeCharge,
-        EncounterEvent.RetreatAndDespawn
-    };
-
-    float[] aggressionScores = new float[]
-    {
-        swimPastAggressionWeight,
-        passOverheadAggressionWeight,
-        fakeChargeAggressionWeight,
-        retreatAggressionWeight
-    };
-
-    float totalAggressionWeight = 0f;
-
-    for (int i = 0; i < aggressionScores.Length; i++)
-    {
-
-        float distanceFromCurrentAggressionWeight = Mathf.Abs(aggressionScores[i] - monsterDirector.currentAgressionWeight);
-
-        // Bell curve: events closer to current aggression score higher
-        // aggressionSpreadSharpness controls how steeply score falls off with distance
-        aggressionScores[i] = Mathf.Exp(-monsterDirector.aggressionSpreadSharpness * distanceFromCurrentAggressionWeight * distanceFromCurrentAggressionWeight);
-        totalAggressionWeight += aggressionScores[i];
-    }
-
-    float randomEventRoll = Random.Range(0f, totalAggressionWeight);
-    float aggressionWeightSum = 0f;
-
-    for (int i = 0; i < aggressionScores.Length; i++)
-    {
-        aggressionWeightSum += aggressionScores[i];
-        if (randomEventRoll <= aggressionWeightSum)
+        EncounterEvent[] events = new EncounterEvent[]
         {
-            BeginEvent(events[i], player);
-            return;
-        }
-    }
+            EncounterEvent.SwimPastPOV,
+            EncounterEvent.PassOverhead,
+            EncounterEvent.FakeCharge,
+            EncounterEvent.RetreatAndDespawn
+        };
 
-    BeginEvent(EncounterEvent.RetreatAndDespawn, player);
-}
+        float[] aggressionScores = new float[]
+        {
+            swimPastAggressionWeight,
+            passOverheadAggressionWeight,
+            fakeChargeAggressionWeight,
+            retreatAggressionWeight
+        };
+
+        float totalAggressionWeight = 0f;
+
+        for (int i = 0; i < aggressionScores.Length; i++)
+        {
+
+            float distanceFromCurrentAggressionWeight = Mathf.Abs(aggressionScores[i] - monsterDirector.currentAgressionWeight);
+
+            // Bell curve: events closer to current aggression score higher
+            // aggressionSpreadSharpness controls how steeply score falls off with distance
+            aggressionScores[i] = Mathf.Exp(-monsterDirector.aggressionSpreadSharpness * distanceFromCurrentAggressionWeight * distanceFromCurrentAggressionWeight);
+            totalAggressionWeight += aggressionScores[i];
+        }
+
+        float randomEventRoll = Random.Range(0f, totalAggressionWeight);
+        float aggressionWeightSum = 0f;
+
+        for (int i = 0; i < aggressionScores.Length; i++)
+        {
+            aggressionWeightSum += aggressionScores[i];
+            if (randomEventRoll <= aggressionWeightSum)
+            {
+                BeginEvent(events[i], player);
+                return;
+            }
+        }
+
+        BeginEvent(EncounterEvent.RetreatAndDespawn, player);
+    }
     private void DynamicMovement()
     {
         Vector3 toTarget = desiredPosition - transform.position;
@@ -348,6 +348,8 @@ public class MonsterMovement : MonoBehaviour
         phaseSafetyDuration = 0f;
     }
 
+    float forwardWeight = 1f;
+    float sideWeight = 0.7f;
     private Vector3 GetTotalObstacleAvoidance()
     {
         Vector3 forward = currentVelocity.sqrMagnitude > 0.01f ? currentVelocity.normalized : transform.forward;
@@ -355,9 +357,9 @@ public class MonsterMovement : MonoBehaviour
         Vector3 right = Quaternion.AngleAxis(sideProbeAngle, Vector3.up) * forward;
 
         Vector3 total = Vector3.zero;
-        total += ObstacleAvoidance(forward, forwardProbeDistance, 1f); // weights 
-        total += ObstacleAvoidance(left, sideProbeDistance, 0.7f); // weights 
-        total += ObstacleAvoidance(right, sideProbeDistance, 0.7f); // weights 
+        total += ObstacleAvoidance(forward, forwardProbeDistance, forwardWeight); 
+        total += ObstacleAvoidance(left, sideProbeDistance, sideWeight); 
+        total += ObstacleAvoidance(right, sideProbeDistance, sideWeight); 
         total += GetFloorAvoidance();
         return total;
     }
