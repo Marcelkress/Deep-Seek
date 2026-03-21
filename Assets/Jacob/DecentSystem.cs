@@ -10,11 +10,13 @@ public class DecentSystem : MonoBehaviour
     [Header("References")]
     [SerializeField] private VisualEffect visualEffect;
     [SerializeField] private VisualEffect playerVfx;
+    [SerializeField] private GameObject playerLight;
     [SerializeField] private Transform elevatorRoot;
     [SerializeField] private Transform groundTarget;
     [SerializeField] private Transform door;
     [SerializeField] private Image fadeImage;
     [SerializeField] private CameraShake cameraShake;
+    [SerializeField] private GameObject monsterDirector;
 
     [Header("Sequence Settings")]
     [SerializeField] private Vector3 doorOpenOffset = new Vector3(-1f, 0f, 0f);
@@ -25,6 +27,7 @@ public class DecentSystem : MonoBehaviour
     [SerializeField] private float moveDownTime = 5f; 
     [SerializeField] private float impactPause = 1f;
     [SerializeField] private float ascendSpeed = 4f;
+    [SerializeField] private float ascendDistance = 80f;
 
     [SerializeField] private float maxVfxSpeed = 25f;
     [SerializeField] private float maxShake = 1.2f;
@@ -43,9 +46,11 @@ public class DecentSystem : MonoBehaviour
 
     private void Awake()
     {
+        monsterDirector.SetActive(false);
+        playerLight.gameObject.SetActive(false);
         playerVfx.gameObject.SetActive(false);
         elevatorRoot = elevatorRoot ? elevatorRoot : transform;
-        startPos = elevatorRoot.position + new Vector3(0, 80, 0);
+        startPos = elevatorRoot.position + new Vector3(0, ascendDistance, 0);
         
         if (door) doorClosedPos = door.localPosition;
         if (fadeImage) fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
@@ -106,6 +111,8 @@ public class DecentSystem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.SetParent(null);
+            playerLight.gameObject.SetActive(true);
+            monsterDirector.SetActive(true);
             playerInTrigger = false;
         }
     }

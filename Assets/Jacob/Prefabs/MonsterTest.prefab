@@ -576,12 +576,12 @@ MonoBehaviour:
   maxTargetSideDistance: 12
   targetHeightMin: 4
   targetHeightMax: 7
-  swimPastDuration: 10
+  swimPastDuration: 7
   swimPastAggressionWeight: 0.2
-  overheadDuration: 10
+  overheadDuration: 7
   additionalOverheadHeightScaling: 1.5
   passOverheadAggressionWeight: 0.2
-  chargeDuration: 10
+  chargeDuration: 7
   fakeOutDuration: 2
   fakeChargeAggressionWeight: 0.5
   arrivalRadius: 3
