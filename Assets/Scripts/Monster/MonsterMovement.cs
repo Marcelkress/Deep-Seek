@@ -129,7 +129,7 @@ public class MonsterMovement : MonoBehaviour
             EncounterEvent.RetreatAndDespawn
         };
 
-        float[] aggressionScores = new float[]
+        float[] aggressionAnchors = new float[]
         {
             swimPastAggressionWeight,
             passOverheadAggressionWeight,
@@ -137,30 +137,11 @@ public class MonsterMovement : MonoBehaviour
             retreatAggressionWeight
         };
 
-        float totalAggressionWeight = 0f;
-
-        for (int i = 0; i < aggressionScores.Length; i++)
+        int selectedIndex = monsterDirector.SelectAggressionWeightedIndex(aggressionAnchors);
+        if (selectedIndex >= 0 && selectedIndex < events.Length)
         {
-
-            float distanceFromCurrentAggressionWeight = Mathf.Abs(aggressionScores[i] - monsterDirector.currentAgressionWeight);
-
-            // Bell curve: events closer to current aggression score higher
-            // aggressionSpreadSharpness controls how steeply score falls off with distance
-            aggressionScores[i] = Mathf.Exp(-monsterDirector.aggressionSpreadSharpness * distanceFromCurrentAggressionWeight * distanceFromCurrentAggressionWeight);
-            totalAggressionWeight += aggressionScores[i];
-        }
-
-        float randomEventRoll = Random.Range(0f, totalAggressionWeight);
-        float aggressionWeightSum = 0f;
-
-        for (int i = 0; i < aggressionScores.Length; i++)
-        {
-            aggressionWeightSum += aggressionScores[i];
-            if (randomEventRoll <= aggressionWeightSum)
-            {
-                BeginEvent(events[i], player);
-                return;
-            }
+            BeginEvent(events[selectedIndex], player);
+            return;
         }
 
         BeginEvent(EncounterEvent.RetreatAndDespawn, player);

@@ -570,7 +570,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterMovement
   maxSpeed: 15
   acceleration: 6
-  maxTurnDegreesPerSecond: 120
   minTargetForwardDistance: 7
   maxTargetForwardDistance: 10
   minTargetSideDistance: 7
@@ -585,7 +584,7 @@ MonoBehaviour:
   chargeDuration: 10
   fakeOutDuration: 2
   fakeChargeAggressionWeight: 0.5
-  arrivalRadius: 2
+  arrivalRadius: 3
   retreatDistance: 40
   despawnDistance: 55
   retreatAggressionWeight: 0.1

@@ -98,42 +98,68 @@ public class MonsterGameDirector : MonoBehaviour
     }
 
     private void EvaluateMonsterSpawningWeights()
-{
-    if (player == null || monsterActive) return;
-
-    MonsterMovement.EncounterEvent[] events = new MonsterMovement.EncounterEvent[]
     {
-        MonsterMovement.EncounterEvent.SwimPastPOV,
-        MonsterMovement.EncounterEvent.PassOverhead,
-        MonsterMovement.EncounterEvent.FakeCharge,
-        MonsterMovement.EncounterEvent.DoNothing
-    };
+        if (player == null || monsterActive) return;
 
-    float[] weights = { spawnSwimPastWeight, spawnPassOverheadWeight, spawnFakeChargeWeight, doNothingWeight };
-    float totalWeight = 0f;
-
-    for (int i = 0; i < weights.Length; i++)
-    {
-        float distanceFromCurrentAggressionWeight = Mathf.Abs(weights[i] - currentAgressionWeight);
-
-        // Bell curve: events closer to current aggression score higher
-        // aggressionSpreadSharpness controls how steeply score falls off with distance
-        weights[i] = Mathf.Exp(-aggressionSpreadSharpness * distanceFromCurrentAggressionWeight * distanceFromCurrentAggressionWeight);
-        totalWeight += weights[i];
-    }
-
-    float randomSpawnChanceRoll = Random.Range(0f, totalWeight);
-    for (int i = 0; i < weights.Length; i++)
-    {
-        if ((randomSpawnChanceRoll -= weights[i]) <= 0f)
+        MonsterMovement.EncounterEvent[] events = new MonsterMovement.EncounterEvent[]
         {
-            StartEvent(events[i]);
+            MonsterMovement.EncounterEvent.SwimPastPOV,
+            MonsterMovement.EncounterEvent.PassOverhead,
+            MonsterMovement.EncounterEvent.FakeCharge,
+            MonsterMovement.EncounterEvent.DoNothing
+        };
+
+        float[] aggressionAnchors = { spawnSwimPastWeight, spawnPassOverheadWeight, spawnFakeChargeWeight, doNothingWeight };
+        int selectedIndex = SelectAggressionWeightedIndex(aggressionAnchors);
+        if (selectedIndex >= 0 && selectedIndex < events.Length)
+        {
+            StartEvent(events[selectedIndex]);
             return;
         }
+
+        StartEvent(MonsterMovement.EncounterEvent.FakeCharge);
     }
 
-    StartEvent(MonsterMovement.EncounterEvent.FakeCharge);
-}
+    public int SelectAggressionWeightedIndex(float[] aggressionAnchors)
+    {
+        if (aggressionAnchors == null || aggressionAnchors.Length == 0)
+        {
+            return -1;
+        }
+
+        float[] weightedScores = new float[aggressionAnchors.Length];
+        float totalWeight = 0f;
+
+        for (int i = 0; i < aggressionAnchors.Length; i++)
+        {
+            float distanceFromCurrentAggressionWeight = Mathf.Abs(aggressionAnchors[i] - currentAgressionWeight);
+
+            // Bell curve: events closer to current aggression score higher
+            // aggressionSpreadSharpness controls how steeply score falls off with distance
+            float weightedScore = Mathf.Exp(-aggressionSpreadSharpness * distanceFromCurrentAggressionWeight * distanceFromCurrentAggressionWeight);
+            weightedScores[i] = weightedScore;
+            totalWeight += weightedScore;
+        }
+
+        if (totalWeight <= 0f)
+        {
+            return -1;
+        }
+
+        float randomRoll = Random.Range(0f, totalWeight);
+        float runningTotal = 0f;
+
+        for (int i = 0; i < weightedScores.Length; i++)
+        {
+            runningTotal += weightedScores[i];
+            if (randomRoll <= runningTotal)
+            {
+                return i;
+            }
+        }
+
+        return weightedScores.Length - 1;
+    }
 
     public void ForceSwimPastPOV() => StartEvent(MonsterMovement.EncounterEvent.SwimPastPOV);
 
