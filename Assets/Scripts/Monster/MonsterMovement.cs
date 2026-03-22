@@ -23,6 +23,7 @@ public class MonsterMovement : MonoBehaviour
     [Header("Core")]
     [SerializeField] private float maxSpeed = 12f;
     [SerializeField] private float acceleration = 6f;
+    [SerializeField] private float maxTurnDegreesPerSecond = 90f;
 
     [Header("Shared Target Offsets")]
     [SerializeField] private float minTargetForwardDistance = 20f;
@@ -67,6 +68,8 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField] private float sideProbeAngle = 30f;
     [SerializeField] private float floorClearance = 8f;
     [SerializeField] private float avoidanceForce = 15f;
+    private Vector3 smoothedAvoidance;
+    [SerializeField] private float avoidanceSmoothTime = 0.25f;
 
     private MonsterGameDirector monsterDirector;
     private Transform player;
@@ -150,14 +153,15 @@ public class MonsterMovement : MonoBehaviour
     {
         Vector3 toTarget = desiredPosition - transform.position;
         Vector3 desiredDirection = toTarget.sqrMagnitude < 0.0001f ? currentForward : toTarget.normalized;
-        Vector3 avoidance = GetTotalObstacleAvoidance();
+        Vector3 rawAvoidance = GetTotalObstacleAvoidance();
         
-        desiredDirection = (desiredDirection + avoidance).normalized;
-
+        smoothedAvoidance = Vector3.Lerp(smoothedAvoidance, rawAvoidance, Time.deltaTime / Mathf.Max(0.001f, avoidanceSmoothTime));
+        
+        desiredDirection = (desiredDirection + smoothedAvoidance).normalized;
+        
         Vector3 desiredVelocity = desiredDirection * maxSpeed;
-
         currentVelocity = Vector3.MoveTowards(currentVelocity, desiredVelocity, acceleration * Time.deltaTime);
-        currentVelocity = Vector3.ClampMagnitude(currentVelocity + avoidance * Time.deltaTime, maxSpeed);
+        currentVelocity = Vector3.ClampMagnitude(currentVelocity + smoothedAvoidance * Time.deltaTime, maxSpeed);
         
         
         //  ------noget der gør den ikke svømmer gennem verden--------- //
@@ -175,9 +179,14 @@ public class MonsterMovement : MonoBehaviour
 
         if (currentVelocity.sqrMagnitude > 0.01f)
         {
-            currentForward = currentVelocity.normalized;
-            transform.rotation = Quaternion.LookRotation(currentForward);
-        }
+        currentForward = currentVelocity.normalized;
+        Quaternion targetRotation = Quaternion.LookRotation(currentForward);
+        transform.rotation = Quaternion.RotateTowards(
+        transform.rotation,
+        targetRotation,
+        maxTurnDegreesPerSecond * Time.deltaTime
+        );
+}
     }
 
     // Called by MonsterGameDirector to start an encounter event
