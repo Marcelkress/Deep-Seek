@@ -1661,6 +1661,7 @@ MonoBehaviour:
   maxSpeed: 15
   acceleration: 6
   maxTurnDegreesPerSecond: 120
+  monsterOxygenDamage: 100
   minTargetForwardDistance: 5
   maxTargetForwardDistance: 8
   minTargetSideDistance: 7
@@ -1672,9 +1673,11 @@ MonoBehaviour:
   overheadDuration: 7
   additionalOverheadHeightScaling: 1.5
   passOverheadAggressionWeight: 0.2
-  chargeDuration: 7
+  fakeChargeDuration: 1.4
   fakeOutDuration: 2
   fakeChargeAggressionWeight: 0.5
+  chargeDuration: 7
+  chargeAggressionWeight: 0.9
   arrivalRadius: 3
   retreatDistance: 40
   despawnDistance: 55
@@ -1686,7 +1689,7 @@ MonoBehaviour:
   forwardProbeDistance: 10
   sideProbeDistance: 5
   sideProbeAngle: 20
-  floorClearance: 2.15
+  floorClearance: 0.3
   avoidanceForce: 10
   avoidanceSmoothTime: 0.25
 --- !u!1 &8981235297127720041

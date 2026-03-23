@@ -20902,10 +20902,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterGameDirector
   playerNoise: {fileID: 165191055}
   player: {fileID: 8997996946661630610}
-  monsterPrefab: {fileID: 2296445223126631390, guid: b76b877f17a546b62a45fb011258d9c8, type: 3}
+  monsterPrefab: {fileID: 9001576352641587858, guid: 04c6593f2d9fe417d9c4c993c77a7b9f, type: 3}
   monsterContainer: {fileID: 1296336920}
-  minTriggerInterval: 10
-  maxTriggerInterval: 20
+  minTriggerInterval: 1
+  maxTriggerInterval: 2
   monsterSpawnHeightOffset: 5
   spawnDistance: 45
   eventSpawnHeight: 15

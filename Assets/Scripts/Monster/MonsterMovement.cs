@@ -26,6 +26,7 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField] private float acceleration = 6f;
     [SerializeField] private float maxTurnDegreesPerSecond = 90f;
     [SerializeField] private int monsterOxygenDamage = 100;
+    [SerializeField] private float playerOffset = 2f;
 
     [Header("Shared Target Offsets")]
     [SerializeField] private float minTargetForwardDistance = 20f;
@@ -293,7 +294,8 @@ public class MonsterMovement : MonoBehaviour
 
         if(EncounterEvent.Charge == currentEvent)
         {
-            desiredPosition = player.position;
+            Vector3 playerPos = new Vector3(player.position.x, player.position.y + playerOffset, player.position.z);
+            desiredPosition = playerPos;
             return;
         }
 
