@@ -25,6 +25,7 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField] private float maxSpeed = 12f;
     [SerializeField] private float acceleration = 6f;
     [SerializeField] private float maxTurnDegreesPerSecond = 90f;
+    [SerializeField] private int monsterOxygenDamage = 100;
 
     [Header("Shared Target Offsets")]
     [SerializeField] private float minTargetForwardDistance = 20f;
@@ -428,6 +429,7 @@ public class MonsterMovement : MonoBehaviour
     private void HitPlayer()
     {
         Debug.Log("Player Hit by Monster!");
+        monsterDirector.player.GetComponent<PlayerOxygen>().RemoveOxygen(monsterOxygenDamage); // Notify the director that the player has been hit
          // Here you would implement what happens when the monster successfully hits the player, e.g. reduce health, trigger effects, etc.
     }
     

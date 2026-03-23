@@ -7,7 +7,7 @@ public class MonsterGameDirector : MonoBehaviour
 {
     [Header("Refs")]
     [SerializeField] private PlayerNoise playerNoise;
-    [SerializeField] private Transform player;
+    [SerializeField] public Transform player;
     [SerializeField] private MonsterMovement monsterPrefab;
     [SerializeField] private Transform monsterContainer;
 
