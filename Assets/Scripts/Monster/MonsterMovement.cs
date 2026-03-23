@@ -434,7 +434,9 @@ public class MonsterMovement : MonoBehaviour
        PlayerOxygen playerOxygen = monsterDirector.player.GetComponent<PlayerOxygen>(); 
        playerOxygen.RemoveOxygen(monsterOxygenDamage);
        // Notify the director that the player has been hit
-         // Here you would implement what happens when the monster successfully hits the player, e.g. reduce health, trigger effects, etc.
+        // Here you would implement what happens when the monster successfully hits the player, e.g. reduce health, trigger effects, etc.
+
+         monsterDirector.currentAgressionWeight /=  2; // så den ikke bliver lige så sur næste gang, da den lige har brugt en masse aggression på at angribe
     }
     
     private void OnDrawGizmosSelected()
