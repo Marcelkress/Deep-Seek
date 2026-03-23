@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class DrillStation : MonoBehaviour
 {
+    [Header("Colors")]
     public Color[] colors;
     // 0 = blue
     // 1 = red
     // 2 = yellow
     // 3 = purple
     
+    [Header("Sequence")]
     public int seqLength = 3;
     public List<int> sequence;
     private int seqIndex;
     public MeshRenderer[] indicationLights;
+    public bool active;
+
+    [Header("Screen")] 
+    public MeshRenderer screenRenderer;
+    
+    
+    [Header("Levers and lights")]
     public MeshRenderer[] leverLights;
     public float leverLightIntensity = 0.15f;
     public Light evaluationLight;
     public float targetIntensity;
     public float fadeDownTime;
+    
+    [Header("Materials")]    
     public Material lightMat;
     public float emissionLevel;
 
     private bool completed;
-    public bool active;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()

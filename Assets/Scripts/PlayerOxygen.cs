@@ -169,4 +169,11 @@ public class PlayerOxygen : MonoBehaviour
             currentOxygen = maxOxygen;
         }
     }
+
+    public void RemoveOxygen(int amount)
+    {
+        currentOxygen -= amount;
+        
+        GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+    }
 }

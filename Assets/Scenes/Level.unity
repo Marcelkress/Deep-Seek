@@ -14984,6 +14984,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
       insertIndex: -1
       addedObject: {fileID: 935998243}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 935998244}
     - targetCorrespondingSourceObject: {fileID: 47668324213327266, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
       insertIndex: -1
       addedObject: {fileID: 221378759}
@@ -15032,6 +15035,8 @@ MonoBehaviour:
   - {fileID: 981189315}
   - {fileID: 1555517849}
   - {fileID: 824171124}
+  active: 0
+  screenRenderer: {fileID: 0}
   leverLights:
   - {fileID: 1844686950}
   - {fileID: 1156034689}
@@ -15043,7 +15048,59 @@ MonoBehaviour:
   fadeDownTime: 1.5
   lightMat: {fileID: 2100000, guid: 63ef474f9768b4a0da29ebd362abee38, type: 2}
   emissionLevel: 8
-  active: 0
+--- !u!114 &935998244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935998237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineImpulseSource
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 3
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -1, z: 0}
 --- !u!4 &938239394
 Transform:
   m_ObjectHideFlags: 0
