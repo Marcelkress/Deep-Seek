@@ -428,10 +428,12 @@ public class MonsterMovement : MonoBehaviour
         return target;
     }
 
-    private void HitPlayer()
+     private void HitPlayer()
     {
         Debug.Log("Player Hit by Monster!");
-        monsterDirector.player.GetComponent<PlayerOxygen>().RemoveOxygen(monsterOxygenDamage); // Notify the director that the player has been hit
+       PlayerOxygen playerOxygen = monsterDirector.player.GetComponent<PlayerOxygen>(); 
+       playerOxygen.RemoveOxygen(monsterOxygenDamage);
+       // Notify the director that the player has been hit
          // Here you would implement what happens when the monster successfully hits the player, e.g. reduce health, trigger effects, etc.
     }
     
