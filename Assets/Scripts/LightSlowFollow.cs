@@ -14,7 +14,9 @@ public class LightSlowFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = camera.transform.position;
+        Vector3 targetPos = camera.transform.position;
+        
+        transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
         
         Quaternion target = camera.transform.rotation;
         
