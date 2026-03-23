@@ -9,6 +9,7 @@ public class MonsterMovement : MonoBehaviour
         SwimPastPOV,
         PassOverhead,
         FakeCharge,
+        Charge,
         RetreatAndDespawn
 
     }
@@ -46,10 +47,15 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField] private float passOverheadAggressionWeight = 0.2f;
 
     [Header("FakeCharge")]
-    [SerializeField] private float chargeDuration = 1.4f;
+    [SerializeField] private float fakeChargeDuration = 1.4f;
     [SerializeField] private float fakeOutDuration = 2f;
     [Range(0f, 1f)]
     [SerializeField] private float fakeChargeAggressionWeight = 0.5f;
+
+    [Header("Charge")]
+    [SerializeField] private float chargeDuration = 2f;
+    [Range(0f, 1f)]
+    [SerializeField] private float chargeAggressionWeight = 0.9f;
 
     [Header("Phase Completion")]
     [SerializeField] private float arrivalRadius = 3f;
@@ -129,7 +135,8 @@ public class MonsterMovement : MonoBehaviour
             EncounterEvent.SwimPastPOV,
             EncounterEvent.PassOverhead,
             EncounterEvent.FakeCharge,
-            EncounterEvent.RetreatAndDespawn
+            EncounterEvent.RetreatAndDespawn,
+            EncounterEvent.Charge
         };
 
         float[] aggressionAnchors = new float[]
@@ -137,7 +144,8 @@ public class MonsterMovement : MonoBehaviour
             swimPastAggressionWeight,
             passOverheadAggressionWeight,
             fakeChargeAggressionWeight,
-            retreatAggressionWeight
+            retreatAggressionWeight,
+            chargeAggressionWeight
         };
 
         int selectedIndex = monsterDirector.SelectAggressionWeightedIndex(aggressionAnchors);
@@ -226,6 +234,9 @@ public class MonsterMovement : MonoBehaviour
                 phaseSafetyDuration = overheadDuration;
                 break;
             case EncounterEvent.FakeCharge:
+                phaseSafetyDuration = fakeChargeDuration;
+                break;
+            case EncounterEvent.Charge:
                 phaseSafetyDuration = chargeDuration;
                 break;
             default:
@@ -257,6 +268,7 @@ public class MonsterMovement : MonoBehaviour
             return;
         }
 
+        
         phaseTimer += Time.deltaTime;
 
         if (HasArrived(desiredPosition))
@@ -269,10 +281,21 @@ public class MonsterMovement : MonoBehaviour
                 phaseSafetyDuration = fakeOutDuration;
                 return;
             }
+            if (currentEvent == EncounterEvent.Charge)
+            {
+                HitPlayer();
+            }
 
             BeginFakePhase();
             return;
         }
+
+        if(EncounterEvent.Charge == currentEvent)
+        {
+            desiredPosition = player.position;
+            return;
+        }
+
 
         if (phaseTimer >= phaseSafetyDuration) // If the monster got stuck or took too long.
         {
@@ -309,6 +332,11 @@ public class MonsterMovement : MonoBehaviour
                 // because it is 2 stage event
                 eventTargetB = playerPos + (playerForwardDir * forwardDistance) + (right * (-randomSide * sideDistance)) + (Vector3.up * eventHeightOffset);
                 eventTargetB = EnsureTargetAboveTerrain(eventTargetB, targetHeightMin);
+                break;
+            }
+            case EncounterEvent.Charge:
+            {
+                eventTargetA = playerPos; // will be updated every frame in UpdateCurrentEvent to ensure it is always charging towards the player
                 break;
             }
             default:
@@ -395,6 +423,12 @@ public class MonsterMovement : MonoBehaviour
             target.y = Mathf.Max(target.y, hit.point.y + minHeight);
         }
         return target;
+    }
+
+    private void HitPlayer()
+    {
+        Debug.Log("Player Hit by Monster!");
+         // Here you would implement what happens when the monster successfully hits the player, e.g. reduce health, trigger effects, etc.
     }
     
     private void OnDrawGizmosSelected()
