@@ -764,9 +764,9 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.6933962, g: 0.9818424, b: 1, a: 1}
-  m_Intensity: 10
-  m_Range: 55.478683
-  m_SpotAngle: 47.351837
+  m_Intensity: 12
+  m_Range: 60
+  m_SpotAngle: 100
   m_InnerSpotAngle: 32.208282
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: com.cqf.urpvolumetricfog.runtime::VolumetricAdditionalLight
   anisotropy: 0.73
-  scattering: 0.52
+  scattering: 0.1
   radius: 1
 --- !u!1 &106992973
 GameObject:
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac497cf5405c942f29465166bb4411df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerOxygen
-  maxOxygen: 500
+  maxOxygen: 800
   oxygenLossPrSStand: 1
   oxygenLossPrSWalk: 4
   oxygenLossPrSSprint: 10
@@ -1502,7 +1502,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 4
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
@@ -15567,6 +15567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rockwall
       objectReference: {fileID: 0}
+    - target: {fileID: 1899209577063724440, guid: 1d4df87bf4fed67f9b4be5b2f86cdfb4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3915590466471329478, guid: 1d4df87bf4fed67f9b4be5b2f86cdfb4, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.4029007
@@ -20904,8 +20908,8 @@ MonoBehaviour:
   player: {fileID: 8997996946661630610}
   monsterPrefab: {fileID: 9001576352641587858, guid: 04c6593f2d9fe417d9c4c993c77a7b9f, type: 3}
   monsterContainer: {fileID: 1296336920}
-  minTriggerInterval: 1
-  maxTriggerInterval: 2
+  minTriggerInterval: 5
+  maxTriggerInterval: 20
   monsterSpawnHeightOffset: 5
   spawnDistance: 45
   eventSpawnHeight: 15
@@ -35636,7 +35640,7 @@ Transform:
   m_GameObject: {fileID: 919132148181277452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.691, z: 0.327}
+  m_LocalPosition: {x: 0, y: -0.691, z: 0.111}
   m_LocalScale: {x: 0.43, y: 0.43, z: 0.43}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -40708,7 +40712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 2
   SprintSpeed: 4
-  RotationSpeed: 0.8
+  RotationSpeed: 0.4
   ForwardAcceleration: 2.4
   ReverseAcceleration: 1
   LateralAcceleration: 1.5
@@ -41053,7 +41057,7 @@ Transform:
   m_GameObject: {fileID: 8616685848238274600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.84556615, z: -0, w: -0.5338707}
-  m_LocalPosition: {x: 47.55, y: 103.066, z: 145.13}
+  m_LocalPosition: {x: 116.9, y: 103.81, z: 183.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -41149,7 +41153,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 45
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -41312,7 +41316,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 4135013736984691060}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 45

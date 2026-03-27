@@ -23,6 +23,7 @@ public class OxygenUI : MonoBehaviour
         playerOxygen = GetComponentInParent<PlayerOxygen>();
         mainSlider.DOValue(playerOxygen.currentOxygen, slideSpeed);
         replenishCooldownSlider.DOValue(replenishCooldownSlider.maxValue, cooldownSlideSpeed);
+        mainSlider.maxValue = playerOxygen.maxOxygen;
 
         //playerOxygen.ReplenishStart.AddListener(StartReplenish);
         //playerOxygen.ReplenishEnd.AddListener(EndReplenish);
