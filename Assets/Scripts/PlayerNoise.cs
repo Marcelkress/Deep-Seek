@@ -68,6 +68,6 @@ public class PlayerNoise : MonoBehaviour
     private IEnumerator Wait(float time)
     {
         yield return new WaitForSeconds(time);
-        interacting = !interacting;
+        interacting = false;
     }
 }
