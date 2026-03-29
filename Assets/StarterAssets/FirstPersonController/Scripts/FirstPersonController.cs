@@ -143,6 +143,7 @@ namespace StarterAssets
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
+		public bool isMoving => _input.move.sqrMagnitude > 0.01f;
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -158,7 +159,7 @@ namespace StarterAssets
 		private float _surgeTimer;
 		private bool _surgeIgnitionImpulseApplied;
 		private SurgeState _surgeState;
-
+		private FootstepSystem footstepSystem;
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
@@ -202,6 +203,7 @@ namespace StarterAssets
 		{
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
+			footstepSystem = GetComponent<FootstepSystem>();
 #if ENABLE_INPUT_SYSTEM
 			_playerInput = GetComponent<PlayerInput>();
 #else
@@ -274,6 +276,7 @@ namespace StarterAssets
 			Vector3 desiredDirection = Vector3.zero;
 			if (inputMagnitude > _threshold)
 			{
+
 				desiredDirection = (transform.right * input.x + transform.forward * input.y).normalized;
 			}
 
@@ -411,6 +414,7 @@ namespace StarterAssets
 			float normalizedSpeed =
 				Mathf.InverseLerp(StepMinSpeed, SprintSpeed * SurgeSustainSpeedMultiplier, planarSpeed);
 			RaiseStepEvent(GetStepPulse(normalizedSpeed, 0f), planarSpeed, 0f, false);
+			
 		}
 
 		private void HandleLandingPulse()
@@ -626,11 +630,13 @@ namespace StarterAssets
 			//Hvis vi lander efter et hop (kommer fra UpdateLandingPulse)
 			if (data.wasLanding)
 			{
+				footstepSystem.PlayFootstep();
 				LandingSound.Post(gameObject);
 				Debug.Log("Player landed!");
 			}
 			else
 			{
+				footstepSystem.PlayFootstep();
 				// Regular footstep — (kommer fra UpdateStepCycle)
 				Footsteps.Post(gameObject);
 			}

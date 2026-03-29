@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class MonsterMovement : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField] private float maxTurnDegreesPerSecond = 90f;
     [SerializeField] private int monsterOxygenDamage = 100;
     [SerializeField] private float playerOffset = 2f;
+    [SerializeField] private float detectionRadius = 10f;
 
     [Header("Shared Target Offsets")]
     [SerializeField] private float minTargetForwardDistance = 20f;
@@ -79,6 +81,13 @@ public class MonsterMovement : MonoBehaviour
     private Vector3 smoothedAvoidance;
     [SerializeField] private float avoidanceSmoothTime = 0.25f;
 
+    [Header("Dust VFX")]
+    [SerializeField] private VisualEffect dustVFX;
+    [SerializeField] private LayerMask dustGroundLayer;
+    [SerializeField] private float rayDistance = 2f;
+    [SerializeField] private float dustSpawnDistance = 0.2f; // 
+
+    private Vector3 lastDustPosition; // New: tracks last spawn spot
     private MonsterGameDirector monsterDirector;
     private Transform player;
     private EncounterEvent currentEvent;
@@ -103,6 +112,8 @@ public class MonsterMovement : MonoBehaviour
 
         monsterDirector = GetComponentInParent<MonsterGameDirector>();
         monsterDirector.monsterActive = true;
+
+        lastDustPosition = transform.position;
     }
 
     private void Update()
@@ -128,6 +139,8 @@ public class MonsterMovement : MonoBehaviour
         {
             EvaluateNextPhaseOrEnd();
         }
+
+       SpawnDustVFX();
     }
 
     private void EvaluateNextPhaseOrEnd()
@@ -275,7 +288,7 @@ public class MonsterMovement : MonoBehaviour
 
         if (HasArrived(desiredPosition))
         {
-            if (currentEvent == EncounterEvent.FakeCharge && !isFakingOut)
+            if (EncounterEvent.FakeCharge == currentEvent && !isFakingOut)
             {
                 isFakingOut = true;
                 desiredPosition = eventTargetB;
@@ -283,7 +296,7 @@ public class MonsterMovement : MonoBehaviour
                 phaseSafetyDuration = fakeOutDuration;
                 return;
             }
-            if (currentEvent == EncounterEvent.Charge)
+            if (EncounterEvent.Charge == currentEvent)
             {
                 HitPlayer();
             }
@@ -294,9 +307,15 @@ public class MonsterMovement : MonoBehaviour
 
         if(EncounterEvent.Charge == currentEvent)
         {
-            Vector3 playerPos = new Vector3(player.position.x, player.position.y + playerOffset, player.position.z);
-            desiredPosition = playerPos;
-            return;
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+            if (distanceToPlayer <= detectionRadius)
+            {
+                Vector3 playerPos = new Vector3(player.position.x, player.position.y + playerOffset, player.position.z);
+                desiredPosition = playerPos;
+                return;
+            }
+           
         }
 
 
@@ -439,6 +458,25 @@ public class MonsterMovement : MonoBehaviour
          monsterDirector.currentAgressionWeight /=  2; // så den ikke bliver lige så sur næste gang, da den lige har brugt en masse aggression på at angribe
     }
     
+    private void SpawnDustVFX()
+    {
+        // Check if the monster has moved enough distance
+        if (Vector3.Distance(transform.position, lastDustPosition) >= dustSpawnDistance)
+        {
+            // Raycast origin is elevated from the character's base, and shifted purely on the X/Z plane
+            Vector3 rayStart = transform.position + (Vector3.up * 0.5f);
+    
+            if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, rayDistance, dustGroundLayer))
+            {
+                dustVFX.transform.position = hit.point + (hit.normal * 0.1f); // Slightly offset from the ground to prevent clipping
+                
+                dustVFX.SendEvent("DustVFX");
+        
+                lastDustPosition = transform.position; 
+            }
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (!Application.isPlaying || !isRunningEvent)
