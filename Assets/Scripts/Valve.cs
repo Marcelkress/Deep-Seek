@@ -1,16 +1,29 @@
+using System;
+using DG.Tweening;
 using UnityEngine;
 
-public class Valve : MonoBehaviour
+public class Valve : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public ValvePuzzle valvePuzzle;
+    public float noiseTime = 0.8f;
+    public Light light;
+    public float lightFadeTime = 1f;
+    public bool turned;
+
+    private void Start()
     {
-        
+        light.intensity = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact(GameObject playerObj)
     {
-        
+        if (!valvePuzzle.active)
+            return;
+
+        turned = true;
+        valvePuzzle.OpenValve(this);
+        playerObj.GetComponent<PlayerNoise>().SetInteractWithTime(noiseTime);
+        light.DOColor(Color.green, lightFadeTime);
+        GetComponent<Animator>().SetTrigger("Turn");
     }
 }
