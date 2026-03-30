@@ -235,7 +235,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 9a09f2f300990b021a238dbc1fb98ff0, type: 3}
+  - {fileID: 2100000, guid: 0ed2417869a7ff53e9b9ce3c6f83d1f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -985,7 +985,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 9a09f2f300990b021a238dbc1fb98ff0, type: 3}
+  - {fileID: 2100000, guid: 2f22157b893bc06ae8fd19a2041bcea2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1419,7 +1419,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 9a09f2f300990b021a238dbc1fb98ff0, type: 3}
+  - {fileID: 2100000, guid: 6749d8ba5b820b84ca5e815edb8e4087, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1674,7 +1674,7 @@ MonoBehaviour:
   swimPastDuration: 7
   swimPastAggressionWeight: 0.2
   overheadDuration: 7
-  additionalOverheadHeightScaling: 1.5
+  additionalOverheadHeightScaling: 2
   passOverheadAggressionWeight: 0.2
   fakeChargeDuration: 1.4
   fakeOutDuration: 2
@@ -1780,7 +1780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909802679630490325, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5367195078215253235, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
       propertyPath: m_LocalPosition.x
