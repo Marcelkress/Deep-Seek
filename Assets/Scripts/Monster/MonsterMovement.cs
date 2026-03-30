@@ -464,7 +464,7 @@ public class MonsterMovement : MonoBehaviour
         if (Vector3.Distance(transform.position, lastDustPosition) >= dustSpawnDistance)
         {
             // Raycast origin is elevated from the character's base, and shifted purely on the X/Z plane
-            Vector3 rayStart = transform.position + (Vector3.up * 0.5f);
+            Vector3 rayStart = transform.position + (Vector3.up * 0.5f) + (transform.forward * 0.5f);
     
             if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, rayDistance, dustGroundLayer))
             {

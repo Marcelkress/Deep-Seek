@@ -7,10 +7,6 @@ public class FootstepSystem : MonoBehaviour
     [SerializeField] private VisualEffect footstepVFX;
     [SerializeField] private LayerMask groundLayer;
 
-
-    [Header("Settings")]
-    public float stepDistance = 2.0f; // Distance required to trigger a step
-
     public void PlayFootstep()
     {
         if (footstepVFX == null) return;

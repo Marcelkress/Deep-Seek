@@ -1682,8 +1682,8 @@ MonoBehaviour:
   chargeDuration: 7
   chargeAggressionWeight: 0.9
   arrivalRadius: 3
-  retreatDistance: 40
-  despawnDistance: 55
+  retreatDistance: 65
+  despawnDistance: 70
   retreatAggressionWeight: 0.1
   avoidanceMask:
     serializedVersion: 2

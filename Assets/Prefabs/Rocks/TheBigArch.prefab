@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6715392365313186682}
   - component: {fileID: 5998795673690815642}
   - component: {fileID: -8074832175949390299}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TheBigArch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
