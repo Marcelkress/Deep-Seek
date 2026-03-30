@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4877620426117016221}
   - component: {fileID: 1219522921085678763}
   - component: {fileID: 6614487794914818669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: smallrock5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.024631537
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4877620426117016221}
