@@ -283,6 +283,27 @@ public class MonsterMovement : MonoBehaviour
             return;
         }
 
+         if(EncounterEvent.Charge == currentEvent)
+        {
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+            // Stage 1: Keep charging the initial one-time target.
+            // Stage 2: Once close enough, switch to live player tracking and allow hit.
+            if (distanceToPlayer <= detectionRadius)
+            {
+                desiredPosition = new Vector3(player.position.x, player.position.y + playerOffset, player.position.z);
+
+                if (HasArrived(desiredPosition))
+                {
+                    HitPlayer();
+                    BeginFakePhase();
+                }
+            }
+
+            // Charge has custom flow and should not be processed by the generic
+            // arrival/timeout logic below, which can otherwise cancel it too early.
+            return;
+        }
         
         phaseTimer += Time.deltaTime;
 
@@ -296,27 +317,13 @@ public class MonsterMovement : MonoBehaviour
                 phaseSafetyDuration = fakeOutDuration;
                 return;
             }
-            if (EncounterEvent.Charge == currentEvent)
-            {
-                HitPlayer();
-            }
+            
 
             BeginFakePhase();
             return;
         }
 
-        if(EncounterEvent.Charge == currentEvent)
-        {
-            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-
-            if (distanceToPlayer <= detectionRadius)
-            {
-                Vector3 playerPos = new Vector3(player.position.x, player.position.y + playerOffset, player.position.z);
-                desiredPosition = playerPos;
-                return;
-            }
-           
-        }
+       
 
         if (phaseTimer >= phaseSafetyDuration) // If the monster got stuck or took too long.
         {
