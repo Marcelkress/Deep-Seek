@@ -1700,7 +1700,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rayDistance: 4
-  dustSpawnDistance: 0.4
+  dustSpawnDistance: 1
 --- !u!1 &8981235297127720041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,6 +1778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SandKickUp
       objectReference: {fileID: 0}
+    - target: {fileID: 4909802679630490325, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5367195078215253235, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1819,6 +1823,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7850868561570320084, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
+      propertyPath: m_Asset
+      value: 
+      objectReference: {fileID: 8926484042661614526, guid: 2f15d4e87a98c77c781d2903612e91eb, type: 3}
+    - target: {fileID: 7850868561570320084, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1832,11 +1840,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7850868561570320084, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7850868561570320084, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7850868561570320084, guid: d78fba711cb29cc8fb172aad98d0a2b7, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
