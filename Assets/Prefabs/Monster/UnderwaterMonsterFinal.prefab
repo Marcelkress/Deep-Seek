@@ -1664,7 +1664,7 @@ MonoBehaviour:
   maxTurnDegreesPerSecond: 120
   monsterOxygenDamage: 100
   playerOffset: 2
-  detectionRadius: 10
+  detectionRadius: 15
   minTargetForwardDistance: 5
   maxTargetForwardDistance: 8
   minTargetSideDistance: 7

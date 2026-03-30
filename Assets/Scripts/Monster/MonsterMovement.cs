@@ -318,7 +318,6 @@ public class MonsterMovement : MonoBehaviour
            
         }
 
-
         if (phaseTimer >= phaseSafetyDuration) // If the monster got stuck or took too long.
         {
             BeginFakePhase();
@@ -507,6 +506,7 @@ public class MonsterMovement : MonoBehaviour
         Gizmos.DrawSphere(transform.position + forward * forwardProbeDistance, probeRadius);
         Gizmos.DrawSphere(transform.position + left * sideProbeDistance, probeRadius);
         Gizmos.DrawSphere(transform.position + right * sideProbeDistance, probeRadius);
+        Gizmos.DrawSphere(transform.position, detectionRadius); // central sphere for the monster's body
 
         // Draw floor clearance (downward probe)
         Gizmos.color = Color.yellow;
