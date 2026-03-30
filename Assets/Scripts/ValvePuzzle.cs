@@ -12,25 +12,31 @@
      /// </summary>
      [Header("Valves")] public Valve[] valves;
      public float lightFadeTime = 1f, lightTargetIntensity;
-    
-    
+     
     [Header("Lights and materials")] public MeshRenderer[] lights;
     public Material lightMat;
     public float emissionLevel;
-    
+
+    [Header("Computer screen")] public MeshRenderer screenRenderer;
     public bool active;
+    private bool completed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        completed = false;
         active = false;
     }
 
     public void ActivatePuzzle()
     {
+        if (completed)
+            return;
+        
         active = true;
         InitializeLights();
         InitializeValveLights();
+        screenRenderer.material.EnableKeyword("_EMISSION");
     }
 
     public void InitializeLights()
@@ -55,7 +61,8 @@
             valve.light.DOIntensity(lightTargetIntensity, lightFadeTime);
         }
     }
-
+    
+   
     public void OpenValve(Valve valve)
     {
         // Convert keys to a list to find the "index" of the current valve
@@ -68,6 +75,26 @@
             Color col = Color.green;
             mesh.material.SetColor("_EmissionColor", col * emissionLevel);
             mesh.material.color = col;
+        }
+        
+        bool allValvesTurned = true;
+        
+        foreach (var val in valves)
+        {
+            if (val.turned == false)
+            {
+                allValvesTurned = false;
+                break;
+            }
+
+            val.light.DOIntensity(0, lightFadeTime);
+        }
+
+        if (allValvesTurned)
+        {
+            active = false;
+            screenRenderer.material.DisableKeyword("_EMISSION");
+            completed = true;
         }
     }
 }
