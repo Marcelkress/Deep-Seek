@@ -24,6 +24,6 @@ public class Valve : MonoBehaviour, IInteractable
         valvePuzzle.OpenValve(this);
         playerObj.GetComponent<PlayerNoise>().SetInteractWithTime(noiseTime);
         light.DOColor(Color.green, lightFadeTime);
-        GetComponent<Animator>().SetTrigger("Turn");
+        GetComponentInChildren<Animator>().SetTrigger("Turn");
     }
 }

@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &198560847941402639
 Transform:
@@ -139,14 +139,13 @@ GameObject:
   - component: {fileID: 3637441085985584279}
   - component: {fileID: 7000187422992228446}
   - component: {fileID: 22021334201815195}
-  - component: {fileID: 2789808203172802143}
   - component: {fileID: 7838556729474330714}
   m_Layer: 0
   m_Name: Valve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3319242756434241243
 Transform:
@@ -240,28 +239,6 @@ MonoBehaviour:
   light: {fileID: 7930224349095234650}
   lightFadeTime: 1
   turned: 0
---- !u!95 &2789808203172802143
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5616669764521890327}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8d4b4fc34c7a74f18892254e34bd4ff5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!65 &7838556729474330714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354,8 +331,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1619774195152698932, guid: 2e013b6e6798e5335bcaa32d53404976, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6579673519449170070}
   m_SourcePrefab: {fileID: 100100000, guid: 2e013b6e6798e5335bcaa32d53404976, type: 3}
+--- !u!1 &1846709977129971406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1619774195152698932, guid: 2e013b6e6798e5335bcaa32d53404976, type: 3}
+  m_PrefabInstance: {fileID: 1142310104740909306}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6579673519449170070
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846709977129971406}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d4b4fc34c7a74f18892254e34bd4ff5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &4554910970733006780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3525200965969502022, guid: 2e013b6e6798e5335bcaa32d53404976, type: 3}
@@ -427,7 +434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2151534447078420670, guid: 22244f860f06ec28e8a4b3e99b27d9dc, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

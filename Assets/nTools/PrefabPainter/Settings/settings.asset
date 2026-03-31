@@ -17,7 +17,7 @@ MonoBehaviour:
     brushes:
     - name: CrabClawKelp
       settings:
-        brushRadius: 5
+        brushRadius: 0.01
         brushSpacing: 2
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
@@ -30,9 +30,9 @@ MonoBehaviour:
         orientationMode: 2
         alongBrushStroke: 0
         rotation: {x: 0, y: 0, z: 0}
-        randomizeOrientationX: 100
+        randomizeOrientationX: 0
         randomizeOrientationY: 100
-        randomizeOrientationZ: 100
+        randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
         scaleUniformMin: 0.5
@@ -332,7 +332,7 @@ MonoBehaviour:
       customPreviewImage: {fileID: 0}
     - name: CrabClawKelp 1
       settings:
-        brushRadius: 5
+        brushRadius: 0.01
         brushSpacing: 2
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
@@ -345,9 +345,9 @@ MonoBehaviour:
         orientationMode: 2
         alongBrushStroke: 0
         rotation: {x: 0, y: 0, z: 0}
-        randomizeOrientationX: 100
+        randomizeOrientationX: 0
         randomizeOrientationY: 100
-        randomizeOrientationZ: 100
+        randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
         scaleUniformMin: 0.5
@@ -647,7 +647,7 @@ MonoBehaviour:
       customPreviewImage: {fileID: 0}
     - name: CrabClawKelp 2
       settings:
-        brushRadius: 5
+        brushRadius: 0.01
         brushSpacing: 2
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
@@ -660,9 +660,9 @@ MonoBehaviour:
         orientationMode: 2
         alongBrushStroke: 0
         rotation: {x: 0, y: 0, z: 0}
-        randomizeOrientationX: 100
+        randomizeOrientationX: 0
         randomizeOrientationY: 100
-        randomizeOrientationZ: 100
+        randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
         scaleUniformMin: 0.5
@@ -1587,7 +1587,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: deeptwistybridges_plant_bulb_01_cluster_c_LOD0
@@ -1907,7 +1907,7 @@ MonoBehaviour:
       customPreviewImage: {fileID: 0}
     - name: deeptwistybridges_plant_bulb_01_cluster_d_LOD0
       settings:
-        brushRadius: 5
+        brushRadius: 0.01
         brushSpacing: 2
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
@@ -1920,9 +1920,9 @@ MonoBehaviour:
         orientationMode: 2
         alongBrushStroke: 0
         rotation: {x: 0, y: 0, z: 0}
-        randomizeOrientationX: 100
+        randomizeOrientationX: 0
         randomizeOrientationY: 100
-        randomizeOrientationZ: 100
+        randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
         scaleUniformMin: 0.5
@@ -2847,7 +2847,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: FungalMedium 1
@@ -4427,7 +4427,7 @@ MonoBehaviour:
       customPreviewImage: {fileID: 0}
     - name: generic_plant_crystal_short_1
       settings:
-        brushRadius: 5
+        brushRadius: 0.01
         brushSpacing: 2
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
@@ -4440,9 +4440,9 @@ MonoBehaviour:
         orientationMode: 2
         alongBrushStroke: 0
         rotation: {x: 0, y: 0, z: 0}
-        randomizeOrientationX: 100
+        randomizeOrientationX: 0
         randomizeOrientationY: 100
-        randomizeOrientationZ: 100
+        randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
         scaleUniformMin: 0.5
@@ -5057,7 +5057,7 @@ MonoBehaviour:
       customPreviewImage: {fileID: 0}
     - name: HornTrumpets
       settings:
-        brushRadius: 5
+        brushRadius: 12.1
         brushSpacing: 2
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
@@ -5067,12 +5067,12 @@ MonoBehaviour:
           m_Bits: 0
         surfaceOffset: 0
         orientationTransformMode: 0
-        orientationMode: 2
+        orientationMode: 0
         alongBrushStroke: 0
         rotation: {x: 0, y: 0, z: 0}
-        randomizeOrientationX: 100
+        randomizeOrientationX: 0
         randomizeOrientationY: 100
-        randomizeOrientationZ: 100
+        randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
         scaleUniformMin: 0.5
@@ -9509,7 +9509,7 @@ MonoBehaviour:
         alongBrushStroke: 0
         rotation: {x: 0, y: 0, z: 0}
         randomizeOrientationX: 0
-        randomizeOrientationY: 0
+        randomizeOrientationY: 100
         randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
@@ -10750,7 +10750,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: pilar1
@@ -16425,7 +16425,7 @@ MonoBehaviour:
       customPreviewImage: {fileID: 0}
     - name: smallrock5_1
       settings:
-        brushRadius: 7.03
+        brushRadius: 13.6
         brushSpacing: 1.62
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
@@ -16443,8 +16443,8 @@ MonoBehaviour:
         randomizeOrientationZ: 30.7
         scaleTransformMode: 0
         scaleMode: 0
-        scaleUniformMin: 1
-        scaleUniformMax: 1
+        scaleUniformMin: 0.05
+        scaleUniformMax: 0.5
         scalePerAxisMin: {x: 1, y: 1, z: 1}
         scalePerAxisMax: {x: 1, y: 1, z: 1}
         pinFixedRotation: 0
@@ -16735,7 +16735,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: smallrockcluster
