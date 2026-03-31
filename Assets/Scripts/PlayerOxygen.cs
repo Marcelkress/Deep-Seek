@@ -7,6 +7,10 @@ using UnityEngine.Events;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.InputSystem;
 using DG.Tweening;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerOxygen : MonoBehaviour
 {
@@ -33,12 +37,29 @@ public class PlayerOxygen : MonoBehaviour
     public UnityEvent LowOxygenWarningEvent;
 
     [Header("Low oxygen Warning")]
-    [SerializeField, Range(0f, 100f)] private float lowOxygenPercent = 10f; // 10 = 10%
+    [SerializeField, Range(0f, 100f)] private float startLightWarningPercent = 10f; // 10 = 10%
+    [SerializeField, Range(0f, 100f)] private float NoOxygenLeftWarningPercent = 0f;
+
     [SerializeField] private Light lowOxygenLight; // blinking light to indicate low oxygen
     [SerializeField] private float lightFadeDuration = 0.5f; // duration for fading the light in and out
     [SerializeField] private float lowOxygenBlinkInterval = 0.5f; // interval for blinking light
     public bool IsLowOxygen => currentOxygen <= LowOxygenThreshold;
-    public int LowOxygenThreshold => Mathf.CeilToInt(maxOxygen * (lowOxygenPercent / 100f));
+    public bool CriticalOxygen => currentOxygen <= CriticalOxygenThreshold;
+
+    public int CriticalOxygenThreshold => Mathf.CeilToInt(maxOxygen * (NoOxygenLeftWarningPercent / 100f));
+    public int LowOxygenThreshold => Mathf.CeilToInt(maxOxygen * (startLightWarningPercent / 100f));
+
+    [Header("Critical Oxygen settings")]
+    [SerializeField] private Volume globalVolume;
+    [SerializeField] private float maxDistortion = -0.6f; // -1..1
+    [SerializeField] private float distortionSpeed = 0.5f; // intensity units per second
+    [SerializeField] private float criticalKillDelay = 5f;
+
+    [SerializeField] private Image fadeImageDeath; // UI overlay for critical oxygen state
+
+
+    private LensDistortion lens;
+    private float criticalTimer;
 
     private float initialLightIntensity;
     private bool walking, sprinting;
@@ -53,6 +74,12 @@ public class PlayerOxygen : MonoBehaviour
 
         initialLightIntensity = lowOxygenLight.intensity;
         lowOxygenLight.intensity = 0; // Start with the light off
+
+        if (globalVolume != null && globalVolume.profile.TryGet(out LensDistortion ld))
+        {
+            lens = ld;
+            lens.active = true;
+        }
     }
     
     // Update is called once per frame
@@ -75,10 +102,8 @@ public class PlayerOxygen : MonoBehaviour
             StartCoroutine(LowOxygenWarningCoroutine());
         }
 
-        if (currentOxygen <= 0)
-        {
-            Die();
-        }
+
+        CriticalOxygenEffectAndDie();
     }
 
     private bool warningActive = false;
@@ -109,6 +134,46 @@ public class PlayerOxygen : MonoBehaviour
         // Clean up once the loop ends (oxygen was replenished)
         lowOxygenLight.DOIntensity(0, lightFadeDuration);
         warningActive = false;
+    }
+    private Tween distortionTween;
+    private bool isDying = false;
+    private void CriticalOxygenEffectAndDie()
+    {
+        if (CriticalOxygen)
+        {
+            if (lens != null && distortionTween == null)
+            {
+                lens.intensity.overrideState = true;
+                distortionTween = DOTween.To(
+                () => lens.intensity.value,
+                v => lens.intensity.value = v,
+                maxDistortion,
+                0.5f
+                ).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+            }
+
+            criticalTimer += Time.deltaTime;
+
+            if (!isDying && criticalTimer >= criticalKillDelay)
+            {
+                isDying = true;
+                Die();
+            }
+
+            return;
+        }
+
+        criticalTimer = 0f;
+        isDying = false;
+        if (distortionTween != null)
+        {
+            distortionTween.Kill();
+            distortionTween = null;
+            if (lens != null)
+            {
+                lens.intensity.value = 0f;
+            }
+        }
     }
 
     private void OxygenLossUpdate()
@@ -238,6 +303,13 @@ public class PlayerOxygen : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player has died");
-        // Implement death logic here (e.g., respawn, game over screen, etc.)
+        fadeImageDeath.gameObject.SetActive(true);
+        fadeImageDeath.color = new Color(0, 0, 0, 0);
+        fadeImageDeath.DOFade(1, 2f).SetEase(Ease.InOutSine).OnComplete(() =>
+        {
+            // After fade to black is complete, reload the scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+
     }
 }
