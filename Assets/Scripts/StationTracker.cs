@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StationTracker : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class StationTracker : MonoBehaviour
     public string textAfterNumber = " of 4 stations";
     public TMP_Text completedAllStationsText;
     public float showTextTime = 5;
+
+    [Header("Debug")] public bool enableTest;
+    public InputActionReference testButton;
 
     private void Awake()
     {
@@ -35,15 +39,23 @@ public class StationTracker : MonoBehaviour
         UITrackerText = GetComponentInChildren<TMP_Text>();
         
         UITrackerText.text = "0" + textAfterNumber;
+
+        if(enableTest)
+            testButton.action.started += CompletedTest;
+    }
+
+    void CompletedTest(InputAction.CallbackContext context)
+    {
+        Completed();
     }
 
     public void Completed()
     {
         stations[index] = true;
+        index++;
 
         int total = 0;
-
-        for (int i = 0; i < stations.Length; i++)
+        for (int i = 0; i < index; i++)
         {
             if (stations[i] == true)
             {
