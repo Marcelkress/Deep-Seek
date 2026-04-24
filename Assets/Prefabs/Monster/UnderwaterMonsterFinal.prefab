@@ -1546,6 +1546,7 @@ GameObject:
   - component: {fileID: 5137260628225071173}
   - component: {fileID: 5446897025322594320}
   - component: {fileID: 9001576352641587858}
+  - component: {fileID: 342692982987647966}
   m_Layer: 0
   m_Name: UnderwaterMonsterFinal
   m_TagString: Untagged
@@ -1702,6 +1703,23 @@ MonoBehaviour:
   rayDistance: 4
   dustSpawnDistance: 1
   target: {fileID: 1742639363843370105, guid: 7b5feeb643dad858b9f1ef290a090418, type: 3}
+--- !u!114 &342692982987647966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335278238498184662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869f27237e2464310b40a4460ab1c798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WwiseEventCaller
+  MonsterSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 75ded1b7018ac4494b8c2d079d19abcd, type: 2}
+  monsterSound: {fileID: 0}
 --- !u!1 &8981235297127720041
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,36 +1,49 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class WwiseEventCaller : MonoBehaviour
 {
     [Header("Assign a Wwise Event here")]
-    public AK.Wwise.Event wwiseEvent;
+    public AK.Wwise.Event MonsterSoundEvent;
 
     [Header("Optional: post on this GameObject instead of this component's object")]
-    public GameObject targetObject;
-
-    public void Play()
-    {
-        GameObject postTarget = targetObject != null ? targetObject : gameObject;
-
-        if (wwiseEvent == null)
-        {
-            Debug.LogWarning($"No Wwise event assigned on {name}", this);
-            return;
-        }
-
-        wwiseEvent.Post(postTarget);
-    }
+    public GameObject monsterSound;
 
     public void Stop()
     {
-        GameObject postTarget = targetObject != null ? targetObject : gameObject;
+        GameObject postTarget = monsterSound != null ? monsterSound : gameObject;
 
-        if (wwiseEvent == null)
+        if (MonsterSoundEvent == null)
         {
             Debug.LogWarning($"No Wwise event assigned on {name}", this);
             return;
         }
 
-        wwiseEvent.Stop(postTarget);
+        MonsterSoundEvent.Stop(postTarget);
+    }
+
+    public void monstersound()
+    {
+        GameObject postTarget = monsterSound != null ? monsterSound : gameObject;
+        MonsterSoundEvent.Post(postTarget);
+    }
+
+    IEnumerator MonstersoundCouroutine()
+    {
+        while (true)
+        {
+            monstersound();
+            yield return new WaitForSeconds(30f);
+
+        }
+
+
+    }
+
+
+    public void Start()
+    {
+        StartCoroutine(MonstersoundCouroutine());
     }
 }

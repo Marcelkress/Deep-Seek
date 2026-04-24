@@ -9,6 +9,7 @@
 						<ObjectRef Name="Play_Underwater_Ambience_B" ID="{B4A900B0-C23B-41E5-9E77-828ED500BD96}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps_Deepseek" ID="{9E2AFE22-7952-45F8-B670-5082EC063111}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_OxygentankPickup" ID="{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Monster_sound" ID="{61FC98DA-0A2F-4C74-BBF1-0E260E52EC74}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PickupScaleSound" ID="{A41527E5-8F30-4E85-A1E8-5789AFFF52AC}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

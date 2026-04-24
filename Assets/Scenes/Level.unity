@@ -64696,8 +64696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cded085d155cde949b60f67a11dbc3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.ProbeVolume
-  version: 2
-  globalVolume: 0
   mode: 2
   size: {x: 401.01, y: 52.994064, z: 301.01}
   overrideRendererFilters: 0
@@ -64728,6 +64726,8 @@ MonoBehaviour:
     e33: 1
   cachedHashCode: -916500744
   fillEmptySpaces: 0
+  version: 2
+  globalVolume: 0
 --- !u!4 &830528805
 Transform:
   m_ObjectHideFlags: 0
@@ -103612,7 +103612,7 @@ MonoBehaviour:
   aggressionHigh: 1
   aggressionRampRate: 0.05
   aggressionDecayRate: 0.01
-  aggressionSharpness: 50
+  aggressionSharpness: 5
   spawnSwimPastWeight: 0.4
   spawnPassOverheadWeight: 0.4
   spawnFakeChargeWeight: 0.7
@@ -187926,6 +187926,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1444204241715081216, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: isEnvironmentAware
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444204241715081216, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: m_positionOffsetData.KeepMe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444204241715081216, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: m_positionOffsetData.positionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3287221377395606690, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 144.76

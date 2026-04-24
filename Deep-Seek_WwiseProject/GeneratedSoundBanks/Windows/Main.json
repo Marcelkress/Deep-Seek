@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{31214C77-EC08-F85C-B48A-838055AEF1D6}",
+    "Hash": "{D95C0427-57EA-BE03-9184-AF8036D388E8}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -48,6 +48,14 @@
       "CachePath": "19/{19C837F0-DECA-B893-9CEA-E75037BF7307}.wem"
      },
      {
+      "Id": "386475734",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Monster sound .wav",
+      "CachePath": "19/{19C5D17E-109E-C1FC-FADA-02EBD8E6B3DA}.wem"
+     },
+     {
       "Id": "427778424",
       "Language": "SFX",
       "Streaming": "false",
@@ -70,6 +78,14 @@
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "2F/{2F1E30C5-78B9-9CAA-8401-C60CBA3C763D}.wem"
+     },
+     {
+      "Id": "594692464",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Monster sound .wav",
+      "CachePath": "24/{242EB717-9311-ECAF-BFA1-B6A64D390405}.wem"
      },
      {
       "Id": "644998508",
@@ -102,6 +118,22 @@
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "DB/{DBCE0CA5-B832-C85A-C3D9-0AAE42A6A0A0}.wem"
+     },
+     {
+      "Id": "900027967",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Monster sound .wav",
+      "CachePath": "0D/{0D07FC82-EE2B-3FB4-3B5E-82F8DD916BEB}.wem"
+     },
+     {
+      "Id": "945341924",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Monster sound .wav",
+      "CachePath": "5B/{5BCFD0A7-029D-3519-616B-B48CA0510AB0}.wem"
      },
      {
       "Id": "1006756753",
@@ -241,6 +273,30 @@
       }
      },
      {
+      "Id": "2033887548",
+      "Name": "Play_Monster_sound",
+      "ObjectPath": "\\Events\\Default Work Unit\\Monster\\Play_Monster_sound",
+      "GUID": "{61FC98DA-0A2F-4C74-BBF1-0E260E52EC74}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "3.9779005",
+      "DurationMax": "7.6110497",
+      "MediaRefs": [
+       {
+        "Id": "386475734"
+       },
+       {
+        "Id": "594692464"
+       },
+       {
+        "Id": "900027967"
+       },
+       {
+        "Id": "945341924"
+       }
+      ]
+     },
+     {
       "Id": "287033506",
       "Name": "Play_OxygentankPickup",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_OxygentankPickup",
@@ -284,6 +340,6 @@
     ]
    }
   ],
-  "FileHash": "{8AC71FFE-B162-6441-77CC-D5DF6EB47664}"
+  "FileHash": "{A98C2D4D-66FC-997D-1EDF-B3A4876BB3B0}"
  }
 }
