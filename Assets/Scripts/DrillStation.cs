@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DrillStation : MonoBehaviour
 {
+    public PlayerOxygen playerOxygen;
+    
     [Header("Colors")]
     public Color[] colors;
     // 0 = blue
@@ -154,13 +156,15 @@ public class DrillStation : MonoBehaviour
             Debug.Log("Failed puzzle - Resetting");
         }
     }
-
+    
     private void CheckCompletion()
     {
-        if (seqIndex >= sequence.Count)
+        if (seqIndex >= sequence.Count && !completed)
         {
             Debug.Log("Puzzle completed!!");
             completed = true;
+            StationTracker.instance.Completed();
+            playerOxygen.AddOxygen(playerOxygen.maxOxygen);
         }
     }
 
@@ -194,9 +198,6 @@ public class DrillStation : MonoBehaviour
             InitializePuzzleLights(false);
             InitializeLeverLights(false);
         }
-       
-        
-
         
     }
 }

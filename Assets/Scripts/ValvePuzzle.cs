@@ -10,6 +10,9 @@
      /// Turn on computer to turn on the lights of each valve.
      /// When a valve is turned, its value is set to true
      /// </summary>
+
+     public PlayerOxygen playerOxygen;
+     
      [Header("Valves")] public Valve[] valves;
      public float lightFadeTime = 1f, lightTargetIntensity;
      
@@ -43,7 +46,7 @@
     {
         for (int i = 0; i < valves.Length; i++)
         {
-            Debug.Log("hmm");
+            //Debug.Log("hmm");
             MeshRenderer mesh = lights[i];
             Color col = Color.red;
             lightMat = new Material(lightMat);
@@ -90,11 +93,13 @@
             val.light.DOIntensity(0, lightFadeTime);
         }
 
-        if (allValvesTurned)
+        if (allValvesTurned && !completed)
         {
             active = false;
             screenRenderer.material.DisableKeyword("_EMISSION");
             completed = true;
+            StationTracker.instance.Completed();
+            playerOxygen.AddOxygen(playerOxygen.maxOxygen);
         }
     }
 }

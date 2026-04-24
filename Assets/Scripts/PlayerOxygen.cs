@@ -57,7 +57,6 @@ public class PlayerOxygen : MonoBehaviour
 
     [SerializeField] private Image fadeImageDeath; // UI overlay for critical oxygen state
 
-
     private LensDistortion lens;
     private float criticalTimer;
 
@@ -101,8 +100,7 @@ public class PlayerOxygen : MonoBehaviour
         {
             StartCoroutine(LowOxygenWarningCoroutine());
         }
-
-
+        
         CriticalOxygenEffectAndDie();
     }
 
