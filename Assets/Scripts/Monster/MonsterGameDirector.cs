@@ -10,6 +10,7 @@ public class MonsterGameDirector : MonoBehaviour
     [SerializeField] public Transform player;
     [SerializeField] private MonsterMovement monsterPrefab;
     [SerializeField] private Transform monsterContainer;
+    [SerializeField] private float grazePeriodDuration = 10f;
 
     [Header("Trigger Timing")]
     [SerializeField] private float minTriggerInterval = 4f;
@@ -31,7 +32,7 @@ public class MonsterGameDirector : MonoBehaviour
 
     [SerializeField] private float aggressionRampRate  = 1.5f; // how fast it climbs
     [SerializeField] private float aggressionDecayRate = 0.8f; // how fast it falls
-    public float aggressionSpreadSharpness = 5f; // how much more likely higher aggression events are favored as weight increases (higher = more favored)
+    public float aggressionSharpness = 5f; // higher = more likely to pick events close to current aggression, lower = more random
 
     [Header("Auto Spawn Event Weights")]
     [SerializeField, Range(0f, 1f)] private float spawnSwimPastWeight = 0.2f;
@@ -66,7 +67,14 @@ public class MonsterGameDirector : MonoBehaviour
 
         StartCoroutine(AgressionLevel());
 
+        
+
         StartCoroutine(ScheduleNextAutoTrigger());
+    }
+
+    private IEnumerator wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 
     private void OnEnable()
@@ -135,8 +143,8 @@ public class MonsterGameDirector : MonoBehaviour
             float distanceFromCurrentAggressionWeight = Mathf.Abs(aggressionAnchors[i] - currentAgressionWeight);
 
             // Bell curve: events closer to current aggression score higher
-            // aggressionSpreadSharpness controls how steeply score falls off with distance
-            float weightedScore = Mathf.Exp(-aggressionSpreadSharpness * distanceFromCurrentAggressionWeight * distanceFromCurrentAggressionWeight);
+            // aggressionSharpness controls how steeply score falls off with distance
+            float weightedScore = Mathf.Exp(-aggressionSharpness * distanceFromCurrentAggressionWeight * distanceFromCurrentAggressionWeight);
             weightedScores[i] = weightedScore;
             totalWeight += weightedScore;
         }
@@ -253,8 +261,14 @@ public class MonsterGameDirector : MonoBehaviour
         return desired;
     }
 
+    private bool startGrazePeriodPlayed = false;
     public IEnumerator ScheduleNextAutoTrigger()
     {
+        if (!startGrazePeriodPlayed)
+        {
+            startGrazePeriodPlayed = true;
+            yield return new WaitForSeconds(grazePeriodDuration);
+        }
         nextAutoTriggerTime = Time.time + Random.Range(minTriggerInterval, maxTriggerInterval);
         yield return new WaitForSeconds(nextAutoTriggerTime - Time.time);
         EvaluateMonsterSpawningWeights();
