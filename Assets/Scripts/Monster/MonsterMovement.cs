@@ -1,4 +1,5 @@
 using System.Collections;
+using NUnit.Framework.Interfaces;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -103,6 +104,10 @@ public class MonsterMovement : MonoBehaviour
     private float eventHeightOffset;
     private Vector3 eventTargetA;
     private Vector3 eventTargetB;
+    private Transform eventTargetTransform;
+    private bool eventTargetDetached;
+
+    public GameObject target;
 
     private void OnEnable()
     {
@@ -114,6 +119,11 @@ public class MonsterMovement : MonoBehaviour
         monsterDirector.monsterActive = true;
 
         lastDustPosition = transform.position;
+    }
+
+    private void OnDisable()
+    {
+        CleanupEventTargetTransform();
     }
 
     private void Update()
@@ -172,8 +182,12 @@ public class MonsterMovement : MonoBehaviour
 
         BeginEvent(EncounterEvent.RetreatAndDespawn, player);
     }
+
+
     private void DynamicMovement()
     {
+        
+
         Vector3 toTarget = desiredPosition - transform.position;
         Vector3 desiredDirection = toTarget.sqrMagnitude < 0.0001f ? currentForward : toTarget.normalized;
         Vector3 rawAvoidance = GetTotalObstacleAvoidance();
@@ -220,6 +234,8 @@ public class MonsterMovement : MonoBehaviour
             return;
         }
 
+        CleanupEventTargetTransform();
+
         player = playerRef;
         currentEvent = eventType;
         isRunningEvent = true;
@@ -239,7 +255,8 @@ public class MonsterMovement : MonoBehaviour
 
         phase = EventPhase.Event;
         desiredPosition = eventTargetA;
-        
+
+       
         switch (eventType)
         {
             case EncounterEvent.SwimPastPOV:
@@ -259,6 +276,9 @@ public class MonsterMovement : MonoBehaviour
                 break;
         }
     }
+
+
+    private bool updateEventTarget = false;
 
     private void UpdateCurrentEvent()
     {
@@ -307,6 +327,27 @@ public class MonsterMovement : MonoBehaviour
         
         phaseTimer += Time.deltaTime;
 
+        if (updateEventTarget)
+        {
+            if (eventTargetTransform == null && target != null)
+            {
+                GameObject targetPos = Instantiate(target, eventTargetA, Quaternion.identity, player);
+                eventTargetTransform = targetPos.transform;
+            }
+
+            if (eventTargetTransform != null)
+            {
+                desiredPosition = eventTargetTransform.position;
+
+                if (!eventTargetDetached && Vector3.Distance(transform.position, desiredPosition) <= arrivalRadius + 5f)
+                {
+                    eventTargetTransform.SetParent(null, true);
+                    eventTargetDetached = true;
+                    updateEventTarget = false;
+                }
+            }
+        }
+
         if (HasArrived(desiredPosition))
         {
             if (EncounterEvent.FakeCharge == currentEvent && !isFakingOut)
@@ -331,7 +372,57 @@ public class MonsterMovement : MonoBehaviour
         }
     }
 
+    private float randomTargetHeight;
     private void ConfigureEventTargets(EncounterEvent eventType)
+    {
+        updateEventTarget = false;
+        eventTargetDetached = false;
+
+        Vector3 playerPos = player.position;
+        Vector3 playerForwardDir = GetPlayerForwardDir(player);
+        Vector3 right = Vector3.Cross(Vector3.up, playerForwardDir).normalized;
+        float sideDistance = Random.Range(minTargetSideDistance, maxTargetSideDistance);
+        float forwardDistance = Random.Range(minTargetForwardDistance, maxTargetForwardDistance);
+        randomTargetHeight = Random.Range(targetHeightMin, targetHeightMax);
+
+        switch (eventType)
+        {
+            case EncounterEvent.SwimPastPOV:
+            {
+                eventTargetA = TargetCalculationForEvent(EncounterEvent.SwimPastPOV);
+                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, randomTargetHeight);
+                updateEventTarget = true; // this event requires the target to update based on player's movement to maintain the "swim past" effect, otherwise it would just be a one-time dash towards an initial position
+                break;
+            }
+            case EncounterEvent.PassOverhead:
+            {
+                eventTargetA = TargetCalculationForEvent(EncounterEvent.PassOverhead);
+                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, randomTargetHeight);
+                updateEventTarget = true; // this event requires the target to update based on player's movement to maintain the "pass overhead" effect, otherwise it would just be a one-time dash towards an initial position
+                break;
+            }
+            case EncounterEvent.FakeCharge:
+            {
+                eventTargetA = TargetCalculationForEvent(EncounterEvent.FakeCharge); // initial target for the fake charge, will be updated to live player tracking in UpdateCurrentEvent after reaching it or if it takes too long
+                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, randomTargetHeight);
+                // because it is 2 stage event
+                eventTargetB = playerPos + (playerForwardDir * forwardDistance) + (right * (-randomSide * sideDistance)) + (Vector3.up * eventHeightOffset);
+                eventTargetB = EnsureTargetAboveTerrain(eventTargetB, randomTargetHeight);
+                break;
+            }
+            case EncounterEvent.Charge:
+            {
+                eventTargetA = playerPos; // will be updated every frame in UpdateCurrentEvent to ensure it is always charging towards the player
+                break;
+            }
+            default:
+                eventTargetA = TargetCalculationForEvent(eventType);
+                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, randomTargetHeight);
+                break;
+        }
+    }
+
+    private Vector3 TargetCalculationForEvent(EncounterEvent eventType)
     {
         Vector3 playerPos = player.position;
         Vector3 playerForwardDir = GetPlayerForwardDir(player);
@@ -342,35 +433,15 @@ public class MonsterMovement : MonoBehaviour
         switch (eventType)
         {
             case EncounterEvent.SwimPastPOV:
-            {
-                eventTargetA = playerPos + (playerForwardDir * forwardDistance) + (right * randomSide * sideDistance) + (Vector3.up * eventHeightOffset);
-                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, targetHeightMin);
-                break;
-            }
+                return playerPos + (playerForwardDir * forwardDistance) + (right * randomSide * sideDistance) + (Vector3.up * eventHeightOffset);
             case EncounterEvent.PassOverhead:
-            {
-                eventTargetA = playerPos + (playerForwardDir * forwardDistance) + (Vector3.up * (eventHeightOffset * additionalOverheadHeightScaling));
-                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, targetHeightMin);
-                break;
-            }
+                return playerPos + (playerForwardDir * forwardDistance) + (Vector3.up * (eventHeightOffset * additionalOverheadHeightScaling));
             case EncounterEvent.FakeCharge:
-            {
-                eventTargetA = playerPos + (playerForwardDir * forwardDistance);
-                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, targetHeightMin);
-                // because it is 2 stage event
-                eventTargetB = playerPos + (playerForwardDir * forwardDistance) + (right * (-randomSide * sideDistance)) + (Vector3.up * eventHeightOffset);
-                eventTargetB = EnsureTargetAboveTerrain(eventTargetB, targetHeightMin);
-                break;
-            }
+                return playerPos + (playerForwardDir * forwardDistance);
             case EncounterEvent.Charge:
-            {
-                eventTargetA = playerPos; // will be updated every frame in UpdateCurrentEvent to ensure it is always charging towards the player
-                break;
-            }
+                return playerPos; // will be updated every frame in UpdateCurrentEvent to ensure it is always charging towards the player
             default:
-                eventTargetA = transform.position + currentForward * 5f;
-                eventTargetA = EnsureTargetAboveTerrain(eventTargetA, targetHeightMin);
-                break;
+                return transform.position + currentForward * 5f;
         }
     }
 
@@ -392,6 +463,18 @@ public class MonsterMovement : MonoBehaviour
         phase = EventPhase.FakeRetreat;
         phaseTimer = 0f;
         phaseSafetyDuration = 0f;
+        CleanupEventTargetTransform();
+    }
+
+    private void CleanupEventTargetTransform()
+    {
+        if (eventTargetTransform == null)
+        {
+            return;
+        }
+
+        Destroy(eventTargetTransform.gameObject);
+        eventTargetTransform = null;
     }
 
     float forwardWeight = 1f;

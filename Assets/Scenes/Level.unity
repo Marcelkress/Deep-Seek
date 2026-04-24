@@ -64696,6 +64696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cded085d155cde949b60f67a11dbc3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.ProbeVolume
+  version: 2
+  globalVolume: 0
   mode: 2
   size: {x: 401.01, y: 52.994064, z: 301.01}
   overrideRendererFilters: 0
@@ -64726,8 +64728,6 @@ MonoBehaviour:
     e33: 1
   cachedHashCode: -916500744
   fillEmptySpaces: 0
-  version: 2
-  globalVolume: 0
 --- !u!4 &830528805
 Transform:
   m_ObjectHideFlags: 0
@@ -103595,12 +103595,13 @@ MonoBehaviour:
   player: {fileID: 8997996946661630610}
   monsterPrefab: {fileID: 9001576352641587858, guid: 04c6593f2d9fe417d9c4c993c77a7b9f, type: 3}
   monsterContainer: {fileID: 1296336920}
-  minTriggerInterval: 1
-  maxTriggerInterval: 5
-  monsterSpawnHeightOffset: 5
+  grazePeriodDuration: 10
+  minTriggerInterval: 5
+  maxTriggerInterval: 13
+  monsterSpawnHeightOffset: 15
   spawnDistance: 45
-  eventSpawnHeight: 15
-  eventSideDistance: 20
+  eventSpawnHeight: 20
+  eventSideDistance: 25
   terrainCheckHeight: 100
   terrainMask:
     serializedVersion: 2
@@ -103611,11 +103612,11 @@ MonoBehaviour:
   aggressionHigh: 1
   aggressionRampRate: 0.05
   aggressionDecayRate: 0.01
-  aggressionSpreadSharpness: 10
-  spawnSwimPastWeight: 0.3
-  spawnPassOverheadWeight: 0.3
-  spawnFakeChargeWeight: 0.65
-  doNothingWeight: 0.2
+  aggressionSharpness: 50
+  spawnSwimPastWeight: 0.4
+  spawnPassOverheadWeight: 0.4
+  spawnFakeChargeWeight: 0.7
+  doNothingWeight: 0.3
   enableDebugKeys: 1
   swimPastKey:
     m_Name: Swim Past Key
