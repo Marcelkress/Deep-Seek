@@ -11012,7 +11012,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8908397756579153498, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
   m_PrefabInstance: {fileID: 969058295742863629}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 433292555}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d770153f5bcc4d39bc49aaa5da3f446, type: 3}
@@ -32765,6 +32765,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6370825945841432288, guid: 9144f9ee4828daee1b5e395ffd98f13a, type: 3}
   m_PrefabInstance: {fileID: 432891710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &433292555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7787721335802456081, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+  m_PrefabInstance: {fileID: 969058295742863629}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &433338661 stripped
 Transform:
@@ -188034,6 +188039,74 @@ PrefabInstance:
       propertyPath: lowOxygenLight
       value: 
       objectReference: {fileID: 832743938}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 8997996946661630621}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 8997996946661630621}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: StopOrcStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: OrcStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: WwiseEventCaller, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: WwiseEventCaller, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      propertyPath: ReplenishStart.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7314114403502244770, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -188058,7 +188131,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5668694399187308556, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1135757753}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7787721335802456081, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8997996946661630621}
   m_SourcePrefab: {fileID: 100100000, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
 --- !u!4 &969058295742863630 stripped
 Transform:
@@ -190882,7 +190958,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6744236933238653319, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
   m_PrefabInstance: {fileID: 969058295742863629}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 433292555}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
@@ -191121,12 +191197,33 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7222108266565362112, guid: fc4401dde228445d7b839fc25a8ba2a4, type: 3}
   m_PrefabInstance: {fileID: 969058295742863629}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 433292555}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac497cf5405c942f29465166bb4411df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerOxygen
+--- !u!114 &8997996946661630621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433292555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eed97e5fc6a345039c89f3f90344b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WwiseEventCaller
+  ORCStartEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3d5c6811dc45646f1b096b1559ae1926, type: 2}
+  ORCStopEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c9319ec6666654d309ade8ef4f59b952, type: 2}
+  orcstart: {fileID: 0}
 --- !u!1 &9006944187296507974
 GameObject:
   m_ObjectHideFlags: 0

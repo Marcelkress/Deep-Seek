@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{D95C0427-57EA-BE03-9184-AF8036D388E8}",
+    "Hash": "{7681FF0E-151C-B535-B548-F09F40C55F14}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "27/{2778AE1B-A91F-9065-3D26-6CCDAD50F080}.wem"
+     },
+     {
+      "Id": "167899123",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ORC stop.wav",
+      "CachePath": "2E/{2E9E1A2F-79DD-C53B-7DF3-3BD382DC3A0B}.wem"
      },
      {
       "Id": "237568392",
@@ -62,6 +70,14 @@
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "2B/{2B3942D8-75DF-D2E0-3285-738FA3A2955A}.wem"
+     },
+     {
+      "Id": "538382245",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ORC startAndLoop.wav",
+      "CachePath": "DB/{DB78DDEC-C8D2-5218-7A8F-9C8136D82403}.wem"
      },
      {
       "Id": "571400089",
@@ -297,6 +313,32 @@
       ]
      },
      {
+      "Id": "1136330962",
+      "Name": "Play_ORC_startAndLoop",
+      "ObjectPath": "\\Events\\Default Work Unit\\ORC\\Play_ORC_startAndLoop",
+      "GUID": "{F1988120-1A0B-4CF3-B7AC-0FEF98A140A2}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "538382245"
+       }
+      ]
+     },
+     {
+      "Id": "468325319",
+      "Name": "Play_ORC_stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\ORC\\Play_ORC_stop",
+      "GUID": "{8F21EF0C-77B9-442D-B4C2-CC8A724B5B76}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.9834791",
+      "DurationMax": "1.9834791",
+      "MediaRefs": [
+       {
+        "Id": "167899123"
+       }
+      ]
+     },
+     {
       "Id": "287033506",
       "Name": "Play_OxygentankPickup",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_OxygentankPickup",
@@ -340,6 +382,6 @@
     ]
    }
   ],
-  "FileHash": "{0D5E54F5-2E01-2FE8-BB15-AA66DC6862D1}"
+  "FileHash": "{721BAD22-4EBC-DE39-1F5F-5D3ECAE42452}"
  }
 }

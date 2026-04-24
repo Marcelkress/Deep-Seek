@@ -77,6 +77,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="ORC" ID="{157620A0-98D1-445E-AD3F-FAD9D073FB26}" ShortID="591609874">
+					<ChildrenList>
+						<Event Name="Play_ORC_stop" ID="{8F21EF0C-77B9-442D-B4C2-CC8A724B5B76}">
+							<ChildrenList>
+								<Action Name="" ID="{67E1D3B8-57F3-400A-B38A-9E80BEF84711}" ShortID="753906904">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ORC stop" ID="{0DEDC801-7E78-4360-9206-43C844D697EF}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ORC_startAndLoop" ID="{F1988120-1A0B-4CF3-B7AC-0FEF98A140A2}">
+							<ChildrenList>
+								<Action Name="" ID="{830AEB92-5C42-46A9-AB31-25EC8A685827}" ShortID="735533775">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ORC startAndLoop" ID="{4C520F24-E813-47EF-B177-78FF81631C9E}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

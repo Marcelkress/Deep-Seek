@@ -16,6 +16,8 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEPS_DEEPSEEK = 803189924U;
         static const AkUniqueID PLAY_LANDINGSOUND = 525953352U;
         static const AkUniqueID PLAY_MONSTER_SOUND = 2033887548U;
+        static const AkUniqueID PLAY_ORC_STARTANDLOOP = 1136330962U;
+        static const AkUniqueID PLAY_ORC_STOP = 468325319U;
         static const AkUniqueID PLAY_OXYGENTANKPICKUP = 287033506U;
         static const AkUniqueID PLAY_PICKUPSCALESOUND = 4271838925U;
         static const AkUniqueID PLAY_UNDERWATER_AMBIENCE_B = 655760415U;
