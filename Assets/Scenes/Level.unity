@@ -64701,6 +64701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cded085d155cde949b60f67a11dbc3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.ProbeVolume
+  version: 2
+  globalVolume: 0
   mode: 2
   size: {x: 401.01, y: 52.994064, z: 301.01}
   overrideRendererFilters: 0
@@ -64731,8 +64733,6 @@ MonoBehaviour:
     e33: 1
   cachedHashCode: -916500744
   fillEmptySpaces: 0
-  version: 2
-  globalVolume: 0
 --- !u!4 &830528805
 Transform:
   m_ObjectHideFlags: 0
@@ -103621,7 +103621,7 @@ MonoBehaviour:
   aggressionHigh: 1
   aggressionRampRate: 0.05
   aggressionDecayRate: 0.01
-  aggressionSharpness: 5
+  aggressionSharpness: 50
   spawnSwimPastWeight: 0.4
   spawnPassOverheadWeight: 0.4
   spawnFakeChargeWeight: 0.7
@@ -119567,6 +119567,8 @@ MonoBehaviour:
   textAfterNumber: ' of 4 stations'
   completedAllStationsText: {fileID: 1135757754}
   showTextTime: 5
+  enableTest: 1
+  testButton: {fileID: -4881319319311499544, guid: e3cf70399f0ab4eae9a2f1d43950e2fa, type: 3}
 --- !u!1001 &1461201453
 PrefabInstance:
   m_ObjectHideFlags: 0

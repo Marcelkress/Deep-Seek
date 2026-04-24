@@ -319,6 +319,13 @@ public class MonsterMovement : MonoBehaviour
                     BeginFakePhase();
                 }
             }
+            else 
+            {
+                if (HasArrived(desiredPosition))
+                {
+                    BeginFakePhase();
+                }
+            }
 
             // Charge has custom flow and should not be processed by the generic
             // arrival/timeout logic below, which can otherwise cancel it too early.
@@ -412,7 +419,7 @@ public class MonsterMovement : MonoBehaviour
             }
             case EncounterEvent.Charge:
             {
-                eventTargetA = playerPos; // will be updated every frame in UpdateCurrentEvent to ensure it is always charging towards the player
+                eventTargetA = TargetCalculationForEvent(EncounterEvent.Charge); // initial target for the charge, will be updated to live player tracking in UpdateCurrentEvent after reaching it or if it takes too long
                 break;
             }
             default:
@@ -439,7 +446,7 @@ public class MonsterMovement : MonoBehaviour
             case EncounterEvent.FakeCharge:
                 return playerPos + (playerForwardDir * forwardDistance);
             case EncounterEvent.Charge:
-                return playerPos; // will be updated every frame in UpdateCurrentEvent to ensure it is always charging towards the player
+                return playerPos + new Vector3 (0,playerOffset,0); // will be updated every frame in UpdateCurrentEvent to ensure it is always charging towards the player
             default:
                 return transform.position + currentForward * 5f;
         }
