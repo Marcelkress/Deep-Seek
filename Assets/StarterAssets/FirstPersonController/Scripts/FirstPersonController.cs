@@ -164,6 +164,8 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+		[HideInInspector] public bool canMove;
+		
 		//Wwise
 		[Header("Wwise")] 
 		public AK.Wwise.Event Footsteps;
@@ -223,7 +225,10 @@ namespace StarterAssets
 			UpdateSurgeState(Time.deltaTime);
 			UpdateCurrentDrift(Time.deltaTime);
 			JumpAndGravity();
-			Move();
+			
+			if(canMove)
+				Move();
+			
 			HandleLandingPulse();
 			UpdateStepCycle(Time.deltaTime);
 
@@ -231,7 +236,8 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
-			CameraRotation();
+			if(canMove)
+				CameraRotation();
 		}
 
 		private void GroundedCheck()

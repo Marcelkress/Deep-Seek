@@ -3,7 +3,37 @@ guid: 1172365af1fd0f049babc1200eb5a99a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pathfinder_Boots_MI
+    second: {fileID: 2100000, guid: 4c073b749f454424e9d74f239fb2b5ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pathfinder_Forearms_MI
+    second: {fileID: 2100000, guid: 1975a6b14f2ee4f518092961ca7bd9d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pathfinder_Legs_MI
+    second: {fileID: 2100000, guid: 51e6c6418524d47909a70b25977dfd12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pathfinder_Parts_MI
+    second: {fileID: 2100000, guid: b0dc6f62e816842e9b66f8c0440fe3be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pathfinder_Torso_MI
+    second: {fileID: 2100000, guid: 2f559f33b31e945d3acc2ee7e6d7e388, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pathfinder_UI_MI
+    second: {fileID: 2100000, guid: 12404d098a7b84216a44fdd2fc160307, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

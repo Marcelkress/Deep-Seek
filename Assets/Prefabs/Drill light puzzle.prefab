@@ -5913,6 +5913,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: -1468131821966076168, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 73c45ee6b9e0b41d6b78cd914d403f84, type: 2}
     - target: {fileID: -1424267107226568684, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -6752,6 +6756,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6142821829497128310}
+    - targetCorrespondingSourceObject: {fileID: 8730707398080843037, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3120649318399785476}
     - targetCorrespondingSourceObject: {fileID: 47668324213327266, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3126360073297200491}
@@ -6764,6 +6771,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3743098255252499769, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
   m_PrefabInstance: {fileID: 5872017383956532681}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2905996776838136020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8730707398080843037, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
+  m_PrefabInstance: {fileID: 5872017383956532681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3120649318399785476
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2905996776838136020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26f0537ef11254d68a89af74acbb87de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5896551828583336043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 47668324213327266, guid: 412d6bcf82dd84fcd9214ccb45bd6f42, type: 3}
@@ -6824,6 +6858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 101b4b4924dd44d68a82aabca9d7706d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillStation
+  playerOxygen: {fileID: 0}
   colors:
   - {r: 0, g: 0.27406907, b: 1, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}

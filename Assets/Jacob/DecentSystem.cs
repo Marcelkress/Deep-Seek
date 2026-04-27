@@ -14,11 +14,11 @@ public class DecentSystem : MonoBehaviour
     [SerializeField] private GameObject playerLight;
     [SerializeField] private Transform elevatorRoot;
     [SerializeField] private Transform groundTarget;
-    [SerializeField] private Transform door;
+    [SerializeField] private Animator door;
     [SerializeField] private Image fadeImage;
     [SerializeField] private CameraShake cameraShake;
     [SerializeField] private GameObject monsterDirector;
-    [SerializeField] private CharacterController controller;
+    [SerializeField] private FirstPersonController controller;
 
     [Header("Sequence Settings")]
     [SerializeField] private Vector3 doorOpenOffset = new Vector3(-1f, 0f, 0f);
@@ -48,24 +48,27 @@ public class DecentSystem : MonoBehaviour
 
     private void Awake()
     {
-        controller.enabled = false; // disable player controller at start
+        controller.canMove = false; // disable player controller at start
+        
         if (monsterDirector != null)
         {
              monsterDirector.SetActive(false);
         }
        
-         if (playerLight != null)
-            {
-                playerLight.gameObject.SetActive(false);     
-            }
-            if (playerVfx != null)
-            {
-                playerVfx.gameObject.SetActive(false);
-            }
+        if (playerLight != null)
+        {
+            playerLight.gameObject.SetActive(false);     
+        }
+        if (playerVfx != null)
+        { 
+            playerVfx.gameObject.SetActive(false);
+        }
+        
         elevatorRoot = elevatorRoot ? elevatorRoot : transform;
+        
         startPos = elevatorRoot.position + new Vector3(0, ascendDistance, 0);
         
-        if (door) doorClosedPos = door.localPosition;
+        //if (door) doorClosedPos = door.localPosition;
         if (fadeImage) fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
         
         StartCoroutine(Sequence());
@@ -99,18 +102,21 @@ public class DecentSystem : MonoBehaviour
 
         }
 
-        controller.enabled = true; 
-
-
+        controller.canMove = true; 
+        
         onDoorOpen?.Invoke();
 
-        if (door) yield return door.DOLocalMove(doorClosedPos + doorOpenOffset, doorTweenTime).SetEase(Ease.OutQuad).WaitForCompletion();
+        //if (door) yield return door.DOLocalMove(doorClosedPos + doorOpenOffset, doorTweenTime).SetEase(Ease.OutQuad).WaitForCompletion();
+
+        door.SetTrigger("Open");
         
         yield return new WaitUntil(() => playerEntered && !playerInTrigger);
 
         onDoorClose?.Invoke();
-        if (door) yield return door.DOLocalMove(doorClosedPos, doorTweenTime).SetEase(Ease.InQuad).WaitForCompletion();
+        //if (door) yield return door.DOLocalMove(doorClosedPos, doorTweenTime).SetEase(Ease.InQuad).WaitForCompletion();
 
+        door.SetTrigger("Close");
+        
         onAscendStart?.Invoke();
 
         
