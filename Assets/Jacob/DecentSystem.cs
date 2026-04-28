@@ -26,7 +26,7 @@ public class DecentSystem : MonoBehaviour
     [SerializeField] private float waitBeforeFade = 3f;
     [SerializeField] private float fadeTime = 1f;
     [SerializeField] private float buildupTime = 10f; 
-    [SerializeField] private float moveDownSpeed = 5f; 
+    [SerializeField] private float moveDownTime = 5f; 
     [SerializeField] private float impactPause = 1f;
     [SerializeField] private float ascendSpeed = 4f;
     [SerializeField] private float ascendDistance = 80f;
@@ -71,56 +71,89 @@ public class DecentSystem : MonoBehaviour
         //if (door) doorClosedPos = door.localPosition;
         if (fadeImage) fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
         
-        StartCoroutine(Sequence());
+        StartCoroutine(Sequence(false));
     }
 
-    private IEnumerator Sequence()
+    public IEnumerator Sequence(bool ascend)
     {
         onSequenceStart?.Invoke();
-        yield return new WaitForSeconds(waitBeforeFade);
-        
-        fadeImage?.DOFade(0f, fadeTime);
-        yield return new WaitForSeconds(fadeTime);
 
+        if(!ascend)
+        {
+            //yield return new WaitForSeconds(waitBeforeFade);
+            fadeImage?.DOFade(0f, fadeTime);
+            //yield return new WaitForSeconds(fadeTime);
+        }
+        
         onRumbleStart?.Invoke();
         
         DOTween.To(() => 0.1f, x => visualEffect?.SetFloat("MovementSpeed", x), maxVfxSpeed, buildupTime).SetEase(Ease.InQuad);
-        DOTween.To(() => 0f, x => cameraShake?.StartShake(x), maxShake, buildupTime).SetEase(Ease.InQuad);
-        yield return new WaitForSeconds(buildupTime);
+        
+        if(!ascend)
+            DOTween.To(() => 0f, x => cameraShake?.StartShake(x), maxShake, buildupTime).SetEase(Ease.InQuad);
+        
+        //yield return new WaitForSeconds(buildupTime);
 
-        if (groundTarget) yield return elevatorRoot.DOMove(groundTarget.position, Vector3.Distance(elevatorRoot.position, groundTarget.position) / moveDownSpeed).SetEase(Ease.InQuad).WaitForCompletion();
-
-        cameraShake?.StartShake(impactShake);
+        if (groundTarget)
+        { 
+            //Debug.Log("Move");
+            yield return elevatorRoot.DOMove(groundTarget.position, 
+                moveDownTime)
+                .SetEase(Ease.InQuad).WaitForCompletion();
+        }
+        
+        if(!ascend)
+            cameraShake?.StartShake(impactShake);
+        
         onImpact?.Invoke();
         
-        DOTween.To(() => impactShake, x => cameraShake?.StartShake(x), 0f, impactPause);
+        if(!ascend)
+            DOTween.To(() => impactShake, x => cameraShake?.StartShake(x), 0f, impactPause);
+        
         yield return new WaitForSeconds(impactPause);
+        
         visualEffect.gameObject.SetActive(false); // stop vfx
+        
         if (playerVfx != null)
         {
             playerVfx.gameObject.SetActive(true); // start player vfx
-
         }
-
-        controller.canMove = true; 
+        
+        if(!ascend)
+            controller.canMove = true; 
         
         onDoorOpen?.Invoke();
 
         //if (door) yield return door.DOLocalMove(doorClosedPos + doorOpenOffset, doorTweenTime).SetEase(Ease.OutQuad).WaitForCompletion();
 
         door.SetTrigger("Open");
-        
-        yield return new WaitUntil(() => playerEntered && !playerInTrigger);
+
+        if (ascend)
+        {
+            yield return new WaitUntil((() => playerEntered && playerInTrigger));
+            controller.canMove = false;
+        }
+        else
+        {
+            yield return new WaitUntil(() => playerEntered && !playerInTrigger);
+        }
 
         onDoorClose?.Invoke();
         //if (door) yield return door.DOLocalMove(doorClosedPos, doorTweenTime).SetEase(Ease.InQuad).WaitForCompletion();
 
         door.SetTrigger("Close");
+
+        if (ascend)
+        {
+            fadeImage?.DOFade(1f, fadeTime);
+            yield return new WaitForSeconds(fadeTime);
+        }
         
         onAscendStart?.Invoke();
-
         
-        yield return elevatorRoot.DOMove(startPos, Vector3.Distance(elevatorRoot.position, startPos) / ascendSpeed).SetEase(Ease.OutQuad).WaitForCompletion();
+        yield return elevatorRoot.DOMove(startPos, 
+            Vector3.Distance(elevatorRoot.position, startPos) / ascendSpeed)
+            .SetEase(Ease.OutQuad).WaitForCompletion();
     }
 
     private void OnTriggerStay(Collider other)

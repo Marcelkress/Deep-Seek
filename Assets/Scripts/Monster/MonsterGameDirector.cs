@@ -25,7 +25,7 @@ public class MonsterGameDirector : MonoBehaviour
     [SerializeField] private LayerMask terrainMask = ~0;
 
     [Header("Noise Agression Multipliers")]
-    [SerializeField, Range(0f, 1f)] public float currentAgressionWeight;
+    [SerializeField, Range(0f, 1f)] public float currentAggressionWeight;
     [SerializeField] private float aggressionLow    = 0.2f;
     [SerializeField] private float aggressionMid    = 0.6f;
     [SerializeField] private float aggressionHigh   = 1.0f;
@@ -140,7 +140,7 @@ public class MonsterGameDirector : MonoBehaviour
 
         for (int i = 0; i < aggressionAnchors.Length; i++)
         {
-            float distanceFromCurrentAggressionWeight = Mathf.Abs(aggressionAnchors[i] - currentAgressionWeight);
+            float distanceFromCurrentAggressionWeight = Mathf.Abs(aggressionAnchors[i] - currentAggressionWeight);
 
             // Bell curve: events closer to current aggression score higher
             // aggressionSharpness controls how steeply score falls off with distance
@@ -294,17 +294,17 @@ public class MonsterGameDirector : MonoBehaviour
 
             targetMax = Mathf.Clamp01(targetMax);
 
-            if (currentAgressionWeight < targetMax)
+            if (currentAggressionWeight < targetMax)
             {
                 // Ramp up toward the target ceiling
-                currentAgressionWeight += aggressionRampRate * Time.deltaTime;
-                currentAgressionWeight  = Mathf.Min(currentAgressionWeight, targetMax);
+                currentAggressionWeight += aggressionRampRate * Time.deltaTime;
+                currentAggressionWeight  = Mathf.Min(currentAggressionWeight, targetMax);
             }
-            else if (currentAgressionWeight > targetMax)
+            else if (currentAggressionWeight > targetMax)
             {
                 // Decay down toward the target ceiling (or zero)
-                currentAgressionWeight -= aggressionDecayRate * Time.deltaTime;
-                currentAgressionWeight  = Mathf.Max(currentAgressionWeight, targetMax);
+                currentAggressionWeight -= aggressionDecayRate * Time.deltaTime;
+                currentAggressionWeight  = Mathf.Max(currentAggressionWeight, targetMax);
             }
             yield return null;
         }

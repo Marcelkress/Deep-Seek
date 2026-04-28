@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class StationTracker : MonoBehaviour
 {
+    public DecentSystem decentSystem;
     public bool[] stations;
     private int index;
     public static StationTracker instance;
@@ -70,6 +71,7 @@ public class StationTracker : MonoBehaviour
             completedAllStationsText.DOFade(1,0.3f).OnComplete(() =>
             {
                 Invoke(nameof(HideText), showTextTime);
+                StartCoroutine(decentSystem.Sequence(true));
             });
         }
     }
