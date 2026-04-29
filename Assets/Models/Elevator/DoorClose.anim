@@ -237,4 +237,11 @@ AnimationClip:
     flags: 0
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.16666667
+    functionName: StartElevatorDoor
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 7c12b72883c524636a6127a85778c74f, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

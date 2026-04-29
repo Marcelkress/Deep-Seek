@@ -45,6 +45,8 @@ public class DecentSystem : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent onSequenceStart, onRumbleStart, onImpact, onDoorOpen, onDoorClose, onAscendStart;
 
+   
+    
     private Vector3 startPos;
     private Vector3 doorClosedPos;
     private bool playerEntered;
@@ -83,6 +85,7 @@ public class DecentSystem : MonoBehaviour
         elevatorRoot.DOKill();
         
         onSequenceStart?.Invoke();
+        
 
         if(!ascend)
         {
@@ -138,6 +141,7 @@ public class DecentSystem : MonoBehaviour
         {
             yield return new WaitUntil((() => playerEntered && playerInTrigger));
             controller.canMove = false;
+           
         }
         else
         {

@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_DEEPSEEKSOUNDDOORSLAM = 3514501978U;
+        static const AkUniqueID PLAY_DEEPSEEKSOUNDWHIRRAMBI = 3434920404U;
         static const AkUniqueID PLAY_FOOTSTEPS_DEEPSEEK = 803189924U;
         static const AkUniqueID PLAY_LANDINGSOUND = 525953352U;
         static const AkUniqueID PLAY_MONSTER_SOUND = 2033887548U;

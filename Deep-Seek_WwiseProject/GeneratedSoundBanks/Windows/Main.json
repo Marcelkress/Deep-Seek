@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{7681FF0E-151C-B535-B548-F09F40C55F14}",
+    "Hash": "{6C1B4D35-9A63-7CFF-BF1C-9284CC2148CC}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -61,7 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Monster sound .wav",
-      "CachePath": "19/{19C5D17E-109E-C1FC-FADA-02EBD8E6B3DA}.wem"
+      "CachePath": "6C/{6CD8AA7F-59EF-D184-1DED-F27D5C5AB6E2}.wem"
      },
      {
       "Id": "427778424",
@@ -77,7 +77,15 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ORC startAndLoop.wav",
-      "CachePath": "DB/{DB78DDEC-C8D2-5218-7A8F-9C8136D82403}.wem"
+      "CachePath": "ED/{ED24D580-8BEE-14D5-9FF4-B065D42F4A2A}.wem"
+     },
+     {
+      "Id": "566333631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DeepSeekSoundDoorSlam.wav",
+      "CachePath": "29/{291E3C4B-D2D1-D682-72FC-B43634F0A573}.wem"
      },
      {
       "Id": "571400089",
@@ -101,7 +109,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Monster sound .wav",
-      "CachePath": "24/{242EB717-9311-ECAF-BFA1-B6A64D390405}.wem"
+      "CachePath": "0C/{0CEB2B09-FD8D-F817-C009-8BAD4BF85F8A}.wem"
      },
      {
       "Id": "644998508",
@@ -141,7 +149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Monster sound .wav",
-      "CachePath": "0D/{0D07FC82-EE2B-3FB4-3B5E-82F8DD916BEB}.wem"
+      "CachePath": "08/{087A5FD2-EC83-48FF-10D8-1B6DB3F3C317}.wem"
      },
      {
       "Id": "945341924",
@@ -149,7 +157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Monster sound .wav",
-      "CachePath": "5B/{5BCFD0A7-029D-3519-616B-B48CA0510AB0}.wem"
+      "CachePath": "31/{31096F01-67D7-788C-0DC2-AF0C3FED5262}.wem"
      },
      {
       "Id": "1006756753",
@@ -166,6 +174,14 @@
       "Location": "Memory",
       "ShortName": "Underwater Ambience B.wav",
       "CachePath": "D1/{D180EF04-7905-7F08-83A4-C3332FC9BC1C}.wem"
+     },
+     {
+      "Id": "1072735311",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DeepSeekSoundWhirrAmbi.wav",
+      "CachePath": "83/{8364E5A6-CD27-4DA3-AE6A-AF05A7C73F5D}.wem"
      }
     ],
     "Plugins": {
@@ -189,6 +205,32 @@
      ]
     },
     "Events": [
+     {
+      "Id": "3514501978",
+      "Name": "Play_DeepSeekSoundDoorSlam",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lift\\Play_DeepSeekSoundDoorSlam",
+      "GUID": "{CE097968-9711-4176-A72C-EFC840EF56A9}",
+      "DurationType": "OneShot",
+      "DurationMin": "35.63102",
+      "DurationMax": "35.63102",
+      "MediaRefs": [
+       {
+        "Id": "566333631"
+       }
+      ]
+     },
+     {
+      "Id": "3434920404",
+      "Name": "Play_DeepSeekSoundWhirrAmbi",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lift\\Play_DeepSeekSoundWhirrAmbi",
+      "GUID": "{D5917D3D-3597-423A-A159-87737297637E}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1072735311"
+       }
+      ]
+     },
      {
       "Id": "803189924",
       "Name": "Play_Footsteps_Deepseek",
@@ -382,6 +424,6 @@
     ]
    }
   ],
-  "FileHash": "{0FB8C707-3B9F-E937-D270-2539801CA07B}"
+  "FileHash": "{C134E2F2-34B6-AE9E-B72A-0BB48E5A9FBB}"
  }
 }

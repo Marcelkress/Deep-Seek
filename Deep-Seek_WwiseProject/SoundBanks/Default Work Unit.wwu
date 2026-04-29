@@ -6,7 +6,9 @@
 				<SoundBank Name="Main" ID="{1D996B7C-8506-41AA-BDA1-C95B98C54736}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_LandingSound" ID="{CF2C3DDA-DB07-40E7-9F40-34BB9111043C}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DeepSeekSoundDoorSlam" ID="{CE097968-9711-4176-A72C-EFC840EF56A9}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Underwater_Ambience_B" ID="{B4A900B0-C23B-41E5-9E77-828ED500BD96}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DeepSeekSoundWhirrAmbi" ID="{D5917D3D-3597-423A-A159-87737297637E}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ORC_stop" ID="{8F21EF0C-77B9-442D-B4C2-CC8A724B5B76}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps_Deepseek" ID="{9E2AFE22-7952-45F8-B670-5082EC063111}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_OxygentankPickup" ID="{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>

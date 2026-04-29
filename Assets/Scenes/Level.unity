@@ -185873,6 +185873,14 @@ PrefabInstance:
       propertyPath: redBlinkingLight
       value: 
       objectReference: {fileID: 1149471735}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: elevatordoorEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 889d0ad67d68d48b4bc5db78a8620d1a, type: 2}
+    - target: {fileID: 7763816015962198131, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
+      propertyPath: elevatorAmbientEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d71fb3e98b8a24d0bb87049cd58ed11a, type: 2}
     - target: {fileID: 7766698513356787789, guid: 72e633405f9e6d5619ef1eef0f769705, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000007629395
@@ -315050,6 +315058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652229192092}
   - component: {fileID: 919132148510954279}
+  - component: {fileID: 919132148510954280}
   m_Layer: 0
   m_Name: ElevatorPodFinal
   m_TagString: Untagged
@@ -315079,6 +315088,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &919132148510954280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148510954278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12b72883c524636a6127a85778c74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElevatorDecent
+  elevatorAmbientEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d71fb3e98b8a24d0bb87049cd58ed11a, type: 2}
+  elevatordoorEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 889d0ad67d68d48b4bc5db78a8620d1a, type: 2}
 --- !u!33 &925599422806380094
 MeshFilter:
   m_ObjectHideFlags: 0

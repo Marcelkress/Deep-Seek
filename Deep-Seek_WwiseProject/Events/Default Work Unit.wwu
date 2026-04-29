@@ -103,6 +103,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Lift" ID="{E3DE220D-9713-4308-881D-BBA58FDF370D}" ShortID="613458343">
+					<ChildrenList>
+						<Event Name="Play_DeepSeekSoundDoorSlam" ID="{CE097968-9711-4176-A72C-EFC840EF56A9}">
+							<ChildrenList>
+								<Action Name="" ID="{1D5F9F4F-AA51-4C80-86F5-950316E500A8}" ShortID="742380554">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeepSeekSoundDoorSlam" ID="{94278D14-97A4-4414-8A36-E14DEFF3E1AE}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DeepSeekSoundWhirrAmbi" ID="{D5917D3D-3597-423A-A159-87737297637E}">
+							<ChildrenList>
+								<Action Name="" ID="{FDA34C9C-47DD-47DE-968C-18F4163C4DB0}" ShortID="928840509">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeepSeekSoundWhirrAmbi" ID="{450D833F-679D-42D2-9AE9-FAD5196CAC3E}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

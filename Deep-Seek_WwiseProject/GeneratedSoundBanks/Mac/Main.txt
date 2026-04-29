@@ -6,6 +6,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	803189924	Play_Footsteps_Deepseek			\Default Work Unit\Footsteps\Play_Footsteps_Deepseek	
 	1136330962	Play_ORC_startAndLoop			\Default Work Unit\ORC\Play_ORC_startAndLoop	
 	2033887548	Play_Monster_sound			\Default Work Unit\Monster\Play_Monster_sound	
+	3434920404	Play_DeepSeekSoundWhirrAmbi			\Default Work Unit\Lift\Play_DeepSeekSoundWhirrAmbi	
+	3514501978	Play_DeepSeekSoundDoorSlam			\Default Work Unit\Lift\Play_DeepSeekSoundDoorSlam	
 	4271838925	Play_PickupScaleSound			\Default Work Unit\Play_PickupScaleSound	
 
 Effect plug-ins	ID	Name	Type				Notes
@@ -18,18 +20,20 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	167899123	ORC stop	.cache\2E\{2E9E1A2F-79DD-C53B-7DF3-3BD382DC3A0B}.wem		\Containers\Default Work Unit\ORC\ORC stop		380924
 	237568392	OxygentankPickup	.cache\E3\{E3E42B78-C71D-A216-C2E7-CD67652144A3}.wem		\Containers\Default Work Unit\OxygentankPickup		77516
 	375802478	Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771	.cache\19\{19C837F0-DECA-B893-9CEA-E75037BF7307}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771		135628
-	386475734	Monster sound_03	.cache\19\{19C5D17E-109E-C1FC-FADA-02EBD8E6B3DA}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_03		598372
+	386475734	Monster sound_03	.cache\6C\{6CD8AA7F-59EF-D184-1DED-F27D5C5AB6E2}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_03		598372
 	427778424	Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771	.cache\2B\{2B3942D8-75DF-D2E0-3285-738FA3A2955A}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771		135628
-	538382245	ORC startAndLoop	.cache\DB\{DB78DDEC-C8D2-5218-7A8F-9C8136D82403}.wem		\Containers\Default Work Unit\ORC\ORC startAndLoop		2475516
+	538382245	ORC startAndLoop	.cache\ED\{ED24D580-8BEE-14D5-9FF4-B065D42F4A2A}.wem		\Containers\Default Work Unit\ORC\ORC startAndLoop		2475516
+	566333631	DeepSeekSoundDoorSlam	.cache\29\{291E3C4B-D2D1-D682-72FC-B43634F0A573}.wem		\Containers\Default Work Unit\Lift\DeepSeekSoundDoorSlam		6285408
 	571400089	Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771	.cache\AC\{ACEDC4C3-522D-A300-EF10-361099E9244C}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771		135628
 	593026888	Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771	.cache\2F\{2F1E30C5-78B9-9CAA-8401-C60CBA3C763D}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771		135628
-	594692464	Monster sound_02	.cache\24\{242EB717-9311-ECAF-BFA1-B6A64D390405}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_02		730758
+	594692464	Monster sound_02	.cache\0C\{0CEB2B09-FD8D-F817-C009-8BAD4BF85F8A}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_02		730758
 	644998508	Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771	.cache\D0\{D0332DC5-9DB5-6A68-6543-BB2ED550D375}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771		135628
 	646366131	Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771	.cache\69\{69029124-2D37-FA53-E4E7-B983E2E33BDC}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771		135628
 	670368937	Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771	.cache\18\{18CE2842-3F1F-B01C-23D1-D21EBCAF2491}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771		135628
 	780315270	Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771	.cache\DB\{DBCE0CA5-B832-C85A-C3D9-0AAE42A6A0A0}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771		135628
-	900027967	Monster sound	.cache\0D\{0D07FC82-EE2B-3FB4-3B5E-82F8DD916BEB}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound		547456
-	945341924	Monster sound_01	.cache\5B\{5BCFD0A7-029D-3519-616B-B48CA0510AB0}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_01		381974
+	900027967	Monster sound	.cache\08\{087A5FD2-EC83-48FF-10D8-1B6DB3F3C317}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound		547456
+	945341924	Monster sound_01	.cache\31\{31096F01-67D7-788C-0DC2-AF0C3FED5262}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_01		381974
 	1006756753	PickupScaleSound	.cache\A3\{A3AA2F22-824E-B8A8-3BEC-C76852498989}.wem		\Containers\Default Work Unit\PickupScaleSound		193632
 	1028068659	Underwater Ambience B	.cache\D1\{D180EF04-7905-7F08-83A4-C3332FC9BC1C}.wem		\Containers\Default Work Unit\Underwater Ambience B		65536096
+	1072735311	DeepSeekSoundWhirrAmbi	.cache\83\{8364E5A6-CD27-4DA3-AE6A-AF05A7C73F5D}.wem		\Containers\Default Work Unit\Lift\DeepSeekSoundWhirrAmbi		5442144
 

@@ -1084,6 +1084,57 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Lift" ID="{571C0CDC-5DD2-401F-A4CA-2F68622EA038}" ShortID="932001440">
+					<ChildrenList>
+						<Sound Name="DeepSeekSoundDoorSlam" ID="{94278D14-97A4-4414-8A36-E14DEFF3E1AE}" ShortID="1048754945">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DeepSeekSoundDoorSlam" ID="{5E2F437A-BE71-4832-BC61-E5FC5348D879}">
+									<Language>SFX</Language>
+									<AudioFile>DeepSeekSoundDoorSlam.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="566333631"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DeepSeekSoundDoorSlam" ID="{5E2F437A-BE71-4832-BC61-E5FC5348D879}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DeepSeekSoundWhirrAmbi" ID="{450D833F-679D-42D2-9AE9-FAD5196CAC3E}" ShortID="692818614">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DeepSeekSoundWhirrAmbi" ID="{C5095CCC-3F8C-456F-9889-0985B2EDD7EE}">
+									<Language>SFX</Language>
+									<AudioFile>DeepSeekSoundWhirrAmbi.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1072735311"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DeepSeekSoundWhirrAmbi" ID="{C5095CCC-3F8C-456F-9889-0985B2EDD7EE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
