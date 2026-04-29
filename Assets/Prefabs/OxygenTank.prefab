@@ -352,8 +352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba81757f783954a3a94c357e032500e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::O2Tank
-  maxAmount: 100
-  minAmount: 250
+  Pickuptank:
+    m_PersistentCalls:
+      m_Calls: []
+  maxAmount: 200
+  minAmount: 300
 --- !u!136 &3480439613353005350
 CapsuleCollider:
   m_ObjectHideFlags: 0
