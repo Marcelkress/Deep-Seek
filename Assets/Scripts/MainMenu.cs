@@ -1,11 +1,16 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-    public void LoadNextScene()
+    public GameObject selectOnStart;
+
+    private void Start()
     {
-        SceneManager.LoadScene("Level");
+        EventSystem.current.SetSelectedGameObject(selectOnStart);
     }
 
     public void QuitGame()

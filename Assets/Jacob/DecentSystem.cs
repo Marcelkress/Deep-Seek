@@ -1,8 +1,10 @@
 using DG.Tweening;
 using StarterAssets;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.VFX;
 
@@ -16,6 +18,8 @@ public class DecentSystem : MonoBehaviour
     [SerializeField] private Transform groundTarget;
     [SerializeField] private Animator door;
     [SerializeField] private Image fadeImage;
+    [SerializeField] private TMP_Text endOfGameText;
+    [SerializeField] private float timeUntilQuit = 4;
     [SerializeField] private CameraShake cameraShake;
     [SerializeField] private GameObject monsterDirector;
     [SerializeField] private FirstPersonController controller;
@@ -76,6 +80,8 @@ public class DecentSystem : MonoBehaviour
 
     public IEnumerator Sequence(bool ascend)
     {
+        elevatorRoot.DOKill();
+        
         onSequenceStart?.Invoke();
 
         if(!ascend)
@@ -146,7 +152,12 @@ public class DecentSystem : MonoBehaviour
         if (ascend)
         {
             fadeImage?.DOFade(1f, fadeTime);
+            endOfGameText.gameObject.SetActive(true);
+            endOfGameText.DOFade(1, fadeTime);
             yield return new WaitForSeconds(fadeTime);
+
+            yield return new WaitForSeconds(timeUntilQuit);
+            SceneManager.LoadScene("MainMenu");
         }
         
         onAscendStart?.Invoke();
