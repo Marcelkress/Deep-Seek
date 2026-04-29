@@ -52,12 +52,19 @@ public class MonsterGameDirector : MonoBehaviour
 
     public bool monsterActive = false;
 
-    private void Awake()
+    private IEnumerator wait(float seconds)
     {
+        yield return new WaitForSeconds(seconds);
+    }
 
+    private void OnEnable()
+    {
         if (playerNoise == null)
         {
             playerNoise = FindAnyObjectByType<PlayerNoise>();
+            
+            if(playerNoise!= null)
+                Debug.Log("Player noise  found");
         }
 
         if (player == null && playerNoise != null)
@@ -66,19 +73,10 @@ public class MonsterGameDirector : MonoBehaviour
         }
 
         StartCoroutine(AgressionLevel());
-
         
-
         StartCoroutine(ScheduleNextAutoTrigger());
-    }
-
-    private IEnumerator wait(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-    }
-
-    private void OnEnable()
-    {
+        
+        
         swimPastKey?.Enable();
         overheadKey?.Enable();
         fakeChargeKey?.Enable();
@@ -95,7 +93,6 @@ public class MonsterGameDirector : MonoBehaviour
 
     private void Update()
     {
-
         if (enableDebugKeys && monsterActive == false)
         {   
             if (swimPastKey != null && swimPastKey.WasPressedThisFrame()) ForceSwimPastPOV();
@@ -291,6 +288,8 @@ public class MonsterGameDirector : MonoBehaviour
                 PlayerNoise.NoiseLevel.High => aggressionHigh,
                 _ => 0f
             };
+
+            //Debug.Log(targetMax);
 
             targetMax = Mathf.Clamp01(targetMax);
 

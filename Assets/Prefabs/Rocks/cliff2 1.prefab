@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6484270085672333638}
   - component: {fileID: 480044503553119392}
   - component: {fileID: -7693976738145995871}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cliff2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4043520553371075234}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000005171418, y: 0.69409597, z: 0.0000000053635425, w: 0.7198825}
+  m_LocalRotation: {x: 0, y: 0.6940932, z: 0, w: 0.7198852}
   m_LocalPosition: {x: -24.3429, y: -0.22699992, z: 2.161342}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8.0181, y: 8.0181, z: 8.0181}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 87.91, z: 0}
 --- !u!33 &6484270085672333638
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fc679d828039574e2bde77a323f6bb11, type: 2}
+  - {fileID: 2100000, guid: 213f904e09040495c87587fed870e88a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
