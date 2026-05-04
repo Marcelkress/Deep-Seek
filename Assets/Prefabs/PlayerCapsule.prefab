@@ -2861,6 +2861,7 @@ GameObject:
   - component: {fileID: 8908397756579153498}
   - component: {fileID: 5740527523654222198}
   - component: {fileID: 4790570672274944998}
+  - component: {fileID: 4126293981148044349}
   m_Layer: 0
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -2964,6 +2965,7 @@ MonoBehaviour:
   CinemachineCameraTarget: {fileID: 321588666132249145}
   TopClamp: 89
   BottomClamp: -89
+  canMove: 0
   Footsteps:
     idInternal: 0
     valueGuidInternal: 
@@ -3390,6 +3392,30 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &4126293981148044349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787721335802456081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71586953a629411184c26fa0f882e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &8689596814688795597
 GameObject:
   m_ObjectHideFlags: 0

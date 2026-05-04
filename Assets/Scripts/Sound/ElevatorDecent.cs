@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using AK.Wwise;
 
@@ -6,9 +7,16 @@ public class ElevatorDecent : MonoBehaviour
     [SerializeField] AK.Wwise.Event elevatorAmbientEvent;
     [SerializeField] AK.Wwise.Event elevatordoorEvent;
     
-    
-    
-    
+
+    public bool DoorClosed;
+
+
+    public void Awake()
+    {
+       DoorClosed=false;
+    }
+
+
     public void StartElevatorAmbience()
 
     {
@@ -20,7 +28,12 @@ public class ElevatorDecent : MonoBehaviour
     public void StartElevatorDoor()
 
     {
-        elevatordoorEvent.Post(gameObject);
+        if (!DoorClosed)
+        {
+            elevatordoorEvent.Post(gameObject);
+            DoorClosed = true;
+        }
+        
     }
 
     public void stopElevatorAmbience()

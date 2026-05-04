@@ -13,11 +13,17 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBIENTDOORCLOSE = 3718507185U;
+        static const AkUniqueID PLAY_DEEPSEEKAMBIENTWITHCHORDS = 1983061245U;
+        static const AkUniqueID PLAY_DEEPSEEKDOOROPEN = 38329876U;
+        static const AkUniqueID PLAY_DEEPSEEKDOORSLAMNOAUDIO = 3278961248U;
+        static const AkUniqueID PLAY_DEEPSEEKIMPACT = 200791458U;
         static const AkUniqueID PLAY_DEEPSEEKSOUNDDOORSLAM = 3514501978U;
         static const AkUniqueID PLAY_DEEPSEEKSOUNDWHIRRAMBI = 3434920404U;
         static const AkUniqueID PLAY_FOOTSTEPS_DEEPSEEK = 803189924U;
         static const AkUniqueID PLAY_LANDINGSOUND = 525953352U;
         static const AkUniqueID PLAY_MONSTER_SOUND = 2033887548U;
+        static const AkUniqueID PLAY_MONSTERHIT = 3193711535U;
         static const AkUniqueID PLAY_ORC_STARTANDLOOP = 1136330962U;
         static const AkUniqueID PLAY_ORC_STOP = 468325319U;
         static const AkUniqueID PLAY_OXYGENTANKPICKUP = 287033506U;

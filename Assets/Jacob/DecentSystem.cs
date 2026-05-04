@@ -1,6 +1,7 @@
 using DG.Tweening;
 using StarterAssets;
 using System.Collections;
+using System.Runtime.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -45,6 +46,13 @@ public class DecentSystem : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent onSequenceStart, onRumbleStart, onImpact, onDoorOpen, onDoorClose, onAscendStart;
 
+
+    //[Header("Sound")]
+    //[SerializeField] private AK.Wwise.Event impact;
+
+    
+    
+    
    
     
     private Vector3 startPos;
@@ -77,11 +85,20 @@ public class DecentSystem : MonoBehaviour
         //if (door) doorClosedPos = door.localPosition;
         if (fadeImage) fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
         
+       // StartCoroutine(Sequence(false));
+        
+    }
+
+    private void Start()
+    {
         StartCoroutine(Sequence(false));
+        
     }
 
     public IEnumerator Sequence(bool ascend)
     {
+        yield return null; // Gives a frame to have everythine initialized before fireing the sequence
+        
         elevatorRoot.DOKill();
         
         onSequenceStart?.Invoke();
@@ -115,13 +132,15 @@ public class DecentSystem : MonoBehaviour
             cameraShake?.StartShake(impactShake);
         
         onImpact?.Invoke();
+      
         
         if(!ascend)
             DOTween.To(() => impactShake, x => cameraShake?.StartShake(x), 0f, impactPause);
         
         yield return new WaitForSeconds(impactPause);
         
-        visualEffect.gameObject.SetActive(false); // stop vfx
+        if (visualEffect != null)
+            visualEffect.gameObject.SetActive(false);
         
         if (playerVfx != null)
         {
@@ -132,6 +151,7 @@ public class DecentSystem : MonoBehaviour
             controller.canMove = true; 
         
         onDoorOpen?.Invoke();
+        Debug.Log("openDoor");
 
         //if (door) yield return door.DOLocalMove(doorClosedPos + doorOpenOffset, doorTweenTime).SetEase(Ease.OutQuad).WaitForCompletion();
 
@@ -146,6 +166,7 @@ public class DecentSystem : MonoBehaviour
         else
         {
             yield return new WaitUntil(() => playerEntered && !playerInTrigger);
+            yield return new WaitForSeconds(3f);
         }
 
         onDoorClose?.Invoke();

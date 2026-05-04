@@ -11,11 +11,15 @@
 						<ObjectRef Name="Play_DeepSeekSoundWhirrAmbi" ID="{D5917D3D-3597-423A-A159-87737297637E}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ORC_stop" ID="{8F21EF0C-77B9-442D-B4C2-CC8A724B5B76}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps_Deepseek" ID="{9E2AFE22-7952-45F8-B670-5082EC063111}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DeepSeekImpact" ID="{DF0AF4FB-C436-46B0-BC57-9C23974D854A}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DeepSeekDoorOpen" ID="{92231F18-D358-46DC-8BF5-DE810DB81D8D}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_OxygentankPickup" ID="{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ORC startAndLoop" ID="{4C520F24-E813-47EF-B177-78FF81631C9E}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Monster_sound" ID="{61FC98DA-0A2F-4C74-BBF1-0E260E52EC74}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ORC_startAndLoop" ID="{F1988120-1A0B-4CF3-B7AC-0FEF98A140A2}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="DeepSeekDoorSlamNoAudio" ID="{2ADDBFD0-789C-4D1A-954A-D7A9EDD6ADFD}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PickupScaleSound" ID="{A41527E5-8F30-4E85-A1E8-5789AFFF52AC}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="DeepSeekDoorOpen" ID="{88189D1C-3216-4F4A-8020-9D9EEBA600F6}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

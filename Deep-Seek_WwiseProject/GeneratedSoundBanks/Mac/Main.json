@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{6C1B4D35-9A63-7CFF-BF1C-9284CC2148CC}",
+    "Hash": "{BCAACEAD-9FF4-7A75-E363-35ABA9163E6E}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "27/{2778AE1B-A91F-9065-3D26-6CCDAD50F080}.wem"
+     },
+     {
+      "Id": "119132395",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DeepSeekImpact.wav",
+      "CachePath": "7F/{7F81A493-2E93-D5E4-A562-A9B1DFADD7DB}.wem"
      },
      {
       "Id": "167899123",
@@ -62,6 +70,14 @@
       "Location": "Memory",
       "ShortName": "Monster sound .wav",
       "CachePath": "6C/{6CD8AA7F-59EF-D184-1DED-F27D5C5AB6E2}.wem"
+     },
+     {
+      "Id": "400180707",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MOnsterHit.wav",
+      "CachePath": "AA/{AAFC4221-2973-3F2A-8883-79CE07BCBCC4}.wem"
      },
      {
       "Id": "427778424",
@@ -144,6 +160,22 @@
       "CachePath": "DB/{DBCE0CA5-B832-C85A-C3D9-0AAE42A6A0A0}.wem"
      },
      {
+      "Id": "817650179",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DeepSeekAmbientNoChords.wav",
+      "CachePath": "51/{51856F8E-D83E-BF45-995B-09996347EE6F}.wem"
+     },
+     {
+      "Id": "831864122",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DeepSeekDoorSlamNoAudio.wav",
+      "CachePath": "D6/{D6A6CF05-FA9C-E046-F991-E09C31607500}.wem"
+     },
+     {
       "Id": "900027967",
       "Language": "SFX",
       "Streaming": "false",
@@ -158,6 +190,22 @@
       "Location": "Memory",
       "ShortName": "Monster sound .wav",
       "CachePath": "31/{31096F01-67D7-788C-0DC2-AF0C3FED5262}.wem"
+     },
+     {
+      "Id": "966527518",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DeepSeekAmbientWithChords.wav",
+      "CachePath": "58/{586695A6-7B6A-F7F7-01B0-59B7CF17782D}.wem"
+     },
+     {
+      "Id": "994188586",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DeepSeekDoorOpen.wav",
+      "CachePath": "C0/{C09B2E03-7EDA-0615-250F-A41FE6EB3841}.wem"
      },
      {
       "Id": "1006756753",
@@ -195,6 +243,14 @@
        "LibId": "7733251"
       },
       {
+       "Id": "3407225994",
+       "Name": "Phone_Booth",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Claustrophobia\\Phone_Booth",
+       "GUID": "{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
        "Id": "3435419520",
        "Name": "New_Guitar_Distortion",
        "ObjectPath": "\\Effects\\Default Work Unit\\New_Guitar_Distortion",
@@ -205,6 +261,76 @@
      ]
     },
     "Events": [
+     {
+      "Id": "3718507185",
+      "Name": "AmbientDoorClose",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lift\\AmbientDoorClose",
+      "GUID": "{0A4182B2-CE09-44DE-B960-9771C47DC60F}",
+      "DurationType": "OneShot",
+      "DurationMin": "29.326597",
+      "DurationMax": "29.326597",
+      "MediaRefs": [
+       {
+        "Id": "817650179"
+       }
+      ]
+     },
+     {
+      "Id": "1983061245",
+      "Name": "Play_DeepSeekAmbientWithChords",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lift\\Play_DeepSeekAmbientWithChords",
+      "GUID": "{40951B40-1C39-40EC-8089-5AB48EFC80F2}",
+      "DurationType": "OneShot",
+      "DurationMin": "30.451178",
+      "DurationMax": "30.451178",
+      "MediaRefs": [
+       {
+        "Id": "966527518"
+       }
+      ]
+     },
+     {
+      "Id": "38329876",
+      "Name": "Play_DeepSeekDoorOpen",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lift\\Play_DeepSeekDoorOpen",
+      "GUID": "{92231F18-D358-46DC-8BF5-DE810DB81D8D}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.9039955",
+      "DurationMax": "4.9039955",
+      "MediaRefs": [
+       {
+        "Id": "994188586"
+       }
+      ]
+     },
+     {
+      "Id": "3278961248",
+      "Name": "Play_DeepSeekDoorSlamNoAudio",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lift\\Play_DeepSeekDoorSlamNoAudio",
+      "GUID": "{941067AE-A5DE-49DB-A5F3-9F5B168B09B9}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6578655",
+      "DurationMax": "1.6578655",
+      "MediaRefs": [
+       {
+        "Id": "831864122"
+       }
+      ]
+     },
+     {
+      "Id": "200791458",
+      "Name": "Play_DeepSeekImpact",
+      "ObjectPath": "\\Events\\Default Work Unit\\Lift\\Play_DeepSeekImpact",
+      "GUID": "{DF0AF4FB-C436-46B0-BC57-9C23974D854A}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.0864973",
+      "DurationMax": "5.0864973",
+      "MediaRefs": [
+       {
+        "Id": "119132395"
+       }
+      ]
+     },
      {
       "Id": "3514501978",
       "Name": "Play_DeepSeekSoundDoorSlam",
@@ -355,6 +481,27 @@
       ]
      },
      {
+      "Id": "3193711535",
+      "Name": "Play_MOnsterHit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Monster\\Play_MOnsterHit",
+      "GUID": "{C8E5F825-46D7-4FA5-A8BA-7B5791EEED30}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.2353125",
+      "DurationMax": "4.2353125",
+      "MediaRefs": [
+       {
+        "Id": "400180707"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3407225994"
+        }
+       ]
+      }
+     },
+     {
       "Id": "1136330962",
       "Name": "Play_ORC_startAndLoop",
       "ObjectPath": "\\Events\\Default Work Unit\\ORC\\Play_ORC_startAndLoop",
@@ -364,7 +511,14 @@
        {
         "Id": "538382245"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3407225994"
+        }
+       ]
+      }
      },
      {
       "Id": "468325319",
@@ -378,7 +532,14 @@
        {
         "Id": "167899123"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3407225994"
+        }
+       ]
+      }
      },
      {
       "Id": "287033506",
@@ -424,6 +585,6 @@
     ]
    }
   ],
-  "FileHash": "{72C3BE8F-BCBF-31BC-88D4-35A25F9C0303}"
+  "FileHash": "{6EEDF1DF-CEA1-1B8C-BF2B-F01709A4F6D2}"
  }
 }

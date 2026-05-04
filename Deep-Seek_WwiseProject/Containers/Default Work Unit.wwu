@@ -1133,6 +1133,137 @@
 								<ActiveSource Name="DeepSeekSoundWhirrAmbi" ID="{C5095CCC-3F8C-456F-9889-0985B2EDD7EE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="DeepSeekAmbientNoChords" ID="{E0E1BFDF-071E-451A-8495-DAAA2A8AEB0D}" ShortID="481262462">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DeepSeekAmbientNoChords" ID="{44035AB9-710A-44AC-A877-D03F489C5E11}">
+									<Language>SFX</Language>
+									<AudioFile>DeepSeekAmbientNoChords.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="817650179"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DeepSeekAmbientNoChords" ID="{44035AB9-710A-44AC-A877-D03F489C5E11}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DeepSeekAmbientWithChords" ID="{3ECB1EB1-BD9B-4DC7-9572-37F17C838D09}" ShortID="418632550">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DeepSeekAmbientWithChords" ID="{A3F23D09-DCFA-4AAA-91DC-16E50350B03B}">
+									<Language>SFX</Language>
+									<AudioFile>DeepSeekAmbientWithChords.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="966527518"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DeepSeekAmbientWithChords" ID="{A3F23D09-DCFA-4AAA-91DC-16E50350B03B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DeepSeekDoorOpen" ID="{88189D1C-3216-4F4A-8020-9D9EEBA600F6}" ShortID="981332792">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DeepSeekDoorOpen" ID="{C234C431-FF57-438B-8DCA-DB50D18C90CF}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.720993008271106"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.720993008271106"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>DeepSeekDoorOpen.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="994188586"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DeepSeekDoorOpen" ID="{C234C431-FF57-438B-8DCA-DB50D18C90CF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DeepSeekDoorSlamNoAudio" ID="{2ADDBFD0-789C-4D1A-954A-D7A9EDD6ADFD}" ShortID="176542045">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>1.5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DeepSeekDoorSlamNoAudio" ID="{8BE08FDE-680C-4842-9FC5-7401FA7EE462}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.667123042417495"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>DeepSeekDoorSlamNoAudio.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="831864122"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DeepSeekDoorSlamNoAudio" ID="{8BE08FDE-680C-4842-9FC5-7401FA7EE462}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DeepSeekImpact" ID="{6CFF38DE-332F-4165-A114-3F42633A790A}" ShortID="803607413">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DeepSeekImpact" ID="{E1CCB18A-59F0-4280-8F55-5B0C49C64F61}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.132641079939531"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.132641079939531"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>DeepSeekImpact.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="119132395"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DeepSeekImpact" ID="{E1CCB18A-59F0-4280-8F55-5B0C49C64F61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -127,6 +127,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_DeepSeekImpact" ID="{DF0AF4FB-C436-46B0-BC57-9C23974D854A}">
+							<ChildrenList>
+								<Action Name="" ID="{BFF9A814-B0FF-4A64-8D83-6961F09C4D02}" ShortID="936649486">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeepSeekImpact" ID="{6CFF38DE-332F-4165-A114-3F42633A790A}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DeepSeekDoorSlamNoAudio" ID="{941067AE-A5DE-49DB-A5F3-9F5B168B09B9}">
+							<ChildrenList>
+								<Action Name="" ID="{38BCC84E-7517-4F5D-AE0D-CF18B0A63B79}" ShortID="781274197">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeepSeekDoorSlamNoAudio" ID="{2ADDBFD0-789C-4D1A-954A-D7A9EDD6ADFD}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DeepSeekDoorOpen" ID="{92231F18-D358-46DC-8BF5-DE810DB81D8D}">
+							<ChildrenList>
+								<Action Name="" ID="{5A049C60-0D22-4201-AFAF-246AEC1E027F}" ShortID="348213848">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeepSeekDoorOpen" ID="{88189D1C-3216-4F4A-8020-9D9EEBA600F6}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
