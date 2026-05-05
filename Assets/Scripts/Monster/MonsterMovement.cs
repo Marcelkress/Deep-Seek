@@ -90,8 +90,7 @@ public class MonsterMovement : MonoBehaviour
 
     [Header("Monster Attack Sound")] [SerializeField]
     private AK.Wwise.Event monsterHitSound;
-
-    public GameObject playerCapsule;
+    public GameObject SoundTarget;
     
     
     private Vector3 lastDustPosition; // New: tracks last spawn spot
@@ -554,7 +553,7 @@ public class MonsterMovement : MonoBehaviour
         Debug.Log("Player Hit by Monster!");
        PlayerOxygen playerOxygen = monsterDirector.player.GetComponent<PlayerOxygen>(); 
        playerOxygen.RemoveOxygen(monsterOxygenDamage);
-       monsterHitSound.Post(playerCapsule);
+       monsterHitSound.Post(gameObject);
        // Notify the director that the player has been hit
         // Here you would implement what happens when the monster successfully hits the player, e.g. reduce health, trigger effects, etc.
 

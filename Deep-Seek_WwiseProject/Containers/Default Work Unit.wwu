@@ -248,6 +248,11 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1027,6 +1032,46 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="MOnsterHit" ID="{47442856-F8FB-4EFA-A3F6-3758DD589264}" ShortID="201214510">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MOnsterHit" ID="{0DA5A344-3340-4895-B802-40781B1B07C1}">
+									<Language>SFX</Language>
+									<AudioFile>MOnsterHit.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="400180707"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{A8D49FBF-245F-4886-BC1B-B381248D8817}" ShortID="338459441">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="MOnsterHit" ID="{0DA5A344-3340-4895-B802-40781B1B07C1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ORC" ID="{95005E24-CA08-497B-AF56-304CD62DEE76}" ShortID="1061940176">
@@ -1049,6 +1094,17 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{CDF36A34-DC0F-4A93-803E-E3B491DEDD93}" ShortID="1055871299">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ORC stop" ID="{813EA77D-4DFD-4C78-BC9F-88498D6EA069}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -1078,6 +1134,17 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{21CE516C-98BF-40B8-B75B-3834A13F3E01}" ShortID="419279890">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ORC startAndLoop" ID="{006895EB-EB2E-493F-8482-3A2D825BAF2C}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -1144,6 +1211,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="DeepSeekAmbientNoChords" ID="{44035AB9-710A-44AC-A877-D03F489C5E11}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="24.4766573911214"/>
+										<Property Name="LoopBegin" Type="Real64" Value="131.034519309365"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="16.8836514577876"/>
+										<Property Name="TrimEnd" Type="Real64" Value="46.2102483793419"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>DeepSeekAmbientNoChords.wav</AudioFile>
 									<MediaIDList>
@@ -1156,6 +1230,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="DeepSeekAmbientWithChords" ID="{3ECB1EB1-BD9B-4DC7-9572-37F17C838D09}" ShortID="418632550">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
@@ -1166,6 +1247,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="DeepSeekAmbientWithChords" ID="{A3F23D09-DCFA-4AAA-91DC-16E50350B03B}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.59556320780549"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.47536021701539"/>
+										<Property Name="TrimEnd" Type="Real64" Value="29.9265384131773"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>DeepSeekAmbientWithChords.wav</AudioFile>
 									<MediaIDList>
@@ -1208,7 +1295,7 @@
 							<PropertyList>
 								<Property Name="InitialDelay" Type="Real64">
 									<ValueList>
-										<Value>1.5</Value>
+										<Value>0.45</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

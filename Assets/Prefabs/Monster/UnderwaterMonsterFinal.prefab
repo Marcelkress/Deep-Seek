@@ -1702,6 +1702,11 @@ MonoBehaviour:
     m_Bits: 64
   rayDistance: 4
   dustSpawnDistance: 1
+  monsterHitSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 27a55dbce0ba54bb180e876b41edf2b8, type: 2}
+  playerCapsule: {fileID: 0}
   target: {fileID: 1742639363843370105, guid: 7b5feeb643dad858b9f1ef290a090418, type: 3}
 --- !u!114 &342692982987647966
 MonoBehaviour:

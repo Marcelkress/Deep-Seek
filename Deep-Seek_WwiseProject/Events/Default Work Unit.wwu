@@ -75,6 +75,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_MOnsterHit" ID="{C8E5F825-46D7-4FA5-A8BA-7B5791EEED30}">
+							<ChildrenList>
+								<Action Name="" ID="{97868176-76A8-47AA-AE0C-41E5A7EBDD65}" ShortID="959162857">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MOnsterHit" ID="{47442856-F8FB-4EFA-A3F6-3758DD589264}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ORC" ID="{157620A0-98D1-445E-AD3F-FAD9D073FB26}" ShortID="591609874">
@@ -155,6 +166,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="DeepSeekDoorOpen" ID="{88189D1C-3216-4F4A-8020-9D9EEBA600F6}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="AmbientDoorClose" ID="{0A4182B2-CE09-44DE-B960-9771C47DC60F}">
+							<ChildrenList>
+								<Action Name="" ID="{76DBE7D2-347F-4853-BC81-6844424F135B}" ShortID="850085784">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeepSeekAmbientNoChords" ID="{E0E1BFDF-071E-451A-8495-DAAA2A8AEB0D}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DeepSeekAmbientWithChords" ID="{40951B40-1C39-40EC-8089-5AB48EFC80F2}">
+							<ChildrenList>
+								<Action Name="" ID="{82D0327C-EEEE-48A5-867F-9FE8300912FD}" ShortID="25889224">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeepSeekAmbientWithChords" ID="{3ECB1EB1-BD9B-4DC7-9572-37F17C838D09}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
