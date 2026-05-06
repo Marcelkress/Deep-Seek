@@ -1,10 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 using AK.Wwise;
-
-
-
-
 public class O2Tank : MonoBehaviour, IInteractable
 {
     public UnityEvent Pickuptank;

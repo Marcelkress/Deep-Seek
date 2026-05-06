@@ -2,6 +2,7 @@
  using UnityEngine;
  using System.Linq;
  using DG.Tweening;
+ using UnityEngine.Events;
 
  public class ValvePuzzle : MonoBehaviour
  {
@@ -23,6 +24,10 @@
     [Header("Computer screen")] public MeshRenderer screenRenderer;
     public bool active;
     private bool completed;
+
+    [Header("Events")] 
+    public UnityEvent ActivateEvent;
+    public UnityEvent FinishedStationEvent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +41,7 @@
         if (completed)
             return;
         
+        ActivateEvent.Invoke();
         active = true;
         InitializeLights();
         InitializeValveLights();
@@ -99,6 +105,7 @@
             screenRenderer.material.DisableKeyword("_EMISSION");
             completed = true;
             StationTracker.instance.Completed();
+            FinishedStationEvent.Invoke();
             playerOxygen.AddOxygen(playerOxygen.maxOxygen);
         }
     }

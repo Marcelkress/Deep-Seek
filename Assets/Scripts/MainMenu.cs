@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
         EventSystem.current.SetSelectedGameObject(selectOnStart);
     }
 

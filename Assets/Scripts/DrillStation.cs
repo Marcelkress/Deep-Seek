@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DrillStation : MonoBehaviour
 {
@@ -35,6 +36,10 @@ public class DrillStation : MonoBehaviour
     public Material lightMat;
     public float emissionLevel;
 
+    [Header("Events for audio")] 
+    public UnityEvent ActivateEvent;
+    public UnityEvent FinishedStationEvent;
+    
     private bool completed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -50,6 +55,7 @@ public class DrillStation : MonoBehaviour
 
     public void ActivatePuzzle()
     {
+        ActivateEvent.Invoke();
         active = true;
         InitializeSeq();   
         InitializePuzzleLights(true);
@@ -162,6 +168,7 @@ public class DrillStation : MonoBehaviour
         if (seqIndex >= sequence.Count && !completed)
         {
             Debug.Log("Puzzle completed!!");
+            FinishedStationEvent.Invoke();
             completed = true;
             StationTracker.instance.Completed();
             playerOxygen.AddOxygen(playerOxygen.maxOxygen);

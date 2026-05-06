@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Valve : MonoBehaviour, IInteractable
 {
@@ -9,6 +10,8 @@ public class Valve : MonoBehaviour, IInteractable
     public Light light;
     public float lightFadeTime = 1f;
     public bool turned;
+
+    public UnityEvent InteractEvent;
 
     private void Start()
     {
@@ -20,6 +23,7 @@ public class Valve : MonoBehaviour, IInteractable
         if (!valvePuzzle.active)
             return;
 
+        InteractEvent.Invoke();
         turned = true;
         valvePuzzle.OpenValve(this);
         playerObj.GetComponent<PlayerNoise>().SetInteractWithTime(noiseTime);

@@ -16,7 +16,7 @@ public class IntroText : MonoBehaviour
     public float panelFadeDuration = 1f;
     public Image backgroundPanel;
     
-    public AK.Wwise.Event characterShowEvent;
+    public UnityEvent characterShowEvent;
 
     private void Start()
     {
@@ -47,7 +47,7 @@ public class IntroText : MonoBehaviour
             foreach (var character in fullText.ToCharArray())
             {
                 text.text += character;
-                //characterShowEvent.Post(gameObject);
+                characterShowEvent.Invoke();
                 yield return new WaitForSeconds(timeBetweenCharacters);
             }
 
