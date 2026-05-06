@@ -1353,6 +1353,324 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="MainMenu" ID="{D533CF0D-AFD2-429E-837D-47DBDE28647E}" ShortID="1071831778">
+					<ChildrenList>
+						<RandomSequenceContainer Name="KeyboardClick" ID="{616CB0B5-72EB-4CB7-A4FC-99CC2AEF2EF1}" ShortID="461530763">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{5D0E4B16-A73B-42B8-A191-B20F45F6B451}" ShortID="72147909">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{897F0E6D-70B2-4495-8F58-5D4F52DF8025}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.058063416477219"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.203221957670266"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="652764269"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{897F0E6D-70B2-4495-8F58-5D4F52DF8025}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_01" ID="{C3366E5D-2905-43F6-9EAA-EAA2F81C66C1}" ShortID="967281063">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{DB954E94-0254-4DDA-88E9-A5EE040C3B87}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.222257303269529"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.382282468980944"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="646232151"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{DB954E94-0254-4DDA-88E9-A5EE040C3B87}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_02" ID="{59D7C806-E9CC-4433-92AE-B6A2A46E004E}" ShortID="969241067">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{251E4B75-AF38-4982-B411-26BDDEEA7096}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0661261398157276"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.01077478382774"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.18240876075125"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="615117573"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{251E4B75-AF38-4982-B411-26BDDEEA7096}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_03" ID="{5024066B-D7C7-4CA2-8913-E030E0DE5F44}" ShortID="1066947937">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{F757E71E-41A6-4DBE-A76F-9EF3454D3A2D}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.924906111027"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.10271186099997"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="732560770"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{F757E71E-41A6-4DBE-A76F-9EF3454D3A2D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_04" ID="{F8F12466-0ACD-452C-BE77-0F490E0C69AB}" ShortID="645784440">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{1F413227-6382-45C1-9A53-64C573E46F1C}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0364970046428232"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.644663158996594"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.760938741143877"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="230561535"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{1F413227-6382-45C1-9A53-64C573E46F1C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_05" ID="{79FF9E0A-98A2-4C84-9C9A-37CA1DDC8EAF}" ShortID="1021868963">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{2F97FAF0-39CC-4E4C-8467-02942DB040C3}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.11620525655167"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.20527657452263"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="405744936"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{2F97FAF0-39CC-4E4C-8467-02942DB040C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_06" ID="{28BC0D8A-045E-451A-81AE-7FC6A9309AEF}" ShortID="514657268">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{52D292EB-34F3-4735-9D15-8EBDA0736759}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0501833813838823"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.996344177499"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.1652596353412"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="389318898"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{52D292EB-34F3-4735-9D15-8EBDA0736759}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_07" ID="{F23C1C52-EB8A-4A76-8DEE-C9C83A17AFC1}" ShortID="478602753">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{076B9CD4-7A3F-405A-B369-917CB5D0DD2D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0717622353789515"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.61651457488001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.81004464506234"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="638665953"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{076B9CD4-7A3F-405A-B369-917CB5D0DD2D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_08" ID="{2BDAF8CF-C957-4963-B087-4C58692DA326}" ShortID="546928215">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{7FC04CD1-E6F3-4F02-ADF6-1676CA5F48C4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.124464089830936"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.17446574954038"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.40561325229805"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="579291182"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{7FC04CD1-E6F3-4F02-ADF6-1676CA5F48C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_09" ID="{AE0FA972-A804-479C-A652-513A976E0738}" ShortID="733847074">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{1D1A3361-A10E-4C77-ABD0-13002F649AD4}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.48562597411772"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.62787055556757"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1053762686"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{1D1A3361-A10E-4C77-ABD0-13002F649AD4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="virtualzero-mechanical-keyboard-typing-hd-372290_10" ID="{59BB3581-497A-422B-B3E7-4FA629892C3F}" ShortID="934169964">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{4D0BECA3-818B-4AFE-8014-BA27EC13760B}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.98316660401571"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.15229530610042"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>virtualzero-mechanical-keyboard-typing-hd-372290.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="929466396"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="virtualzero-mechanical-keyboard-typing-hd-372290" ID="{4D0BECA3-818B-4AFE-8014-BA27EC13760B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

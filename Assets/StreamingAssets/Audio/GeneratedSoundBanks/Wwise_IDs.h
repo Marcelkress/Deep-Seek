@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_DEEPSEEKSOUNDDOORSLAM = 3514501978U;
         static const AkUniqueID PLAY_DEEPSEEKSOUNDWHIRRAMBI = 3434920404U;
         static const AkUniqueID PLAY_FOOTSTEPS_DEEPSEEK = 803189924U;
+        static const AkUniqueID PLAY_KEYBOARDCLICK = 3396608295U;
         static const AkUniqueID PLAY_LANDINGSOUND = 525953352U;
         static const AkUniqueID PLAY_MONSTER_SOUND = 2033887548U;
         static const AkUniqueID PLAY_MONSTERHIT = 3193711535U;

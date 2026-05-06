@@ -195,6 +195,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="MainMenu" ID="{B9DBC5E1-95A4-4671-A3F3-5E0AEB128BD9}" ShortID="777403580">
+					<ChildrenList>
+						<Event Name="Play_KeyboardClick" ID="{659195F9-2058-48FE-B0EA-394F6737412E}">
+							<ChildrenList>
+								<Action Name="" ID="{CF3CD959-CAFB-4D95-A91F-890A66501A58}" ShortID="1058776192">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="KeyboardClick" ID="{616CB0B5-72EB-4CB7-A4FC-99CC2AEF2EF1}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

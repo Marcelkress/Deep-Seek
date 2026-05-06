@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{BCAACEAD-9FF4-7A75-E363-35ABA9163E6E}",
+    "Hash": "{2584475F-22C1-7089-D53D-6AFB20E9B360}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DeepSeekImpact.wav",
-      "CachePath": "7F/{7F81A493-2E93-D5E4-A562-A9B1DFADD7DB}.wem"
+      "CachePath": "43/{43C3037C-56C4-796A-E4A2-836DDADB080D}.wem"
      },
      {
       "Id": "167899123",
@@ -46,6 +46,14 @@
       "Location": "Memory",
       "ShortName": "ORC stop.wav",
       "CachePath": "2E/{2E9E1A2F-79DD-C53B-7DF3-3BD382DC3A0B}.wem"
+     },
+     {
+      "Id": "230561535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "49/{495C768A-5E65-0D1C-3853-0EEC7BB34A2F}.wem"
      },
      {
       "Id": "237568392",
@@ -72,12 +80,28 @@
       "CachePath": "6C/{6CD8AA7F-59EF-D184-1DED-F27D5C5AB6E2}.wem"
      },
      {
+      "Id": "389318898",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "F3/{F37E6E1F-DD2C-7A84-AE05-408E3D378CCA}.wem"
+     },
+     {
       "Id": "400180707",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "MOnsterHit.wav",
       "CachePath": "AA/{AAFC4221-2973-3F2A-8883-79CE07BCBCC4}.wem"
+     },
+     {
+      "Id": "405744936",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "CF/{CFE98347-A61A-6E8A-2B61-C03AAB1B1978}.wem"
      },
      {
       "Id": "427778424",
@@ -112,6 +136,14 @@
       "CachePath": "AC/{ACEDC4C3-522D-A300-EF10-361099E9244C}.wem"
      },
      {
+      "Id": "579291182",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "D0/{D001A184-0792-8704-8D4C-FFE649393411}.wem"
+     },
+     {
       "Id": "593026888",
       "Language": "SFX",
       "Streaming": "false",
@@ -128,12 +160,36 @@
       "CachePath": "0C/{0CEB2B09-FD8D-F817-C009-8BAD4BF85F8A}.wem"
      },
      {
+      "Id": "615117573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "2E/{2E0A4BD7-D2EF-E83E-72BE-53C7454F2C50}.wem"
+     },
+     {
+      "Id": "638665953",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "06/{06FA3F4A-8567-F340-538C-45974B678D70}.wem"
+     },
+     {
       "Id": "644998508",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "D0/{D0332DC5-9DB5-6A68-6543-BB2ED550D375}.wem"
+     },
+     {
+      "Id": "646232151",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "E0/{E0EBD3FB-7B25-2FE7-F5E9-BA6D64D371B7}.wem"
      },
      {
       "Id": "646366131",
@@ -144,12 +200,28 @@
       "CachePath": "69/{69029124-2D37-FA53-E4E7-B983E2E33BDC}.wem"
      },
      {
+      "Id": "652764269",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "CB/{CB5FAD19-37D9-1656-4CAF-24E881E74051}.wem"
+     },
+     {
       "Id": "670368937",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "18/{18CE2842-3F1F-B01C-23D1-D21EBCAF2491}.wem"
+     },
+     {
+      "Id": "732560770",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "E2/{E2BFDC7E-4CD4-613A-C624-A9FE47BC92FB}.wem"
      },
      {
       "Id": "780315270",
@@ -165,7 +237,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DeepSeekAmbientNoChords.wav",
-      "CachePath": "51/{51856F8E-D83E-BF45-995B-09996347EE6F}.wem"
+      "CachePath": "C4/{C4F283B9-C66F-F6F2-D97B-0B87566C9424}.wem"
      },
      {
       "Id": "831864122",
@@ -184,6 +256,14 @@
       "CachePath": "08/{087A5FD2-EC83-48FF-10D8-1B6DB3F3C317}.wem"
      },
      {
+      "Id": "929466396",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "B6/{B6B21C9B-ED04-9368-A29C-AD8D0FA1EE0C}.wem"
+     },
+     {
       "Id": "945341924",
       "Language": "SFX",
       "Streaming": "false",
@@ -197,7 +277,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DeepSeekAmbientWithChords.wav",
-      "CachePath": "58/{586695A6-7B6A-F7F7-01B0-59B7CF17782D}.wem"
+      "CachePath": "2F/{2FF7A276-5D57-CB77-C09B-6E43359C90C9}.wem"
      },
      {
       "Id": "994188586",
@@ -205,7 +285,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DeepSeekDoorOpen.wav",
-      "CachePath": "C0/{C09B2E03-7EDA-0615-250F-A41FE6EB3841}.wem"
+      "CachePath": "42/{4281841D-41AB-58FE-E681-66200FA49610}.wem"
      },
      {
       "Id": "1006756753",
@@ -222,6 +302,14 @@
       "Location": "Memory",
       "ShortName": "Underwater Ambience B.wav",
       "CachePath": "D1/{D180EF04-7905-7F08-83A4-C3332FC9BC1C}.wem"
+     },
+     {
+      "Id": "1053762686",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
+      "CachePath": "B3/{B3AE8777-783C-E9A2-0972-04AE21770349}.wem"
      },
      {
       "Id": "1072735311",
@@ -406,6 +494,50 @@
       }
      },
      {
+      "Id": "3396608295",
+      "Name": "Play_KeyboardClick",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Play_KeyboardClick",
+      "GUID": "{659195F9-2058-48FE-B0EA-394F6737412E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.08907132",
+      "DurationMax": "0.2311475",
+      "MediaRefs": [
+       {
+        "Id": "230561535"
+       },
+       {
+        "Id": "389318898"
+       },
+       {
+        "Id": "405744936"
+       },
+       {
+        "Id": "579291182"
+       },
+       {
+        "Id": "615117573"
+       },
+       {
+        "Id": "638665953"
+       },
+       {
+        "Id": "646232151"
+       },
+       {
+        "Id": "652764269"
+       },
+       {
+        "Id": "732560770"
+       },
+       {
+        "Id": "929466396"
+       },
+       {
+        "Id": "1053762686"
+       }
+      ]
+     },
+     {
       "Id": "525953352",
       "Name": "Play_LandingSound",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_LandingSound",
@@ -585,6 +717,6 @@
     ]
    }
   ],
-  "FileHash": "{405AB919-BF7B-F9C7-62D5-0581A62A7E4D}"
+  "FileHash": "{A2339607-4AE6-0E29-34CD-F7878B6F39C6}"
  }
 }
