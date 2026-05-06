@@ -237,7 +237,7 @@ namespace StarterAssets
 		private void LateUpdate()
 		{
 			if(canMove)
-				CameraRotation();
+				    CameraRotation();
 		}
 
 		private void GroundedCheck()
