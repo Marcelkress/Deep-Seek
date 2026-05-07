@@ -20,6 +20,7 @@
     [Header("Lights and materials")] public MeshRenderer[] lights;
     public Material lightMat;
     public float emissionLevel;
+    public Animator topLigth;
 
     [Header("Computer screen")] public MeshRenderer screenRenderer;
     public bool active;
@@ -103,6 +104,7 @@
         {
             active = false;
             screenRenderer.material.DisableKeyword("_EMISSION");
+            topLigth.SetTrigger("Complete");
             completed = true;
             StationTracker.instance.Completed();
             FinishedStationEvent.Invoke();

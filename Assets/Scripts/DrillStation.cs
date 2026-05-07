@@ -31,6 +31,7 @@ public class DrillStation : MonoBehaviour
     public Light evaluationLight;
     public float targetIntensity;
     public float fadeDownTime;
+    public Animator topLigth;
     
     [Header("Materials")]    
     public Material lightMat;
@@ -168,6 +169,7 @@ public class DrillStation : MonoBehaviour
         if (seqIndex >= sequence.Count && !completed)
         {
             Debug.Log("Puzzle completed!!");
+            topLigth.SetTrigger("Complete");
             FinishedStationEvent.Invoke();
             completed = true;
             StationTracker.instance.Completed();
