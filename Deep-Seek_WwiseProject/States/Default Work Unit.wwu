@@ -8,8 +8,21 @@
 						<State Name="None" ID="{5155FA15-7B28-4963-90EC-674D25192707}"/>
 						<State Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
 						<State Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
-						<State Name="MonsterAttack" ID="{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
+							<EndState Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
+							<EndState Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{049214B0-83A8-1BA8-0FF0-C95B2C0BA021}",
+    "Hash": "{ED997FE5-CAC8-2C7C-B53F-34295C57CF09}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -102,6 +102,14 @@
       "Location": "Memory",
       "ShortName": "BreathingRun.wav",
       "CachePath": "D3/{D3337C23-3662-BA88-188F-EC87354EC9CC}.wem"
+     },
+     {
+      "Id": "301614092",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "LeverSwitchLow 57-BreakerSwitchOff_BWU.43.wav",
+      "CachePath": "C3/{C324915F-C907-8F5D-F437-8E10DC4EEC0B}.wem"
      },
      {
       "Id": "340528204",
@@ -214,14 +222,6 @@
       "Location": "Memory",
       "ShortName": "ORC startAndLoop.wav",
       "CachePath": "ED/{ED24D580-8BEE-14D5-9FF4-B065D42F4A2A}.wem"
-     },
-     {
-      "Id": "555115316",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Simple Pulse Ambience.wav",
-      "CachePath": "9E/{9E81125A-1E77-2C73-B96C-31555DA0639F}.wem"
      },
      {
       "Id": "566333631",
@@ -608,22 +608,10 @@
       "Name": "Enable_State_GameMusic",
       "ObjectPath": "\\Events\\Default Work Unit\\Enable_State_GameMusic",
       "GUID": "{292969D8-7557-4ABE-9E7D-33D90F16EE6C}",
-      "DurationType": "Infinite",
-      "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "3103015060",
-         "Id": "0",
-         "GUID": "{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "555115316"
-         }
-        ]
-       }
-      ],
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
       "ActionSetState": [
        {
         "GroupId": "3103015060",
@@ -1160,6 +1148,30 @@
       ]
      },
      {
+      "Id": "4235708025",
+      "Name": "StationHandle",
+      "ObjectPath": "\\Events\\Default Work Unit\\StationAudio\\StationHandle",
+      "GUID": "{1A736C52-678A-429D-933B-5721E85DDB96}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.32259557",
+      "DurationMax": "0.32259557",
+      "MediaRefs": [
+       {
+        "Id": "301614092"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "3604890626"
+        }
+       ]
+      }
+     },
+     {
       "Id": "2578586511",
       "Name": "Stop_A_Desperate_Prayer",
       "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Stop_A_Desperate_Prayer",
@@ -1190,12 +1202,6 @@
         "GUID": "{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"
        },
        {
-        "Id": "2621508965",
-        "Name": "MonsterAttack",
-        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MonsterAttack",
-        "GUID": "{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"
-       },
-       {
         "Id": "3479155863",
         "Name": "MainMusic",
         "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MainMusic",
@@ -1206,6 +1212,6 @@
     ]
    }
   ],
-  "FileHash": "{D063B038-8F06-2606-848F-F4F07CCA95FB}"
+  "FileHash": "{47EFF4AB-215A-2556-11AE-EBA844B0F38E}"
  }
 }

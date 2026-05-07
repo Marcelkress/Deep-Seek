@@ -38,7 +38,7 @@ public class DrillStation : MonoBehaviour
     public float emissionLevel;
 
     [Header("Events for audio")] 
-    public UnityEvent ActivateEvent;
+    public UnityEvent ActivateEvent, FailedEvent;
     public UnityEvent FinishedStationEvent;
     
     private bool completed;
@@ -160,6 +160,7 @@ public class DrillStation : MonoBehaviour
             active = false;
             InitializePuzzleLights(false);
             correctStep = false;
+            FailedEvent.Invoke();
             Debug.Log("Failed puzzle - Resetting");
         }
     }

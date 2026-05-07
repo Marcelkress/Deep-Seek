@@ -10,6 +10,7 @@
 						<ObjectRef Name="Play_DeepSeekSoundDoorSlam" ID="{CE097968-9711-4176-A72C-EFC840EF56A9}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Underwater_Ambience_B" ID="{B4A900B0-C23B-41E5-9E77-828ED500BD96}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepSeekSoundWhirrAmbi" ID="{D5917D3D-3597-423A-A159-87737297637E}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StationHandle" ID="{1A736C52-678A-429D-933B-5721E85DDB96}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BreathWalk" ID="{C7B2DE8F-5F17-441F-9051-EF8BF8F6BE37}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ORC_stop" ID="{8F21EF0C-77B9-442D-B4C2-CC8A724B5B76}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_JumpVoic" ID="{E2F1D325-C752-4464-BC21-2BED6604B1A5}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>

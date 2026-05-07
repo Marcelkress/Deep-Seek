@@ -4,7 +4,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 State	ID	Name	State Group			Notes
 	748895195	None	MusicStates			
 	1145324063	MonsterClose	MusicStates			
-	2621508965	MonsterAttack	MusicStates			
 	3479155863	MainMusic	MusicStates			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

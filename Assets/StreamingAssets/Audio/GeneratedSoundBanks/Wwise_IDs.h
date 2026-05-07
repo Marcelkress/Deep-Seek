@@ -37,6 +37,7 @@ namespace AK
         static const AkUniqueID PLAY_PICKUPSCALESOUND = 4271838925U;
         static const AkUniqueID PLAY_UNDERWATER_AMBIENCE_B = 655760415U;
         static const AkUniqueID PLAY_UNDERWATER_SOUND = 1254934981U;
+        static const AkUniqueID STATIONHANDLE = 4235708025U;
         static const AkUniqueID STOP_A_DESPERATE_PRAYER = 2578586511U;
     } // namespace EVENTS
 
@@ -49,7 +50,6 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID MAINMUSIC = 3479155863U;
-                static const AkUniqueID MONSTERATTACK = 2621508965U;
                 static const AkUniqueID MONSTERCLOSE = 1145324063U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE

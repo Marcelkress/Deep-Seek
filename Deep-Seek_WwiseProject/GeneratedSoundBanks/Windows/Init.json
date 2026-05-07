@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{6A7133D5-A50D-86DF-0627-4B3E52AABC02}",
+    "Hash": "{E8FF14FE-72C0-5666-9E7B-B467C70C3642}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -62,12 +62,6 @@
         "GUID": "{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"
        },
        {
-        "Id": "2621508965",
-        "Name": "MonsterAttack",
-        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MonsterAttack",
-        "GUID": "{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"
-       },
-       {
         "Id": "3479155863",
         "Name": "MainMusic",
         "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MainMusic",
@@ -78,6 +72,6 @@
     ]
    }
   ],
-  "FileHash": "{7CCEF9CE-6F38-01E9-C4F9-2251F9BFE708}"
+  "FileHash": "{B7B44E38-6273-64A1-0019-69EB957C50AC}"
  }
 }

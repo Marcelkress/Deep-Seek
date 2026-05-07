@@ -315,17 +315,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_MainMusic" ID="{ED9C0ED6-B3BB-4A3A-96C0-30F72CA24B9F}">
-					<ChildrenList>
-						<Action Name="" ID="{349788B1-A247-427B-A644-582F318BA857}" ShortID="321083777">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MainMusic" ID="{9071C541-C7A7-4799-BFD4-F1015DDBD906}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_MonsterClose" ID="{A8C6FD0F-D971-4034-B411-5AC51788E36C}">
 					<ChildrenList>
 						<Action Name="" ID="{A3F1ED69-B3AC-4234-A7DC-D1F3CB742C8E}" ShortID="501667752">
@@ -359,15 +348,23 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{794F32A8-DCEE-44AF-A5EC-72EA9B526661}" ShortID="476973435">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{CEC3C5E5-ABFC-495A-B6CB-28898E53B364}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="StationAudio" ID="{DB8CD028-95F9-40A4-A927-5768E7B1E418}" ShortID="600820711">
+					<ChildrenList>
+						<Event Name="StationHandle" ID="{1A736C52-678A-429D-933B-5721E85DDB96}">
+							<ChildrenList>
+								<Action Name="" ID="{64592B88-E18C-4803-8C5C-489BD195378B}" ShortID="1038094071">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LeverSwitchLow 57-BreakerSwitchOff_BWU" ID="{54CEFA97-9BDE-4819-9584-9EDD12EA9785}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

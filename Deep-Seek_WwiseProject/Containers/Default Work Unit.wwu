@@ -2807,35 +2807,9 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
-				<MusicSwitchContainer Name="Music" ID="{CEC3C5E5-ABFC-495A-B6CB-28898E53B364}" ShortID="554023467">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
-						</Reference>
-						<Reference Name="TransitionRoot">
-							<Custom>
-								<MusicTransition Name="Root" ID="{4BC98311-F2FD-4968-98CF-1B823F9805E1}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{757FADE4-1E71-417A-B552-7A54F0F86D22}">
-											<TransitionInfo/>
-										</MusicTransition>
-									</ChildrenList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</Custom>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="StationAudio" ID="{31D2D296-E2C2-484C-B2AF-17237DFCA8D6}" ShortID="280648259">
 					<ChildrenList>
-						<MusicSegment Name="MainMusic" ID="{9071C541-C7A7-4799-BFD4-F1015DDBD906}" ShortID="1006441459">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="287727.278911565"/>
-							</PropertyList>
+						<Sound Name="LeverSwitchLow 57-BreakerSwitchOff_BWU" ID="{54CEFA97-9BDE-4819-9584-9EDD12EA9785}" ShortID="145190613">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
@@ -2845,260 +2819,43 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Simple Ambience" ID="{2F71B700-D5A3-4E94-9B36-7AC579A6F8DF}" ShortID="359676264">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{B6D0D046-3AA7-409C-BF78-8477B3D47F9D}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Simple Ambience" ID="{CB536A07-A826-41FC-B95B-9BC092D60422}">
-											<Language>SFX</Language>
-											<AudioFile>Simple Ambience.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="735865697"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{277B453A-AEA2-4251-AF55-DFDD3748C2F5}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Simple Ambience" ID="{67980927-F738-4FE9-A182-AE95707E1986}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="287727.278911565"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Simple Ambience" ID="{CB536A07-A826-41FC-B95B-9BC092D60422}"/>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
+								<AudioFileSource Name="LeverSwitchLow 57-BreakerSwitchOff_BWU_43" ID="{D10E5BA6-BBE2-42C8-86FB-66EA2392E53D}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0413011611495888"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.363896722021521"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>LeverSwitchLow 57-BreakerSwitchOff_BWU.43.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="301614092"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"/>
-										<StateGroupInfo Name="" ID="{0AF57442-F9F1-4654-ABE7-C92521B77E32}" ShortID="258620294"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
-										<CustomState Name="" ID="{6D15D04E-3FA3-46B0-859F-B77C93D6F3B0}" ShortID="438598245"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="MonsterAttack" ID="{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"/>
-										<CustomState Name="" ID="{1E84EAE4-4426-4CCB-B3EF-BBDB5C517B2C}" ShortID="399658150">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="None" ID="{5155FA15-7B28-4963-90EC-674D25192707}"/>
-										<CustomState Name="" ID="{A3450E87-FCBF-4094-9A8A-47FA7EA8A14A}" ShortID="337882264"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
-										<CustomState Name="" ID="{AA0351A8-2E43-4771-993E-E29158533910}" ShortID="208337712">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
 							<ObjectLists>
-								<ObjectList Name="Cues">
-									<MusicCue Name="Entry Cue" ID="{C2DA519C-45BA-41C2-AF5E-5D3CAF905A23}"/>
-									<MusicCue Name="Exit Cue" ID="{5C1B8C5B-5B65-4E83-859C-2F12D888CBD9}">
-										<PropertyList>
-											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="1000"/>
-										</PropertyList>
-									</MusicCue>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{3F357554-84F8-4621-A2FF-DD280FBA5509}" ShortID="503815416">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+									<EffectSlot Name="" ID="{E310368A-E52B-4365-BA14-226B43E8D271}" ShortID="396425441">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
 								</ObjectList>
 							</ObjectLists>
-						</MusicSegment>
-						<MusicSegment Name="MonsterClose" ID="{4CD75D18-FC02-4FD9-BC5F-4D859749B3B4}" ShortID="1002323427">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="196162.176870748"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="Simple Pulse Ambience" ID="{6DDE7E97-91FC-4038-974C-DE9F8884907B}" ShortID="684784027">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{C0CCD4F4-4366-4BD9-BB4E-BFA471ED96B4}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Simple Pulse Ambience" ID="{991224C3-EC98-4766-A824-385CAEC6DF2A}">
-											<Language>SFX</Language>
-											<AudioFile>Simple Pulse Ambience.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="555115316"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{5F060F50-7A98-4E12-815C-84465320F87E}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Simple Pulse Ambience" ID="{EEC87DA4-9AEB-4F04-914C-62D8F0CC1413}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="196162.176870748"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Simple Pulse Ambience" ID="{991224C3-EC98-4766-A824-385CAEC6DF2A}"/>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"/>
-										<StateGroupInfo Name="" ID="{C22537E6-FCD3-4B58-9D49-1E9EEF9398F3}" ShortID="465831158"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
-										<CustomState Name="" ID="{8DF65862-FB05-446E-A826-CC682775EC70}" ShortID="781710210">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="MonsterAttack" ID="{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"/>
-										<CustomState Name="" ID="{7A3E42E6-72E2-41CF-98F4-8D43A3F068B2}" ShortID="656594636">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="None" ID="{5155FA15-7B28-4963-90EC-674D25192707}"/>
-										<CustomState Name="" ID="{A224D9A2-EB21-4423-AA67-638606CAFC3A}" ShortID="968799341"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
-										<CustomState Name="" ID="{E0E9588E-D75E-4955-A009-2927E60E111D}" ShortID="242227593"/>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
-							<ObjectLists>
-								<ObjectList Name="Cues">
-									<MusicCue Name="Entry Cue" ID="{D19F370C-9AD2-4F6C-93EF-17032B61F94B}"/>
-									<MusicCue Name="Exit Cue" ID="{6B705ADF-28A7-4C25-9A49-9A187849D0F3}">
-										<PropertyList>
-											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="1000"/>
-										</PropertyList>
-									</MusicCue>
-								</ObjectList>
-							</ObjectLists>
-						</MusicSegment>
+							<ActiveSourceList>
+								<ActiveSource Name="LeverSwitchLow 57-BreakerSwitchOff_BWU_43" ID="{D10E5BA6-BBE2-42C8-86FB-66EA2392E53D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"/>
-								<StateGroupInfo Name="" ID="{C6A029DF-0935-4B33-9AF7-555E0536031C}" ShortID="199345905"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
-								<CustomState Name="" ID="{CED041FD-5BB7-421A-89CF-DA2BAE2CCF8C}" ShortID="303882774"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="MonsterAttack" ID="{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"/>
-								<CustomState Name="" ID="{71CD5C60-2845-4CA0-A52D-DEF512D834BC}" ShortID="1007963111"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{5155FA15-7B28-4963-90EC-674D25192707}"/>
-								<CustomState Name="" ID="{A2720751-5FB3-4104-AB45-0EBEA8F05167}" ShortID="729066121"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
-								<CustomState Name="" ID="{C4037F08-FB3C-4DE1-A4B0-6C21799506A1}" ShortID="56300633"/>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ObjectLists>
-						<ObjectList Name="Arguments">
-							<PluginInnerObject Name="" ID="{1348C440-E5CD-4B00-8300-06D02C788036}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
-								<ReferenceList>
-									<Reference Name="Argument">
-										<ObjectRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}" WorkUnitID="{A64ADB50-DD78-4CC8-98EB-E9F81D6C75FA}"/>
-									</Reference>
-								</ReferenceList>
-							</PluginInnerObject>
-						</ObjectList>
-						<ObjectList Name="Entries">
-							<MultiSwitchEntry Name="" ID="{84581244-1F28-43AD-B07E-B4B4BDFB8EE0}">
-								<ReferenceList>
-									<Reference Name="AudioNode">
-										<ObjectRef Name="MonsterClose" ID="{4CD75D18-FC02-4FD9-BC5F-4D859749B3B4}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
-									</Reference>
-								</ReferenceList>
-								<ObjectLists>
-									<ObjectList Name="EntryPath">
-										<PluginInnerObject Name="" ID="{3431E4DC-67C2-434F-B236-34FE24F5005F}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
-											<ReferenceList>
-												<Reference Name="EntryPathObject">
-													<ObjectRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}" WorkUnitID="{A64ADB50-DD78-4CC8-98EB-E9F81D6C75FA}"/>
-												</Reference>
-											</ReferenceList>
-										</PluginInnerObject>
-									</ObjectList>
-								</ObjectLists>
-							</MultiSwitchEntry>
-						</ObjectList>
-					</ObjectLists>
-				</MusicSwitchContainer>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
