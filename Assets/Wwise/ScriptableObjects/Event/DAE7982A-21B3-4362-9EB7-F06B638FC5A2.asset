@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79936237f85d9450a98e145f70c59782, type: 3}
-  m_Name: 1A736C52-678A-429D-933B-5721E85DDB96
+  m_Name: DAE7982A-21B3-4362-9EB7-F06B638FC5A2
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
-  objectName: LightsOn
-  id: 3680323533
-  guid: 1A736C52-678A-429D-933B-5721E85DDB96
+  objectName: Play_Station_Engine_On
+  id: 215042785
+  guid: DAE7982A-21B3-4362-9EB7-F06B638FC5A2
   IsInUserDefinedSoundBank: 1

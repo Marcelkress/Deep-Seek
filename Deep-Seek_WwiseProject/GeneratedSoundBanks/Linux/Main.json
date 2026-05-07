@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{ED997FE5-CAC8-2C7C-B53F-34295C57CF09}",
+    "Hash": "{A5CC43E8-2E5E-45AA-A7E4-3D348117AD0F}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -22,6 +22,14 @@
       "Location": "Memory",
       "ShortName": "Footsteps Deepseek\\Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771.wav",
       "CachePath": "EE/{EEC85EBA-3DE6-0AEC-B284-AE3254C4D9CC}.wem"
+     },
+     {
+      "Id": "58943377",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "LeverSwitchLow 56-BullSwitchOn_ZA01.104.wav",
+      "CachePath": "66/{66BE55E4-4423-4D4C-8490-CF9A4A5F3CA3}.wem"
      },
      {
       "Id": "98165099",
@@ -88,6 +96,14 @@
       "CachePath": "E3/{E3E42B78-C71D-A216-C2E7-CD67652144A3}.wem"
      },
      {
+      "Id": "245202253",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "freesound_community-coded-message-sonar-72108.wav",
+      "CachePath": "DE/{DE6C1D23-2AFA-99A4-FA2B-F3A81B7DE18F}.wem"
+     },
+     {
       "Id": "259429331",
       "Language": "SFX",
       "Streaming": "false",
@@ -109,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "LeverSwitchLow 57-BreakerSwitchOff_BWU.43.wav",
-      "CachePath": "C3/{C324915F-C907-8F5D-F437-8E10DC4EEC0B}.wem"
+      "CachePath": "EC/{ECF40D61-2C28-66FD-45C8-52850F2CA2E5}.wem"
      },
      {
       "Id": "340528204",
@@ -358,6 +374,14 @@
       "Location": "Memory",
       "ShortName": "HitVoice.wav",
       "CachePath": "CE/{CE9535E4-48CF-B2D0-88AE-6E34EB20FF4B}.wem"
+     },
+     {
+      "Id": "705368653",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Station Engine On.wav",
+      "CachePath": "4D/{4D8A3E47-1CBF-F026-3B41-14C268B4D79E}.wem"
      },
      {
       "Id": "732560770",
@@ -630,6 +654,30 @@
       ]
      },
      {
+      "Id": "3680323533",
+      "Name": "LightsOn",
+      "ObjectPath": "\\Events\\Default Work Unit\\StationAudio\\LightsOn",
+      "GUID": "{1A736C52-678A-429D-933B-5721E85DDB96}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.32259557",
+      "DurationMax": "0.32259557",
+      "MediaRefs": [
+       {
+        "Id": "301614092"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        },
+        {
+         "Id": "3604890626"
+        }
+       ]
+      }
+     },
+     {
       "Id": "1134978873",
       "Name": "Play_A_Desperate_Prayer",
       "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Play_A_Desperate_Prayer",
@@ -812,6 +860,19 @@
       ]
      },
      {
+      "Id": "3955572982",
+      "Name": "Play_Extractionsonar",
+      "ObjectPath": "\\Events\\Default Work Unit\\StationAudio\\Play_Extractionsonar",
+      "GUID": "{99193202-FC2E-4D22-99DB-5BF9497C21B6}",
+      "MaxAttenuation": "200",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "245202253"
+       }
+      ]
+     },
+     {
       "Id": "803189924",
       "Name": "Play_Footsteps_Deepseek",
       "ObjectPath": "\\Events\\Default Work Unit\\Footsteps\\Play_Footsteps_Deepseek",
@@ -855,6 +916,27 @@
        "ShareSets": [
         {
          "Id": "2995775460"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3341410160",
+      "Name": "Play_Handle",
+      "ObjectPath": "\\Events\\Default Work Unit\\StationAudio\\Play_Handle",
+      "GUID": "{601003AF-FF4F-44EC-815E-C4DF035087CE}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4856467",
+      "DurationMax": "2.4856467",
+      "MediaRefs": [
+       {
+        "Id": "58943377"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
         }
        ]
       }
@@ -1122,6 +1204,26 @@
       ]
      },
      {
+      "Id": "215042785",
+      "Name": "Play_Station_Engine_On",
+      "ObjectPath": "\\Events\\Default Work Unit\\StationAudio\\Play_Station_Engine_On",
+      "GUID": "{DAE7982A-21B3-4362-9EB7-F06B638FC5A2}",
+      "MaxAttenuation": "30",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "705368653"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3407225994"
+        }
+       ]
+      }
+     },
+     {
       "Id": "655760415",
       "Name": "Play_Underwater_Ambience_B",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Underwater_Ambience_B",
@@ -1146,30 +1248,6 @@
         "Id": "353269859"
        }
       ]
-     },
-     {
-      "Id": "4235708025",
-      "Name": "StationHandle",
-      "ObjectPath": "\\Events\\Default Work Unit\\StationAudio\\StationHandle",
-      "GUID": "{1A736C52-678A-429D-933B-5721E85DDB96}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.32259557",
-      "DurationMax": "0.32259557",
-      "MediaRefs": [
-       {
-        "Id": "301614092"
-       }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1008402193"
-        },
-        {
-         "Id": "3604890626"
-        }
-       ]
-      }
      },
      {
       "Id": "2578586511",
@@ -1212,6 +1290,6 @@
     ]
    }
   ],
-  "FileHash": "{D2C4B61E-4633-7EAA-2C34-AD17CAB97E1B}"
+  "FileHash": "{FE1612B5-E51E-F3C7-50FD-B59B4AAA30E1}"
  }
 }

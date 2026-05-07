@@ -40,6 +40,8 @@ public class DrillStation : MonoBehaviour
     [Header("Events for audio")] 
     public UnityEvent ActivateEvent, FailedEvent;
     public UnityEvent FinishedStationEvent;
+    public UnityEvent EvaluationLightEventCorrect;
+    public UnityEvent EvaluationLightEventIncorrect;
     
     private bool completed;
     
@@ -169,9 +171,9 @@ public class DrillStation : MonoBehaviour
     {
         if (seqIndex >= sequence.Count && !completed)
         {
+            FinishedStationEvent.Invoke();
             Debug.Log("Puzzle completed!!");
             topLigth.SetTrigger("Complete");
-            FinishedStationEvent.Invoke();
             completed = true;
             StationTracker.instance.Completed();
             playerOxygen.AddOxygen(playerOxygen.maxOxygen);
@@ -192,6 +194,7 @@ public class DrillStation : MonoBehaviour
             }
             else
             {
+                EvaluationLightEventCorrect.Invoke();
                 evaluationLight.DOIntensity(targetIntensity, 0.1f).OnComplete(() =>
                 {
                     evaluationLight.DOIntensity(0, fadeDownTime);
@@ -201,6 +204,7 @@ public class DrillStation : MonoBehaviour
         else
         {
             evaluationLight.color = Color.red;
+            EvaluationLightEventIncorrect.Invoke();
             evaluationLight.DOIntensity(targetIntensity, 0.1f).OnComplete(() =>
             {
                 evaluationLight.DOIntensity(0, fadeDownTime);

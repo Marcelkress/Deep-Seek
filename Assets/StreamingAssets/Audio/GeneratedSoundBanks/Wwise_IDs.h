@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID AMBIENTDOORCLOSE = 3718507185U;
         static const AkUniqueID ENABLE_STATE_GAMEMUSIC = 3019832752U;
+        static const AkUniqueID LIGHTSON = 3680323533U;
         static const AkUniqueID PLAY_A_DESPERATE_PRAYER = 1134978873U;
         static const AkUniqueID PLAY_BREATHING_RUNNING = 3908227708U;
         static const AkUniqueID PLAY_BREATHWALK = 1371788995U;
@@ -24,7 +25,9 @@ namespace AK
         static const AkUniqueID PLAY_DEEPSEEKIMPACT = 200791458U;
         static const AkUniqueID PLAY_DEEPSEEKSOUNDDOORSLAM = 3514501978U;
         static const AkUniqueID PLAY_DEEPSEEKSOUNDWHIRRAMBI = 3434920404U;
+        static const AkUniqueID PLAY_EXTRACTIONSONAR = 3955572982U;
         static const AkUniqueID PLAY_FOOTSTEPS_DEEPSEEK = 803189924U;
+        static const AkUniqueID PLAY_HANDLE = 3341410160U;
         static const AkUniqueID PLAY_HITV = 2855285393U;
         static const AkUniqueID PLAY_JUMPVOIC = 1487838551U;
         static const AkUniqueID PLAY_KEYBOARDCLICK = 3396608295U;
@@ -35,9 +38,9 @@ namespace AK
         static const AkUniqueID PLAY_ORC_STOP = 468325319U;
         static const AkUniqueID PLAY_OXYGENTANKPICKUP = 287033506U;
         static const AkUniqueID PLAY_PICKUPSCALESOUND = 4271838925U;
+        static const AkUniqueID PLAY_STATION_ENGINE_ON = 215042785U;
         static const AkUniqueID PLAY_UNDERWATER_AMBIENCE_B = 655760415U;
         static const AkUniqueID PLAY_UNDERWATER_SOUND = 1254934981U;
-        static const AkUniqueID STATIONHANDLE = 4235708025U;
         static const AkUniqueID STOP_A_DESPERATE_PRAYER = 2578586511U;
     } // namespace EVENTS
 

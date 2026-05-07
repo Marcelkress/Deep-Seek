@@ -9,6 +9,7 @@ public class DrillStationLever : MonoBehaviour, IInteractable
     public int leverID;
     private bool canInteract;
     public UnityEvent PullEvent;
+   
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,4 +39,7 @@ public class DrillStationLever : MonoBehaviour, IInteractable
     {
         station.SetEvalLight();
     }
+
+
+   
 }

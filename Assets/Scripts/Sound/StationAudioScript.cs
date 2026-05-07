@@ -6,9 +6,9 @@ public class StationAudioScript : MonoBehaviour
    public AK.Wwise.Event stationActivatedEvent;
    public AK.Wwise.Event handleEvent;
    public AK.Wwise.Event valveEvent;
-   public AK.Wwise.Event StationFinishedEvent;
-
-
+   public AK.Wwise.Event stationFinishedEvent;
+ 
+   
 
 
    public void FailedCombination()
@@ -37,7 +37,7 @@ public class StationAudioScript : MonoBehaviour
 
    public void StationFinished()
    {
-      StationFinishedEvent.Post(gameObject);
+      stationFinishedEvent.Post(gameObject);
    }
 
 }

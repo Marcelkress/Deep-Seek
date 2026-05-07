@@ -363,6 +363,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Extractionsonar" ID="{99193202-FC2E-4D22-99DB-5BF9497C21B6}">
+							<ChildrenList>
+								<Action Name="" ID="{4E0BD2B2-3FCA-4B4F-B392-26CC9B59B693}" ShortID="817159854">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Extractionsonar" ID="{BE343DED-C8A0-4D16-A178-AD1907AA8D3A}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Station_Engine_On" ID="{DAE7982A-21B3-4362-9EB7-F06B638FC5A2}">
+							<ChildrenList>
+								<Action Name="" ID="{B4D7A6B2-D970-49B1-95F4-BCCBAF56DBE7}" ShortID="466680384">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Station Engine On" ID="{E01C9455-DD7A-461B-9E7C-9C411D3A3360}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
