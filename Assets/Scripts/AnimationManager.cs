@@ -6,6 +6,8 @@ public class AnimationManager : MonoBehaviour
 {
     private StarterAssetsInputs _input;
     private Animator anim;
+    public AK.Wwise.Event Footsteps;
+    
     
     private bool walking, sprinting;
     private void Start()
@@ -23,4 +25,13 @@ public class AnimationManager : MonoBehaviour
         anim.SetBool("Walking", walking);
         anim.SetBool("Running", sprinting);
     }
+    
+    public void FootStepSound()
+    {
+        Footsteps.Post(gameObject);
+			
+    }
+
+   
+    
 }

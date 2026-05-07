@@ -1547,6 +1547,7 @@ GameObject:
   - component: {fileID: 5446897025322594320}
   - component: {fileID: 9001576352641587858}
   - component: {fileID: 342692982987647966}
+  - component: {fileID: 5316054440331632599}
   m_Layer: 0
   m_Name: UnderwaterMonsterFinal
   m_TagString: Untagged
@@ -1706,7 +1707,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 27a55dbce0ba54bb180e876b41edf2b8, type: 2}
-  playerCapsule: {fileID: 0}
+  SoundTarget: {fileID: 0}
   target: {fileID: 1742639363843370105, guid: 7b5feeb643dad858b9f1ef290a090418, type: 3}
 --- !u!114 &342692982987647966
 MonoBehaviour:
@@ -1724,7 +1725,40 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 75ded1b7018ac4494b8c2d079d19abcd, type: 2}
+  OnTriggerEnterState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 927d03a28a17b4eaca925aeb48f7d0fc, type: 2}
+  OnTriggerExitState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 05b4d9086aef9402895c56e126a3f78e, type: 2}
   monsterSound: {fileID: 0}
+--- !u!135 &5316054440331632599
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335278238498184662}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 60
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8981235297127720041
 GameObject:
   m_ObjectHideFlags: 0

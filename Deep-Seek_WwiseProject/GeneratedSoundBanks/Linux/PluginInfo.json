@@ -4,6 +4,13 @@
   "BasePlatform": "Linux",
   "PluginLibs": [
    {
+    "LibName": "Wwise Parametric EQ",
+    "LibId": "6881283",
+    "Type": "Effect",
+    "DLL": "AkParametricEQ",
+    "StaticLib": "AkParametricEQFX"
+   },
+   {
     "LibName": "Wwise RoomVerb",
     "LibId": "7733251",
     "Type": "Effect",
@@ -28,6 +35,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{064E4829-7EA5-BDBE-E71D-45726D24027B}"
+  "FileHash": "{E14A3B84-76B7-ADC3-00E3-5AC08066B4A2}"
  }
 }

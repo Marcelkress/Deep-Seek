@@ -14,6 +14,10 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AMBIENTDOORCLOSE = 3718507185U;
+        static const AkUniqueID ENABLE_STATE_GAMEMUSIC = 3019832752U;
+        static const AkUniqueID PLAY_A_DESPERATE_PRAYER = 1134978873U;
+        static const AkUniqueID PLAY_BREATHING_RUNNING = 3908227708U;
+        static const AkUniqueID PLAY_BREATHWALK = 1371788995U;
         static const AkUniqueID PLAY_DEEPSEEKAMBIENTWITHCHORDS = 1983061245U;
         static const AkUniqueID PLAY_DEEPSEEKDOOROPEN = 38329876U;
         static const AkUniqueID PLAY_DEEPSEEKDOORSLAMNOAUDIO = 3278961248U;
@@ -21,6 +25,8 @@ namespace AK
         static const AkUniqueID PLAY_DEEPSEEKSOUNDDOORSLAM = 3514501978U;
         static const AkUniqueID PLAY_DEEPSEEKSOUNDWHIRRAMBI = 3434920404U;
         static const AkUniqueID PLAY_FOOTSTEPS_DEEPSEEK = 803189924U;
+        static const AkUniqueID PLAY_HITV = 2855285393U;
+        static const AkUniqueID PLAY_JUMPVOIC = 1487838551U;
         static const AkUniqueID PLAY_KEYBOARDCLICK = 3396608295U;
         static const AkUniqueID PLAY_LANDINGSOUND = 525953352U;
         static const AkUniqueID PLAY_MONSTER_SOUND = 2033887548U;
@@ -30,7 +36,26 @@ namespace AK
         static const AkUniqueID PLAY_OXYGENTANKPICKUP = 287033506U;
         static const AkUniqueID PLAY_PICKUPSCALESOUND = 4271838925U;
         static const AkUniqueID PLAY_UNDERWATER_AMBIENCE_B = 655760415U;
+        static const AkUniqueID PLAY_UNDERWATER_SOUND = 1254934981U;
+        static const AkUniqueID STOP_A_DESPERATE_PRAYER = 2578586511U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSICSTATES
+        {
+            static const AkUniqueID GROUP = 3103015060U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MAINMUSIC = 3479155863U;
+                static const AkUniqueID MONSTERATTACK = 2621508965U;
+                static const AkUniqueID MONSTERCLOSE = 1145324063U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSICSTATES
+
+    } // namespace STATES
 
     namespace BANKS
     {

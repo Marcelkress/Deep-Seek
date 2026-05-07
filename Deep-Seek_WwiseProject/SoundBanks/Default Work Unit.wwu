@@ -10,17 +10,25 @@
 						<ObjectRef Name="Play_DeepSeekSoundDoorSlam" ID="{CE097968-9711-4176-A72C-EFC840EF56A9}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Underwater_Ambience_B" ID="{B4A900B0-C23B-41E5-9E77-828ED500BD96}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepSeekSoundWhirrAmbi" ID="{D5917D3D-3597-423A-A159-87737297637E}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BreathWalk" ID="{C7B2DE8F-5F17-441F-9051-EF8BF8F6BE37}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ORC_stop" ID="{8F21EF0C-77B9-442D-B4C2-CC8A724B5B76}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_JumpVoic" ID="{E2F1D325-C752-4464-BC21-2BED6604B1A5}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="AmbientDoorClose" ID="{0A4182B2-CE09-44DE-B960-9771C47DC60F}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Breathing_running" ID="{05A5540F-0E83-4501-8E7F-2FDECD6266CC}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_A_Desperate_Prayer" ID="{453476A0-5CF8-45AE-B2E0-5920A3B00602}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps_Deepseek" ID="{9E2AFE22-7952-45F8-B670-5082EC063111}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepSeekImpact" ID="{DF0AF4FB-C436-46B0-BC57-9C23974D854A}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepSeekDoorOpen" ID="{92231F18-D358-46DC-8BF5-DE810DB81D8D}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_OxygentankPickup" ID="{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ORC startAndLoop" ID="{4C520F24-E813-47EF-B177-78FF81631C9E}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_A_Desperate_Prayer" ID="{1DFCBFA8-6637-47FA-93F5-2C87B9FC3E42}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Underwater_sound" ID="{B8838AB4-440A-48BF-BBE7-3A6D03059672}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_KeyboardClick" ID="{659195F9-2058-48FE-B0EA-394F6737412E}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enable_State_GameMusic" ID="{292969D8-7557-4ABE-9E7D-33D90F16EE6C}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Monster_sound" ID="{61FC98DA-0A2F-4C74-BBF1-0E260E52EC74}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ORC_startAndLoop" ID="{F1988120-1A0B-4CF3-B7AC-0FEF98A140A2}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="DeepSeekDoorSlamNoAudio" ID="{2ADDBFD0-789C-4D1A-954A-D7A9EDD6ADFD}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_HitV" ID="{4523C295-D9B1-4E78-890D-BDA284A5B4BC}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PickupScaleSound" ID="{A41527E5-8F30-4E85-A1E8-5789AFFF52AC}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="DeepSeekDoorOpen" ID="{88189D1C-3216-4F4A-8020-9D9EEBA600F6}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MOnsterHit" ID="{C8E5F825-46D7-4FA5-A8BA-7B5791EEED30}" WorkUnitID="{E5BBA1AC-004A-4A16-AA2D-491E2AEAF23D}" Origin="Manual" Filter="7"/>

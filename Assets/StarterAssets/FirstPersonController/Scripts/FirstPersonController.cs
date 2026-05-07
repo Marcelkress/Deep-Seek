@@ -168,8 +168,10 @@ namespace StarterAssets
 		
 		//Wwise
 		[Header("Wwise")] 
-		public AK.Wwise.Event Footsteps;
+		//public AK.Wwise.Event Footsteps;
 		public AK.Wwise.Event LandingSound;
+		public AK.Wwise.Event JumpVoice;
+		public AK.Wwise.Event HitVoice;
 
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
@@ -208,6 +210,7 @@ namespace StarterAssets
 			footstepSystem = GetComponent<FootstepSystem>();
 #if ENABLE_INPUT_SYSTEM
 			_playerInput = GetComponent<PlayerInput>();
+			Isjumpping = false;
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
@@ -225,6 +228,7 @@ namespace StarterAssets
 			UpdateSurgeState(Time.deltaTime);
 			UpdateCurrentDrift(Time.deltaTime);
 			JumpAndGravity();
+			
 			
 			if(canMove)
 				Move();
@@ -431,6 +435,7 @@ namespace StarterAssets
 				float normalizedLanding = Mathf.Clamp01(landingSpeed * LandingPulseScale);
 				float planarSpeed = new Vector3(_planarVelocity.x, 0f, _planarVelocity.z).magnitude;
 				RaiseStepEvent(GetStepPulse(0.4f, normalizedLanding), planarSpeed, landingSpeed, true);
+				Isjumpping = false;
 			}
 
 			_wasGroundedLastFrame = Grounded;
@@ -565,6 +570,7 @@ namespace StarterAssets
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					JumpSound();
 				}
 
 				// jump timeout
@@ -623,6 +629,7 @@ namespace StarterAssets
 		private void OnEnable()
 		{
 			StepLanded += OnStepLanded;
+			
 		}
 		// Stopper med at Lytte på "Steplanded"
 		private void OnDisable()
@@ -639,13 +646,36 @@ namespace StarterAssets
 				footstepSystem.PlayFootstep();
 				LandingSound.Post(gameObject);
 				Debug.Log("Player landed!");
+				Isjumpping = false;
 			}
 			else
 			{
 				footstepSystem.PlayFootstep();
 				// Regular footstep — (kommer fra UpdateStepCycle)
-				Footsteps.Post(gameObject);
+				//Footsteps.Post(gameObject);
 			}
 		}
-}
+
+		private void JumpSound()
+
+		{
+
+			if (_input.jump && Grounded && !Isjumpping)
+			{
+				JumpVoice.Post(gameObject);
+				Isjumpping = true;
+			}
+			
+		}
+
+		private bool Isjumpping;
+
+		
+		
+		
+	}
+	
+	
+		
+	
 }

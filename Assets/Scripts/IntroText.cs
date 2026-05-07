@@ -17,9 +17,12 @@ public class IntroText : MonoBehaviour
     public Image backgroundPanel;
     
     public UnityEvent characterShowEvent;
+    public MenuMusicScript menuMusic;
+    public BreathingSoundScript breathingSound;
 
     private void Start()
     {
+        menuMusic.MenuMusicPlay();
         backgroundPanel.DOFade(0, 0);
         foreach (var text in textFields)
         {
@@ -54,7 +57,12 @@ public class IntroText : MonoBehaviour
             yield return new WaitForSeconds(textShowTime);
             text.gameObject.SetActive(false);
         }
+        menuMusic.MenuMusicStop();
+        yield return new WaitForSeconds(2f);
+        menuMusic.GetUnderWater();
+        breathingSound.StartBreathingSoundWalk();
 
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("Level");
     }
 }

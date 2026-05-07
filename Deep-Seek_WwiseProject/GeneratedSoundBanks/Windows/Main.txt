@@ -6,59 +6,106 @@ Event	ID	Name			Wwise Object Path	Notes
 	525953352	Play_LandingSound			\Default Work Unit\Play_LandingSound	
 	655760415	Play_Underwater_Ambience_B			\Default Work Unit\Play_Underwater_Ambience_B	
 	803189924	Play_Footsteps_Deepseek			\Default Work Unit\Footsteps\Play_Footsteps_Deepseek	
+	1134978873	Play_A_Desperate_Prayer			\Default Work Unit\MainMenu\Play_A_Desperate_Prayer	
 	1136330962	Play_ORC_startAndLoop			\Default Work Unit\ORC\Play_ORC_startAndLoop	
+	1254934981	Play_Underwater_sound			\Default Work Unit\MainMenu\Play_Underwater_sound	
+	1371788995	Play_BreathWalk			\Default Work Unit\DiverVoice\Play_BreathWalk	
+	1487838551	Play_JumpVoic			\Default Work Unit\DiverVoice\Play_JumpVoic	
 	1983061245	Play_DeepSeekAmbientWithChords			\Default Work Unit\Lift\Play_DeepSeekAmbientWithChords	
 	2033887548	Play_Monster_sound			\Default Work Unit\Monster\Play_Monster_sound	
+	2578586511	Stop_A_Desperate_Prayer			\Default Work Unit\MainMenu\Stop_A_Desperate_Prayer	
+	2855285393	Play_HitV			\Default Work Unit\DiverVoice\Play_HitV	
+	3019832752	Enable_State_GameMusic			\Default Work Unit\Enable_State_GameMusic	
 	3193711535	Play_MOnsterHit			\Default Work Unit\Monster\Play_MOnsterHit	
 	3278961248	Play_DeepSeekDoorSlamNoAudio			\Default Work Unit\Lift\Play_DeepSeekDoorSlamNoAudio	
 	3396608295	Play_KeyboardClick			\Default Work Unit\MainMenu\Play_KeyboardClick	
 	3434920404	Play_DeepSeekSoundWhirrAmbi			\Default Work Unit\Lift\Play_DeepSeekSoundWhirrAmbi	
 	3514501978	Play_DeepSeekSoundDoorSlam			\Default Work Unit\Lift\Play_DeepSeekSoundDoorSlam	
 	3718507185	AmbientDoorClose			\Default Work Unit\Lift\AmbientDoorClose	
+	3908227708	Play_Breathing_running			\Default Work Unit\DiverVoice\Play_Breathing_running	
 	4271838925	Play_PickupScaleSound			\Default Work Unit\Play_PickupScaleSound	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MusicStates			
+	1145324063	MonsterClose	MusicStates			
+	2621508965	MonsterAttack	MusicStates			
+	3479155863	MainMusic	MusicStates			
+
 Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
 	2995775460	Room_Small	Wwise RoomVerb			
 	3407225994	Phone_Booth	Wwise RoomVerb			
 	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
+	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	48094280	Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771	.cache\EE\{EEC85EBA-3DE6-0AEC-B284-AE3254C4D9CC}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 3-universfield-heavy-walking-footsteps-352771		135628
 	98165099	Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771	.cache\27\{2778AE1B-A91F-9065-3D26-6CCDAD50F080}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 1-universfield-heavy-walking-footsteps-352771		135628
 	119132395	DeepSeekImpact	.cache\43\{43C3037C-56C4-796A-E4A2-836DDADB080D}.wem		\Containers\Default Work Unit\Lift\DeepSeekImpact		897356
 	167899123	ORC stop	.cache\2E\{2E9E1A2F-79DD-C53B-7DF3-3BD382DC3A0B}.wem		\Containers\Default Work Unit\ORC\ORC stop		380924
-	230561535	virtualzero-mechanical-keyboard-typing-hd-372290_04	.cache\49\{495C768A-5E65-0D1C-3853-0EEC7BB34A2F}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_04		20604
+	199048475	Breathing walk_01	.cache\52\{52B420DC-E22B-C642-281B-34AF787D7075}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\BreathWalk\Breathing walk_01		444796
+	199357808	JumpVoice_01	.cache\C4\{C428703C-5717-F395-242C-215D0236CE84}.wem		\Containers\Default Work Unit\DiverVoice\JumpVoic\JumpVoice_01		82152
+	228257008	BreathingRun_02	.cache\34\{340F0755-8351-84A5-D5F5-E55BD6C9C07B}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_02		251620
+	230561535	virtualzero-mechanical-keyboard-typing-hd-372290_04	.cache\8D\{8D1F18D9-0EC7-FADF-3E15-511DF2851DDF}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_04		20604
 	237568392	OxygentankPickup	.cache\E3\{E3E42B78-C71D-A216-C2E7-CD67652144A3}.wem		\Containers\Default Work Unit\OxygentankPickup		77516
+	259429331	BreathingRun_06	.cache\4D\{4D07B5FA-46D7-9CCF-5620-2D116EF3DF94}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_06		251620
+	272984212	BreathingRun_01	.cache\D3\{D3337C23-3662-BA88-188F-EC87354EC9CC}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_01		213552
+	340528204	BreathingRun_03	.cache\41\{41629FCA-9436-CE4D-E506-893A34BB0A62}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_03		244824
+	353269859	Underwater sound	.cache\EA\{EA9BEB3C-7EA3-EF2E-8EFC-972DABEBD72B}.wem		\Containers\Default Work Unit\MainMenu\Underwater sound\Underwater sound		1332992
+	371614706	BreathingRun_05	.cache\0C\{0C77C0C0-F529-81BF-F350-B7F18F12A945}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_05		244824
 	375802478	Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771	.cache\19\{19C837F0-DECA-B893-9CEA-E75037BF7307}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 4-universfield-heavy-walking-footsteps-352771		135628
 	386475734	Monster sound_03	.cache\6C\{6CD8AA7F-59EF-D184-1DED-F27D5C5AB6E2}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_03		598372
-	389318898	virtualzero-mechanical-keyboard-typing-hd-372290_06	.cache\F3\{F37E6E1F-DD2C-7A84-AE05-408E3D378CCA}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_06		29892
+	389318898	virtualzero-mechanical-keyboard-typing-hd-372290_06	.cache\B3\{B395D924-08B9-C244-C0B3-EC96E32B6C7E}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_06		29892
 	400180707	MOnsterHit	.cache\AA\{AAFC4221-2973-3F2A-8883-79CE07BCBCC4}.wem		\Containers\Default Work Unit\Monster \MOnsterHit		813276
-	405744936	virtualzero-mechanical-keyboard-typing-hd-372290_05	.cache\CF\{CFE98347-A61A-6E8A-2B61-C03AAB1B1978}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_05		15808
+	405744936	virtualzero-mechanical-keyboard-typing-hd-372290_05	.cache\1B\{1B6D48A0-821E-57D6-D11B-F29987B83DA3}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_05		15808
 	427778424	Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771	.cache\2B\{2B3942D8-75DF-D2E0-3285-738FA3A2955A}.wem		\Containers\Default Work Unit\LandingSound\Footsteps Deepseek 10-universfield-heavy-walking-footsteps-352771		135628
+	454593157	Breathing walk_02	.cache\9A\{9A356FC0-2F82-4F2F-461B-427F0E151945}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\BreathWalk\Breathing walk_02		434916
+	471079799	HitVoice_01	.cache\50\{50B510B4-45DE-3CDD-6B76-4745F62FB896}.wem		\Containers\Default Work Unit\DiverVoice\HitV\HitVoice_01		147800
+	476466743	BreathingRun_08	.cache\74\{7496B595-A8C1-7ED0-0E90-2BADCE343229}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_08		258420
+	518198009	JumpVoice_02	.cache\4C\{4C6CACF7-4401-D9B1-D11A-50FA1C47404A}.wem		\Containers\Default Work Unit\DiverVoice\JumpVoic\JumpVoice_02		57956
 	538382245	ORC startAndLoop	.cache\ED\{ED24D580-8BEE-14D5-9FF4-B065D42F4A2A}.wem		\Containers\Default Work Unit\ORC\ORC startAndLoop		2475516
-	566333631	DeepSeekSoundDoorSlam	.cache\29\{291E3C4B-D2D1-D682-72FC-B43634F0A573}.wem		\Containers\Default Work Unit\Lift\DeepSeekSoundDoorSlam		6285408
+	555115316	Simple Pulse Ambience	.cache\9E\{9E81125A-1E77-2C73-B96C-31555DA0639F}.wem		\Containers\Default Work Unit\Music\MonsterClose\Simple Pulse Ambience		34603104
+	566333631	DeepSeekSoundDoorSlam	.cache\B5\{B56847EF-1AC6-75FF-77C6-D05357A0D20C}.wem		\Containers\Default Work Unit\Lift\DeepSeekSoundDoorSlam		6139560
 	571400089	Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771	.cache\AC\{ACEDC4C3-522D-A300-EF10-361099E9244C}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 8-universfield-heavy-walking-footsteps-352771		135628
-	579291182	virtualzero-mechanical-keyboard-typing-hd-372290_08	.cache\D0\{D001A184-0792-8704-8D4C-FFE649393411}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_08		40872
+	579291182	virtualzero-mechanical-keyboard-typing-hd-372290_08	.cache\39\{392E6CBC-504A-3CE7-87B7-25697891760E}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_08		40872
 	593026888	Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771	.cache\2F\{2F1E30C5-78B9-9CAA-8401-C60CBA3C763D}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 9-universfield-heavy-walking-footsteps-352771		135628
 	594692464	Monster sound_02	.cache\0C\{0CEB2B09-FD8D-F817-C009-8BAD4BF85F8A}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_02		730758
-	615117573	virtualzero-mechanical-keyboard-typing-hd-372290_02	.cache\2E\{2E0A4BD7-D2EF-E83E-72BE-53C7454F2C50}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_02		30372
-	638665953	virtualzero-mechanical-keyboard-typing-hd-372290_07	.cache\06\{06FA3F4A-8567-F340-538C-45974B678D70}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_07		34236
+	597428888	Breathing walk_04	.cache\62\{62CF13FD-336C-B752-B584-70968F814E9D}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\BreathWalk\Breathing walk_04		451388
+	615117573	virtualzero-mechanical-keyboard-typing-hd-372290_02	.cache\A1\{A1A618FA-B607-AF9B-61AC-71ADADD6188F}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_02		30372
+	619106469	BreathingRun_10	.cache\2B\{2B79992C-FBCE-6E2F-776B-C70FD7426BD0}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_10		244824
+	638665953	virtualzero-mechanical-keyboard-typing-hd-372290_07	.cache\DE\{DEFBE89D-2B04-4522-B339-78CEA0C9B3C5}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_07		34236
 	644998508	Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771	.cache\D0\{D0332DC5-9DB5-6A68-6543-BB2ED550D375}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 5-universfield-heavy-walking-footsteps-352771		135628
-	646232151	virtualzero-mechanical-keyboard-typing-hd-372290_01	.cache\E0\{E0EBD3FB-7B25-2FE7-F5E9-BA6D64D371B7}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_01		28324
+	646232151	virtualzero-mechanical-keyboard-typing-hd-372290_01	.cache\1E\{1E1EF440-D3BC-5749-5A98-A18ED40DE83A}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_01		28324
 	646366131	Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771	.cache\69\{69029124-2D37-FA53-E4E7-B983E2E33BDC}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 7-universfield-heavy-walking-footsteps-352771		135628
-	652764269	virtualzero-mechanical-keyboard-typing-hd-372290	.cache\CB\{CB5FAD19-37D9-1656-4CAF-24E881E74051}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290		25700
+	652764269	virtualzero-mechanical-keyboard-typing-hd-372290	.cache\B1\{B1814274-EBA0-E9B0-E080-9AE764D77C85}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290		25700
 	670368937	Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771	.cache\18\{18CE2842-3F1F-B01C-23D1-D21EBCAF2491}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 6-universfield-heavy-walking-footsteps-352771		135628
-	732560770	virtualzero-mechanical-keyboard-typing-hd-372290_03	.cache\E2\{E2BFDC7E-4CD4-613A-C624-A9FE47BC92FB}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_03		31464
+	688102791	Breathing walk	.cache\7A\{7AFEA9EE-4846-E073-219C-28D6028BC7A8}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\BreathWalk\Breathing walk		398684
+	696628940	Breathing walk_03	.cache\91\{9109F737-095E-3268-519F-E7436096A6E0}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\BreathWalk\Breathing walk_03		484324
+	702938665	HitVoice_04	.cache\CE\{CE9535E4-48CF-B2D0-88AE-6E34EB20FF4B}.wem		\Containers\Default Work Unit\DiverVoice\HitV\HitVoice_04		110872
+	732560770	virtualzero-mechanical-keyboard-typing-hd-372290_03	.cache\51\{51F17A55-7F63-5AC3-15BB-208DD08F50D3}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_03		31464
 	780315270	Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771	.cache\DB\{DBCE0CA5-B832-C85A-C3D9-0AAE42A6A0A0}.wem		\Containers\Default Work Unit\Footsteps Deepseek\Footsteps Deepseek 2-universfield-heavy-walking-footsteps-352771		135628
 	817650179	DeepSeekAmbientNoChords	.cache\C4\{C4F283B9-C66F-F6F2-D97B-0B87566C9424}.wem		\Containers\Default Work Unit\Lift\DeepSeekAmbientNoChords		5173352
+	827446479	A Desperate Prayer	.cache\39\{392E03A8-0E42-2342-5512-BF9CFB518279}.wem		\Containers\Default Work Unit\MainMenu\A Desperate Prayer		46923872
 	831864122	DeepSeekDoorSlamNoAudio	.cache\D6\{D6A6CF05-FA9C-E046-F991-E09C31607500}.wem		\Containers\Default Work Unit\Lift\DeepSeekDoorSlamNoAudio		213164
+	842125416	BreathingRun_04	.cache\1A\{1A403D5E-F829-0C01-B2EA-58D7648903C7}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_04		231232
+	886743596	BreathingRun_09	.cache\26\{26311F85-B651-F551-EFB3-005578226E64}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_09		251624
 	900027967	Monster sound	.cache\08\{087A5FD2-EC83-48FF-10D8-1B6DB3F3C317}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound		547456
-	929466396	virtualzero-mechanical-keyboard-typing-hd-372290_10	.cache\B6\{B6B21C9B-ED04-9368-A29C-AD8D0FA1EE0C}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_10		29928
+	905839551	JumpVoice	.cache\26\{2639C4D2-0951-180B-59A3-D63B8C929254}.wem		\Containers\Default Work Unit\DiverVoice\JumpVoic\JumpVoice		54800
+	926421025	HitVoice	.cache\C5\{C59A219E-2117-2928-09A4-A6BFE27B4469}.wem		\Containers\Default Work Unit\DiverVoice\HitV\HitVoice		150532
+	929466396	virtualzero-mechanical-keyboard-typing-hd-372290_10	.cache\A3\{A39D73FD-8C09-F289-CFB6-5C1586518FEA}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_10		29928
 	945341924	Monster sound_01	.cache\31\{31096F01-67D7-788C-0DC2-AF0C3FED5262}.wem		\Containers\Default Work Unit\Monster \Monster sound\Monster sound_01		381974
+	945911822	Breathing walk_05	.cache\5D\{5DC93C16-03B3-7667-0F15-3D0C4C053CB2}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\BreathWalk\Breathing walk_05		375624
 	966527518	DeepSeekAmbientWithChords	.cache\2F\{2FF7A276-5D57-CB77-C09B-6E43359C90C9}.wem		\Containers\Default Work Unit\Lift\DeepSeekAmbientWithChords		4489684
 	994188586	DeepSeekDoorOpen	.cache\42\{4281841D-41AB-58FE-E681-66200FA49610}.wem		\Containers\Default Work Unit\Lift\DeepSeekDoorOpen		865160
+	997050069	HitVoice_02	.cache\5B\{5B65528F-62F5-57C8-3E08-F96D09B57D0B}.wem		\Containers\Default Work Unit\DiverVoice\HitV\HitVoice_02		109504
+	998432021	HitVoice_03	.cache\AB\{AB48C27B-2693-4BE5-722F-9A80AA5740A0}.wem		\Containers\Default Work Unit\DiverVoice\HitV\HitVoice_03		109504
 	1006756753	PickupScaleSound	.cache\A3\{A3AA2F22-824E-B8A8-3BEC-C76852498989}.wem		\Containers\Default Work Unit\PickupScaleSound		193632
 	1028068659	Underwater Ambience B	.cache\D1\{D180EF04-7905-7F08-83A4-C3332FC9BC1C}.wem		\Containers\Default Work Unit\Underwater Ambience B		65536096
-	1053762686	virtualzero-mechanical-keyboard-typing-hd-372290_09	.cache\B3\{B3AE8777-783C-E9A2-0972-04AE21770349}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_09		25188
+	1039488803	BreathingRun_07	.cache\77\{778A3998-79E1-FC86-3722-7DFB288B0522}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun_07		251624
+	1053762686	virtualzero-mechanical-keyboard-typing-hd-372290_09	.cache\10\{10044092-F01B-D619-85E0-77A02FBE11E6}.wem		\Containers\Default Work Unit\MainMenu\KeyboardClick\virtualzero-mechanical-keyboard-typing-hd-372290_09		25188
 	1072735311	DeepSeekSoundWhirrAmbi	.cache\83\{8364E5A6-CD27-4DA3-AE6A-AF05A7C73F5D}.wem		\Containers\Default Work Unit\Lift\DeepSeekSoundWhirrAmbi		5442144
+	1073496261	BreathingRun	.cache\18\{18B4D999-71A9-1D9E-A23A-5E815570390D}.wem		\Containers\Default Work Unit\DiverVoice\Breathing\Breathing running\BreathingRun		210832
 

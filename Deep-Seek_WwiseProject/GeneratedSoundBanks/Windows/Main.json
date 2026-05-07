@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{2584475F-22C1-7089-D53D-6AFB20E9B360}",
+    "Hash": "{049214B0-83A8-1BA8-0FF0-C95B2C0BA021}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -48,12 +48,36 @@
       "CachePath": "2E/{2E9E1A2F-79DD-C53B-7DF3-3BD382DC3A0B}.wem"
      },
      {
+      "Id": "199048475",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Breathing walk.wav",
+      "CachePath": "52/{52B420DC-E22B-C642-281B-34AF787D7075}.wem"
+     },
+     {
+      "Id": "199357808",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpVoice.wav",
+      "CachePath": "C4/{C428703C-5717-F395-242C-215D0236CE84}.wem"
+     },
+     {
+      "Id": "228257008",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "34/{340F0755-8351-84A5-D5F5-E55BD6C9C07B}.wem"
+     },
+     {
       "Id": "230561535",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "49/{495C768A-5E65-0D1C-3853-0EEC7BB34A2F}.wem"
+      "CachePath": "8D/{8D1F18D9-0EC7-FADF-3E15-511DF2851DDF}.wem"
      },
      {
       "Id": "237568392",
@@ -62,6 +86,46 @@
       "Location": "Memory",
       "ShortName": "freesound_community-pickupplasticobject-91036.wav",
       "CachePath": "E3/{E3E42B78-C71D-A216-C2E7-CD67652144A3}.wem"
+     },
+     {
+      "Id": "259429331",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "4D/{4D07B5FA-46D7-9CCF-5620-2D116EF3DF94}.wem"
+     },
+     {
+      "Id": "272984212",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "D3/{D3337C23-3662-BA88-188F-EC87354EC9CC}.wem"
+     },
+     {
+      "Id": "340528204",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "41/{41629FCA-9436-CE4D-E506-893A34BB0A62}.wem"
+     },
+     {
+      "Id": "353269859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Underwater sound.wav",
+      "CachePath": "EA/{EA9BEB3C-7EA3-EF2E-8EFC-972DABEBD72B}.wem"
+     },
+     {
+      "Id": "371614706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "0C/{0C77C0C0-F529-81BF-F350-B7F18F12A945}.wem"
      },
      {
       "Id": "375802478",
@@ -85,7 +149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "F3/{F37E6E1F-DD2C-7A84-AE05-408E3D378CCA}.wem"
+      "CachePath": "B3/{B395D924-08B9-C244-C0B3-EC96E32B6C7E}.wem"
      },
      {
       "Id": "400180707",
@@ -101,7 +165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "CF/{CFE98347-A61A-6E8A-2B61-C03AAB1B1978}.wem"
+      "CachePath": "1B/{1B6D48A0-821E-57D6-D11B-F29987B83DA3}.wem"
      },
      {
       "Id": "427778424",
@@ -112,6 +176,38 @@
       "CachePath": "2B/{2B3942D8-75DF-D2E0-3285-738FA3A2955A}.wem"
      },
      {
+      "Id": "454593157",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Breathing walk.wav",
+      "CachePath": "9A/{9A356FC0-2F82-4F2F-461B-427F0E151945}.wem"
+     },
+     {
+      "Id": "471079799",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HitVoice.wav",
+      "CachePath": "50/{50B510B4-45DE-3CDD-6B76-4745F62FB896}.wem"
+     },
+     {
+      "Id": "476466743",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "74/{7496B595-A8C1-7ED0-0E90-2BADCE343229}.wem"
+     },
+     {
+      "Id": "518198009",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpVoice.wav",
+      "CachePath": "4C/{4C6CACF7-4401-D9B1-D11A-50FA1C47404A}.wem"
+     },
+     {
       "Id": "538382245",
       "Language": "SFX",
       "Streaming": "false",
@@ -120,12 +216,20 @@
       "CachePath": "ED/{ED24D580-8BEE-14D5-9FF4-B065D42F4A2A}.wem"
      },
      {
+      "Id": "555115316",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Simple Pulse Ambience.wav",
+      "CachePath": "9E/{9E81125A-1E77-2C73-B96C-31555DA0639F}.wem"
+     },
+     {
       "Id": "566333631",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DeepSeekSoundDoorSlam.wav",
-      "CachePath": "29/{291E3C4B-D2D1-D682-72FC-B43634F0A573}.wem"
+      "CachePath": "B5/{B56847EF-1AC6-75FF-77C6-D05357A0D20C}.wem"
      },
      {
       "Id": "571400089",
@@ -141,7 +245,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "D0/{D001A184-0792-8704-8D4C-FFE649393411}.wem"
+      "CachePath": "39/{392E6CBC-504A-3CE7-87B7-25697891760E}.wem"
      },
      {
       "Id": "593026888",
@@ -160,12 +264,28 @@
       "CachePath": "0C/{0CEB2B09-FD8D-F817-C009-8BAD4BF85F8A}.wem"
      },
      {
+      "Id": "597428888",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Breathing walk.wav",
+      "CachePath": "62/{62CF13FD-336C-B752-B584-70968F814E9D}.wem"
+     },
+     {
       "Id": "615117573",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "2E/{2E0A4BD7-D2EF-E83E-72BE-53C7454F2C50}.wem"
+      "CachePath": "A1/{A1A618FA-B607-AF9B-61AC-71ADADD6188F}.wem"
+     },
+     {
+      "Id": "619106469",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "2B/{2B79992C-FBCE-6E2F-776B-C70FD7426BD0}.wem"
      },
      {
       "Id": "638665953",
@@ -173,7 +293,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "06/{06FA3F4A-8567-F340-538C-45974B678D70}.wem"
+      "CachePath": "DE/{DEFBE89D-2B04-4522-B339-78CEA0C9B3C5}.wem"
      },
      {
       "Id": "644998508",
@@ -189,7 +309,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "E0/{E0EBD3FB-7B25-2FE7-F5E9-BA6D64D371B7}.wem"
+      "CachePath": "1E/{1E1EF440-D3BC-5749-5A98-A18ED40DE83A}.wem"
      },
      {
       "Id": "646366131",
@@ -205,7 +325,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "CB/{CB5FAD19-37D9-1656-4CAF-24E881E74051}.wem"
+      "CachePath": "B1/{B1814274-EBA0-E9B0-E080-9AE764D77C85}.wem"
      },
      {
       "Id": "670368937",
@@ -216,12 +336,36 @@
       "CachePath": "18/{18CE2842-3F1F-B01C-23D1-D21EBCAF2491}.wem"
      },
      {
+      "Id": "688102791",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Breathing walk.wav",
+      "CachePath": "7A/{7AFEA9EE-4846-E073-219C-28D6028BC7A8}.wem"
+     },
+     {
+      "Id": "696628940",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Breathing walk.wav",
+      "CachePath": "91/{9109F737-095E-3268-519F-E7436096A6E0}.wem"
+     },
+     {
+      "Id": "702938665",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HitVoice.wav",
+      "CachePath": "CE/{CE9535E4-48CF-B2D0-88AE-6E34EB20FF4B}.wem"
+     },
+     {
       "Id": "732560770",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "E2/{E2BFDC7E-4CD4-613A-C624-A9FE47BC92FB}.wem"
+      "CachePath": "51/{51F17A55-7F63-5AC3-15BB-208DD08F50D3}.wem"
      },
      {
       "Id": "780315270",
@@ -240,12 +384,36 @@
       "CachePath": "C4/{C4F283B9-C66F-F6F2-D97B-0B87566C9424}.wem"
      },
      {
+      "Id": "827446479",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "A Desperate Prayer.wav",
+      "CachePath": "39/{392E03A8-0E42-2342-5512-BF9CFB518279}.wem"
+     },
+     {
       "Id": "831864122",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DeepSeekDoorSlamNoAudio.wav",
       "CachePath": "D6/{D6A6CF05-FA9C-E046-F991-E09C31607500}.wem"
+     },
+     {
+      "Id": "842125416",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "1A/{1A403D5E-F829-0C01-B2EA-58D7648903C7}.wem"
+     },
+     {
+      "Id": "886743596",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "26/{26311F85-B651-F551-EFB3-005578226E64}.wem"
      },
      {
       "Id": "900027967",
@@ -256,12 +424,28 @@
       "CachePath": "08/{087A5FD2-EC83-48FF-10D8-1B6DB3F3C317}.wem"
      },
      {
+      "Id": "905839551",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpVoice.wav",
+      "CachePath": "26/{2639C4D2-0951-180B-59A3-D63B8C929254}.wem"
+     },
+     {
+      "Id": "926421025",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HitVoice.wav",
+      "CachePath": "C5/{C59A219E-2117-2928-09A4-A6BFE27B4469}.wem"
+     },
+     {
       "Id": "929466396",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "B6/{B6B21C9B-ED04-9368-A29C-AD8D0FA1EE0C}.wem"
+      "CachePath": "A3/{A39D73FD-8C09-F289-CFB6-5C1586518FEA}.wem"
      },
      {
       "Id": "945341924",
@@ -270,6 +454,14 @@
       "Location": "Memory",
       "ShortName": "Monster sound .wav",
       "CachePath": "31/{31096F01-67D7-788C-0DC2-AF0C3FED5262}.wem"
+     },
+     {
+      "Id": "945911822",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Breathing walk.wav",
+      "CachePath": "5D/{5DC93C16-03B3-7667-0F15-3D0C4C053CB2}.wem"
      },
      {
       "Id": "966527518",
@@ -288,6 +480,22 @@
       "CachePath": "42/{4281841D-41AB-58FE-E681-66200FA49610}.wem"
      },
      {
+      "Id": "997050069",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HitVoice.wav",
+      "CachePath": "5B/{5B65528F-62F5-57C8-3E08-F96D09B57D0B}.wem"
+     },
+     {
+      "Id": "998432021",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HitVoice.wav",
+      "CachePath": "AB/{AB48C27B-2693-4BE5-722F-9A80AA5740A0}.wem"
+     },
+     {
       "Id": "1006756753",
       "Language": "SFX",
       "Streaming": "false",
@@ -304,12 +512,20 @@
       "CachePath": "D1/{D180EF04-7905-7F08-83A4-C3332FC9BC1C}.wem"
      },
      {
+      "Id": "1039488803",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "77/{778A3998-79E1-FC86-3722-7DFB288B0522}.wem"
+     },
+     {
       "Id": "1053762686",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
-      "CachePath": "B3/{B3AE8777-783C-E9A2-0972-04AE21770349}.wem"
+      "CachePath": "10/{10044092-F01B-D619-85E0-77A02FBE11E6}.wem"
      },
      {
       "Id": "1072735311",
@@ -318,10 +534,26 @@
       "Location": "Memory",
       "ShortName": "DeepSeekSoundWhirrAmbi.wav",
       "CachePath": "83/{8364E5A6-CD27-4DA3-AE6A-AF05A7C73F5D}.wem"
+     },
+     {
+      "Id": "1073496261",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BreathingRun.wav",
+      "CachePath": "18/{18B4D999-71A9-1D9E-A23A-5E815570390D}.wem"
      }
     ],
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
       {
        "Id": "2995775460",
        "Name": "Room_Small",
@@ -345,6 +577,14 @@
        "GUID": "{31F65586-5FD4-4370-BB42-56C173E7B2F4}",
        "LibName": "Wwise Guitar Distortion",
        "LibId": "8257539"
+      },
+      {
+       "Id": "3604890626",
+       "Name": "High_Pass_60Hz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\High Pass Filters\\High_Pass_60Hz",
+       "GUID": "{F9627628-0B10-4272-BC30-D4C20423CB38}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
       }
      ]
     },
@@ -362,6 +602,144 @@
         "Id": "817650179"
        }
       ]
+     },
+     {
+      "Id": "3019832752",
+      "Name": "Enable_State_GameMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enable_State_GameMusic",
+      "GUID": "{292969D8-7557-4ABE-9E7D-33D90F16EE6C}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3103015060",
+         "Id": "0",
+         "GUID": "{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "555115316"
+         }
+        ]
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "3103015060",
+        "Id": "1145324063",
+        "Name": "MonsterClose",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MonsterClose",
+        "GUID": "{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"
+       },
+       {
+        "GroupId": "3103015060",
+        "Id": "3479155863",
+        "Name": "MainMusic",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MainMusic",
+        "GUID": "{311ACBC1-7905-40AF-B223-1D900760043D}"
+       }
+      ]
+     },
+     {
+      "Id": "1134978873",
+      "Name": "Play_A_Desperate_Prayer",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Play_A_Desperate_Prayer",
+      "GUID": "{453476A0-5CF8-45AE-B2E0-5920A3B00602}",
+      "DurationType": "OneShot",
+      "DurationMin": "266.0078",
+      "DurationMax": "266.0078",
+      "MediaRefs": [
+       {
+        "Id": "827446479"
+       }
+      ]
+     },
+     {
+      "Id": "3908227708",
+      "Name": "Play_Breathing_running",
+      "ObjectPath": "\\Events\\Default Work Unit\\DiverVoice\\Play_Breathing_running",
+      "GUID": "{05A5540F-0E83-4501-8E7F-2FDECD6266CC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "228257008"
+       },
+       {
+        "Id": "259429331"
+       },
+       {
+        "Id": "272984212"
+       },
+       {
+        "Id": "340528204"
+       },
+       {
+        "Id": "371614706"
+       },
+       {
+        "Id": "476466743"
+       },
+       {
+        "Id": "619106469"
+       },
+       {
+        "Id": "842125416"
+       },
+       {
+        "Id": "886743596"
+       },
+       {
+        "Id": "1039488803"
+       },
+       {
+        "Id": "1073496261"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3407225994"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1371788995",
+      "Name": "Play_BreathWalk",
+      "ObjectPath": "\\Events\\Default Work Unit\\DiverVoice\\Play_BreathWalk",
+      "GUID": "{C7B2DE8F-5F17-441F-9051-EF8BF8F6BE37}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "199048475"
+       },
+       {
+        "Id": "454593157"
+       },
+       {
+        "Id": "597428888"
+       },
+       {
+        "Id": "688102791"
+       },
+       {
+        "Id": "696628940"
+       },
+       {
+        "Id": "945911822"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3407225994"
+        },
+        {
+         "Id": "3604890626"
+        }
+       ]
+      }
      },
      {
       "Id": "1983061245",
@@ -425,8 +803,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Lift\\Play_DeepSeekSoundDoorSlam",
       "GUID": "{CE097968-9711-4176-A72C-EFC840EF56A9}",
       "DurationType": "OneShot",
-      "DurationMin": "35.63102",
-      "DurationMax": "35.63102",
+      "DurationMin": "34.804222",
+      "DurationMax": "34.804222",
       "MediaRefs": [
        {
         "Id": "566333631"
@@ -489,6 +867,59 @@
        "ShareSets": [
         {
          "Id": "2995775460"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2855285393",
+      "Name": "Play_HitV",
+      "ObjectPath": "\\Events\\Default Work Unit\\DiverVoice\\Play_HitV",
+      "GUID": "{4523C295-D9B1-4E78-890D-BDA284A5B4BC}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.56983817",
+      "DurationMax": "0.7835274",
+      "MediaRefs": [
+       {
+        "Id": "471079799"
+       },
+       {
+        "Id": "702938665"
+       },
+       {
+        "Id": "926421025"
+       },
+       {
+        "Id": "997050069"
+       },
+       {
+        "Id": "998432021"
+       }
+      ]
+     },
+     {
+      "Id": "1487838551",
+      "Name": "Play_JumpVoic",
+      "ObjectPath": "\\Events\\Default Work Unit\\DiverVoice\\Play_JumpVoic",
+      "GUID": "{E2F1D325-C752-4464-BC21-2BED6604B1A5}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.27955747",
+      "DurationMax": "0.46606165",
+      "MediaRefs": [
+       {
+        "Id": "199357808"
+       },
+       {
+        "Id": "518198009"
+       },
+       {
+        "Id": "905839551"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
         }
        ]
       }
@@ -713,10 +1144,68 @@
         "Id": "1028068659"
        }
       ]
+     },
+     {
+      "Id": "1254934981",
+      "Name": "Play_Underwater_sound",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Play_Underwater_sound",
+      "GUID": "{B8838AB4-440A-48BF-BBE7-3A6D03059672}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.9246583",
+      "DurationMax": "6.9246583",
+      "MediaRefs": [
+       {
+        "Id": "353269859"
+       }
+      ]
+     },
+     {
+      "Id": "2578586511",
+      "Name": "Stop_A_Desperate_Prayer",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Stop_A_Desperate_Prayer",
+      "GUID": "{1DFCBFA8-6637-47FA-93F5-2C87B9FC3E42}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3103015060",
+      "Name": "MusicStates",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicStates",
+      "GUID": "{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\None",
+        "GUID": "{5155FA15-7B28-4963-90EC-674D25192707}"
+       },
+       {
+        "Id": "1145324063",
+        "Name": "MonsterClose",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MonsterClose",
+        "GUID": "{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"
+       },
+       {
+        "Id": "2621508965",
+        "Name": "MonsterAttack",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MonsterAttack",
+        "GUID": "{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"
+       },
+       {
+        "Id": "3479155863",
+        "Name": "MainMusic",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MainMusic",
+        "GUID": "{311ACBC1-7905-40AF-B223-1D900760043D}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{0D628017-1776-869E-CB95-EB5516DF1EE0}"
+  "FileHash": "{D063B038-8F06-2606-848F-F4F07CCA95FB}"
  }
 }

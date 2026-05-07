@@ -119,6 +119,9 @@
 						<Event Name="Play_DeepSeekSoundDoorSlam" ID="{CE097968-9711-4176-A72C-EFC840EF56A9}">
 							<ChildrenList>
 								<Action Name="" ID="{1D5F9F4F-AA51-4C80-86F5-950316E500A8}" ShortID="742380554">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="DeepSeekSoundDoorSlam" ID="{94278D14-97A4-4414-8A36-E14DEFF3E1AE}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
@@ -174,6 +177,9 @@
 						<Event Name="AmbientDoorClose" ID="{0A4182B2-CE09-44DE-B960-9771C47DC60F}">
 							<ChildrenList>
 								<Action Name="" ID="{76DBE7D2-347F-4853-BC81-6844424F135B}" ShortID="850085784">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="DeepSeekAmbientNoChords" ID="{E0E1BFDF-071E-451A-8495-DAAA2A8AEB0D}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
@@ -208,8 +214,160 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_A_Desperate_Prayer" ID="{453476A0-5CF8-45AE-B2E0-5920A3B00602}">
+							<ChildrenList>
+								<Action Name="" ID="{1C851711-E78F-403B-9ECA-0D0EF2CCCFD1}" ShortID="516648463">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="A Desperate Prayer" ID="{CF08578B-9C17-4445-9546-0A23B6D7B93F}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_A_Desperate_Prayer" ID="{1DFCBFA8-6637-47FA-93F5-2C87B9FC3E42}">
+							<ChildrenList>
+								<Action Name="" ID="{4087C092-8977-44B0-9066-1488D7AE78DB}" ShortID="159221600">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="A Desperate Prayer" ID="{CF08578B-9C17-4445-9546-0A23B6D7B93F}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Underwater_sound" ID="{B8838AB4-440A-48BF-BBE7-3A6D03059672}">
+							<ChildrenList>
+								<Action Name="" ID="{7F2D1066-DF44-4DB6-8FB4-7EAC0644D5D5}" ShortID="339021477">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Underwater sound" ID="{37F5EC9B-3C90-4E90-B06B-DD9DD0A89223}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="DiverVoice" ID="{2E3B153A-D3F0-4F76-B96F-D7510E1B4EA5}" ShortID="1060335737">
+					<ChildrenList>
+						<Event Name="Play_BreathWalk" ID="{C7B2DE8F-5F17-441F-9051-EF8BF8F6BE37}">
+							<ChildrenList>
+								<Action Name="" ID="{D59AF68E-D43E-4301-9428-0F1FC31C92D3}" ShortID="144225264">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BreathWalk" ID="{0DF09914-C4EE-423B-ABBF-573EB3B928CE}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Breathing_running" ID="{05A5540F-0E83-4501-8E7F-2FDECD6266CC}">
+							<ChildrenList>
+								<Action Name="" ID="{83CDD728-8C71-4482-907E-8A19484B9607}" ShortID="523718754">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Breathing running" ID="{F653DA91-CF6A-456C-9053-ED0D22C52C90}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_JumpVoic" ID="{E2F1D325-C752-4464-BC21-2BED6604B1A5}">
+							<ChildrenList>
+								<Action Name="" ID="{9104FAED-8F7B-4056-958D-CF78602B06E8}" ShortID="874556617">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="JumpVoic" ID="{9A477E93-D2B5-4ACB-9E61-3012D1E01C0C}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_HitV" ID="{4523C295-D9B1-4E78-890D-BDA284A5B4BC}">
+							<ChildrenList>
+								<Action Name="" ID="{0C1F87CA-BEA4-4DD2-AFAD-4FC361F779CE}" ShortID="441053376">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HitV" ID="{A2E98ACF-E962-4C2D-B5BA-4242A8ECFFD5}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_New_Music_Playlist_Container" ID="{55BEDBB2-3D11-4321-B019-1AE8803F5D51}">
+					<ChildrenList>
+						<Action Name="" ID="{AC7B6F4D-74E4-4104-8289-940840AAFE5A}" ShortID="501969039">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="New Music Playlist Container" ID="{4D579C93-E4D6-46AF-90D1-5F0102ADD9D2}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MainMusic" ID="{ED9C0ED6-B3BB-4A3A-96C0-30F72CA24B9F}">
+					<ChildrenList>
+						<Action Name="" ID="{349788B1-A247-427B-A644-582F318BA857}" ShortID="321083777">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMusic" ID="{9071C541-C7A7-4799-BFD4-F1015DDBD906}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MonsterClose" ID="{A8C6FD0F-D971-4034-B411-5AC51788E36C}">
+					<ChildrenList>
+						<Action Name="" ID="{A3F1ED69-B3AC-4234-A7DC-D1F3CB742C8E}" ShortID="501667752">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MonsterClose" ID="{4CD75D18-FC02-4FD9-BC5F-4D859749B3B4}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Enable_State_GameMusic" ID="{292969D8-7557-4ABE-9E7D-33D90F16EE6C}">
+					<ChildrenList>
+						<Action Name="" ID="{52F650FD-4090-48CE-9637-5B3F95576586}" ShortID="758476380">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}" WorkUnitID="{A64ADB50-DD78-4CC8-98EB-E9F81D6C75FA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{15FDD078-244E-49BC-81AD-63BE5226FC77}" ShortID="46399095">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}" WorkUnitID="{A64ADB50-DD78-4CC8-98EB-E9F81D6C75FA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{794F32A8-DCEE-44AF-A5EC-72EA9B526661}" ShortID="476973435">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{CEC3C5E5-ABFC-495A-B6CB-28898E53B364}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

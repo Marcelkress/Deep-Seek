@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{EF5E17C0-EDF8-B83D-F022-95796B820743}",
+    "Hash": "{6A7133D5-A50D-86DF-0627-4B3E52AABC02}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -41,9 +41,43 @@
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3103015060",
+      "Name": "MusicStates",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicStates",
+      "GUID": "{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\None",
+        "GUID": "{5155FA15-7B28-4963-90EC-674D25192707}"
+       },
+       {
+        "Id": "1145324063",
+        "Name": "MonsterClose",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MonsterClose",
+        "GUID": "{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"
+       },
+       {
+        "Id": "2621508965",
+        "Name": "MonsterAttack",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MonsterAttack",
+        "GUID": "{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"
+       },
+       {
+        "Id": "3479155863",
+        "Name": "MainMusic",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStates\\MainMusic",
+        "GUID": "{311ACBC1-7905-40AF-B223-1D900760043D}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{57DBCA3D-C285-BF9C-99BF-60106327EF6C}"
+  "FileHash": "{7CCEF9CE-6F38-01E9-C4F9-2251F9BFE708}"
  }
 }

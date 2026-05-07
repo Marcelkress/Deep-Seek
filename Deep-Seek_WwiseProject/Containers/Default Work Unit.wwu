@@ -1164,6 +1164,10 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="DeepSeekSoundDoorSlam" ID="{5E2F437A-BE71-4832-BC61-E5FC5348D879}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.826797139710484"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>DeepSeekSoundDoorSlam.wav</AudioFile>
 									<MediaIDList>
@@ -1356,6 +1360,13 @@
 				<Folder Name="MainMenu" ID="{D533CF0D-AFD2-429E-837D-47DBDE28647E}" ShortID="1071831778">
 					<ChildrenList>
 						<RandomSequenceContainer Name="KeyboardClick" ID="{616CB0B5-72EB-4CB7-A4FC-99CC2AEF2EF1}" ShortID="461530763">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
@@ -1669,8 +1680,1425 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="A Desperate Prayer" ID="{CF08578B-9C17-4445-9546-0A23B6D7B93F}" ShortID="615770293">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="A Desperate Prayer" ID="{DBF070F1-B6BA-4D34-8F49-FB1D5F411D89}">
+									<Language>SFX</Language>
+									<AudioFile>A Desperate Prayer.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="827446479"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="A Desperate Prayer" ID="{DBF070F1-B6BA-4D34-8F49-FB1D5F411D89}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<MusicSegment Name="MonsterSerching" ID="{87489C90-563E-4080-8222-ED1EA7E96D38}" ShortID="432099134">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="196162.176870748"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{1B279F55-1033-4C20-961A-9E11650028BF}"/>
+									<MusicCue Name="Exit Cue" ID="{D07D91B8-5727-40CF-A9C9-92B7DC831694}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="188725.35452694"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Underwater sound" ID="{37F5EC9B-3C90-4E90-B06B-DD9DD0A89223}" ShortID="537417701">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="7143.51576694554"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Underwater sound" ID="{686FA5A3-49AF-4DE8-9E96-A223138A0C55}" ShortID="907228151">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{67EA1F99-5B97-4267-9ECC-1C666B01A9CD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Underwater sound" ID="{CA7B989A-DA5B-4189-B156-4DB09AD96945}">
+											<Language>SFX</Language>
+											<AudioFile>Underwater sound.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="353269859"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{7FA6A08B-2516-4F65-9CE2-ECD9F73F80B4}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Underwater sound" ID="{6E3266FB-D21F-4846-827A-3F8B34BA31CE}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="5471.4428037601"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="5471.4428037601"/>
+															</PropertyList>
+															<AudioSourceRef Name="Underwater sound" ID="{CA7B989A-DA5B-4189-B156-4DB09AD96945}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{4AB153B8-F91B-4EAB-BF23-0A0DA04F3E43}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5.47144</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{DC6A8126-D426-4555-87DA-FB6C6A0E81A7}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5.47144</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{14816437-356D-4F89-8243-BCFF153F30FB}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5.47144</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{E52C8884-F566-4A0F-8124-53AA031D5951}"/>
+									<MusicCue Name="Exit Cue" ID="{77EE574F-DF7C-40AD-A85D-48AFB390B49C}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="6924.65804925111"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="DiverVoice" ID="{A5BE981F-5458-43CF-9E8F-9D68521CF8B5}" ShortID="271995148">
+					<ChildrenList>
+						<Folder Name="Breathing" ID="{46520FD8-8984-4FB8-A309-1849C92AF645}" ShortID="283837065">
+							<ChildrenList>
+								<RandomSequenceContainer Name="BreathWalk" ID="{0DF09914-C4EE-423B-ABBF-573EB3B928CE}" ShortID="904447799">
+									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Breathing walk" ID="{508E4E12-0646-41B4-B0C5-62412FB32927}" ShortID="996192800">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Breathing walk" ID="{932EB83F-C420-4646-B282-D2E6C98B3BAA}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.672264267726498"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.22220688498481"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.48176237875967"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Breathing walk.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="688102791"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Breathing walk" ID="{932EB83F-C420-4646-B282-D2E6C98B3BAA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Breathing walk_01" ID="{0B386008-4F71-43BE-AEF5-5C80A8BDED13}" ShortID="184161292">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Breathing walk" ID="{50DF2928-DD6A-43AF-8F80-75ED7FC69BBF}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.04574441646344"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.51910979971701"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.04010139760773"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Breathing walk.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="199048475"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Breathing walk" ID="{50DF2928-DD6A-43AF-8F80-75ED7FC69BBF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Breathing walk_02" ID="{8A6F58E9-E470-45D8-A602-7D4CE9AACA21}" ShortID="854373350">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Breathing walk" ID="{9077BD0E-D55B-488F-9DF4-49A00D075DAA}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.21381048339506"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.02142679625453"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.48639637183471"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Breathing walk.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="454593157"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Breathing walk" ID="{9077BD0E-D55B-488F-9DF4-49A00D075DAA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Breathing walk_03" ID="{C63B0FA0-FCCA-4FD3-BCEC-1FEFF099677C}" ShortID="357915233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Breathing walk" ID="{DB1E9366-D851-49CE-BA1E-4CE2D3ECB48E}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.36320254288984"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.43037375560781"/>
+														<Property Name="TrimEnd" Type="Real64" Value="12.1754534427407"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Breathing walk.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="696628940"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Breathing walk" ID="{DB1E9366-D851-49CE-BA1E-4CE2D3ECB48E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Breathing walk_04" ID="{2F277850-A52B-4DD0-8613-008D8EE7100D}" ShortID="132460638">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Breathing walk" ID="{BF0793D1-CC32-4867-888A-8D3E530CA29F}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.17646246852137"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="12.1194308265138"/>
+														<Property Name="TrimEnd" Type="Real64" Value="14.6777704392782"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Breathing walk.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="597428888"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Breathing walk" ID="{BF0793D1-CC32-4867-888A-8D3E530CA29F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Breathing walk_05" ID="{CFAFBE73-AA43-4D2B-BA93-B42289EEE842}" ShortID="299328388">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Breathing walk" ID="{8C93690F-52E7-4444-9AE5-59004FE60D65}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.616242245415956"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="14.5843998081776"/>
+														<Property Name="TrimEnd" Type="Real64" Value="16.7132372498946"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Breathing walk.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="945911822"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Breathing walk" ID="{8C93690F-52E7-4444-9AE5-59004FE60D65}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{32A8281A-1FCE-44D7-9C06-D1A90B854E99}" ShortID="454880630">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+											<EffectSlot Name="" ID="{E131FBCC-F014-4C9E-95CB-56E83B940263}" ShortID="561899043">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Breathing running" ID="{F653DA91-CF6A-456C-9053-ED0D22C52C90}" ShortID="35406246">
+									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="BreathingRun" ID="{D71E708A-F9B1-4AF2-ADC3-438D16D7D749}" ShortID="1021924733">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{FA66B176-30AB-42DD-BB9D-BD6B7AD58635}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.269763213099696"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.8517825384825"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.04644911513683"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1073496261"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{33E8CA44-D843-425A-862D-EC4444050A96}" ShortID="842942710">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{FA66B176-30AB-42DD-BB9D-BD6B7AD58635}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_01" ID="{FF854BFF-9014-45A1-B2E3-0851E806E50B}" ShortID="380677817">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{810394B0-EA8B-4118-8772-BEB3DA288F85}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.254348172351142"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.16206100210959"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.37214261951247"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="272984212"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{8BC1FE0C-9DA9-4CF7-A754-48D19CB75BD5}" ShortID="803929849">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{810394B0-EA8B-4118-8772-BEB3DA288F85}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_02" ID="{E78A7492-F041-4392-9D79-63476289C89D}" ShortID="710268148">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{A837A1A0-7731-41BA-8075-6A149FB17D13}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.231225611228311"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.4338018638653"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.85969405174794"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="228257008"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{DEBF92B9-44EF-4B29-9173-19A366B91A26}" ShortID="598662351">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{A837A1A0-7731-41BA-8075-6A149FB17D13}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_03" ID="{CE56BA4D-7A4D-4AD3-B2ED-BDA04D033C8C}" ShortID="58224269">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{4A3A9DF2-FC10-473E-85DE-364D6DC0D7E1}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.269763213099696"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.43380186386529"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.82115644987656"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="340528204"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{9E19A290-D993-49D4-8086-06399626C059}" ShortID="723861246">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{4A3A9DF2-FC10-473E-85DE-364D6DC0D7E1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_04" ID="{C1A32DDC-4C01-4215-8FFE-215D8B9CA2CE}" ShortID="72318713">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{BF738600-1C60-4F2D-BC43-F328EAAED545}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.23122561122831"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.78261792936377"/>
+														<Property Name="TrimEnd" Type="Real64" Value="8.09289731163226"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="842125416"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{4EF0A0A6-5D37-4F37-8D27-BB5AD26D3C2C}" ShortID="37717547">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{BF738600-1C60-4F2D-BC43-F328EAAED545}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_05" ID="{28F65F56-D253-4491-A92D-FC3DF172A775}" ShortID="260035262">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{ECEC9099-E4E3-4654-A66A-E7CE7749B727}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.269763213099695"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.09289639299086"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.48025097900213"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="371614706"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{6B8C5283-B6E7-468C-80F0-99378872686C}" ShortID="472044992">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{ECEC9099-E4E3-4654-A66A-E7CE7749B727}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_06" ID="{370ED2A0-6F3A-47C4-9CEE-618396A33292}" ShortID="177393050">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{05637FF6-4E2E-4AEC-AF36-5A58DC4FE91C}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.269763213099695"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.44171245848934"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.867604646372"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="259429331"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{E754183B-A320-4268-B004-D36B8064081F}" ShortID="252137806">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{05637FF6-4E2E-4AEC-AF36-5A58DC4FE91C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_07" ID="{71D6557E-AC4C-4FC2-A201-02654DE941F4}" ShortID="582978789">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{975770E7-1D45-4340-9648-EB1707A9F2B0}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.192688009356926"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="10.7905285239878"/>
+														<Property Name="TrimEnd" Type="Real64" Value="12.2164207118705"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1039488803"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{FB80F1FE-13F9-4C8B-9E87-E55A4525971A}" ShortID="1038954391">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{975770E7-1D45-4340-9648-EB1707A9F2B0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_08" ID="{B2A7EBC0-C161-4026-A448-C9791AAFE965}" ShortID="200482648">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{D07FFA23-C908-4B3B-9754-71F17A7C8C15}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.269763213099695"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="12.1008069876149"/>
+														<Property Name="TrimEnd" Type="Real64" Value="13.5652367773689"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="476466743"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{53895B8B-BCFD-4CDE-AD0A-6A29EEBD624D}" ShortID="258005096">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{D07FFA23-C908-4B3B-9754-71F17A7C8C15}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_09" ID="{BACA651C-212C-43D1-9CA2-91802849141A}" ShortID="198315522">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{A2ED8C06-D104-4589-BF42-36236458884A}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.346838416842465"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="13.5266982568562"/>
+														<Property Name="TrimEnd" Type="Real64" Value="14.9525904447388"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="886743596"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{55508BE9-BB45-4589-AB97-A2DFE06D4C93}" ShortID="511278886">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{A2ED8C06-D104-4589-BF42-36236458884A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="BreathingRun_10" ID="{01A3F124-1176-4D7C-B10E-035F69E55767}" ShortID="354450165">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BreathingRun" ID="{783EA032-3A21-475F-8278-34F048E89426}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.231225611228311"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="14.914051924226"/>
+														<Property Name="TrimEnd" Type="Real64" Value="16.3014065102373"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>BreathingRun.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="619106469"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{DB9D9C25-01EE-4CDA-8528-0B7AE9B2A6C1}" ShortID="979241923">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="BreathingRun" ID="{783EA032-3A21-475F-8278-34F048E89426}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{FBFB410F-6594-4943-BAEB-693EE5FE392A}" ShortID="893163881">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Phone_Booth" ID="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<RandomSequenceContainer Name="HitV" ID="{A2E98ACF-E962-4C2D-B5BA-4242A8ECFFD5}" ShortID="755712831">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="HitVoice" ID="{43FB6381-2D46-41EE-9B06-A1689B5D483C}" ShortID="139169687">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HitVoice" ID="{C2A64A1D-50D9-4620-ADBF-7CB09761308A}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.45587033435126"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.23939769149836"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HitVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="926421025"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HitVoice" ID="{C2A64A1D-50D9-4620-ADBF-7CB09761308A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HitVoice_01" ID="{7F03B404-8DEA-476A-8FCD-B0AF583DBF66}" ShortID="413561450">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HitVoice" ID="{B8935958-34CF-4EDF-86C9-53D29BA7DAFC}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.22515152356901"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.99443293276764"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HitVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="471079799"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HitVoice" ID="{B8935958-34CF-4EDF-86C9-53D29BA7DAFC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HitVoice_02" ID="{A05456AB-580E-4C24-91E9-46B60504E1C1}" ShortID="343622224">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HitVoice" ID="{CD7BDCE3-43B2-4853-8135-04D95DEB7AB6}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.50016386495769"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.07000200287764"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HitVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="997050069"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HitVoice" ID="{CD7BDCE3-43B2-4853-8135-04D95DEB7AB6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HitVoice_03" ID="{7AEE6786-ABBD-4790-B001-74B52B10A751}" ShortID="192724683">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HitVoice" ID="{F8D70060-058E-4DA7-95B0-18AA4825F57E}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.96749650365081"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.53733464157076"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HitVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="998432021"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HitVoice" ID="{F8D70060-058E-4DA7-95B0-18AA4825F57E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HitVoice_04" ID="{D20B4C98-E233-48B4-89E3-44770437EEE7}" ShortID="887671293">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HitVoice" ID="{89124345-4566-47DE-B16F-573DBE9CBFAF}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.43482914234393"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.01179003425725"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HitVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="702938665"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HitVoice" ID="{89124345-4566-47DE-B16F-573DBE9CBFAF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="JumpVoic" ID="{9A477E93-D2B5-4ACB-9E61-3012D1E01C0C}" ShortID="710067490">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="JumpVoice" ID="{000978DE-7C7D-4B98-A463-5C58DBA6F685}" ShortID="419002821">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-80</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JumpVoice" ID="{3952EEB4-690D-4A2C-91F3-A010C402322B}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.136980891886337"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.421901170533884"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>JumpVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="905839551"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JumpVoice" ID="{3952EEB4-690D-4A2C-91F3-A010C402322B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JumpVoice_01" ID="{C16C5BAA-897C-4B4D-92B5-3865DE9E318C}" ShortID="376280746">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-150</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JumpVoice" ID="{CD777DC9-7C23-4F40-94C3-2A3763479945}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.04927363184934"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.47665403805868"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>JumpVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="199357808"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JumpVoice" ID="{CD777DC9-7C23-4F40-94C3-2A3763479945}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JumpVoice_02" ID="{C7AFF50D-4A44-4591-8249-3CDA3A956517}" ShortID="304183040">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>130</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JumpVoice" ID="{7C0E76EF-0C4D-4C98-AB1E-7B99393ECA8A}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.97800407883871"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.27936206451261"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>JumpVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="518198009"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JumpVoice" ID="{7C0E76EF-0C4D-4C98-AB1E-7B99393ECA8A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{2A97C1E9-505A-4130-BBEF-210CB8E8E7DD}" ShortID="215804664">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<MusicSwitchContainer Name="Music" ID="{CEC3C5E5-ABFC-495A-B6CB-28898E53B364}" ShortID="554023467">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{4BC98311-F2FD-4968-98CF-1B823F9805E1}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{757FADE4-1E71-417A-B552-7A54F0F86D22}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="MainMusic" ID="{9071C541-C7A7-4799-BFD4-F1015DDBD906}" ShortID="1006441459">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="287727.278911565"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Simple Ambience" ID="{2F71B700-D5A3-4E94-9B36-7AC579A6F8DF}" ShortID="359676264">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{B6D0D046-3AA7-409C-BF78-8477B3D47F9D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Simple Ambience" ID="{CB536A07-A826-41FC-B95B-9BC092D60422}">
+											<Language>SFX</Language>
+											<AudioFile>Simple Ambience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="735865697"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{277B453A-AEA2-4251-AF55-DFDD3748C2F5}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Simple Ambience" ID="{67980927-F738-4FE9-A182-AE95707E1986}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="287727.278911565"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Simple Ambience" ID="{CB536A07-A826-41FC-B95B-9BC092D60422}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"/>
+										<StateGroupInfo Name="" ID="{0AF57442-F9F1-4654-ABE7-C92521B77E32}" ShortID="258620294"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
+										<CustomState Name="" ID="{6D15D04E-3FA3-46B0-859F-B77C93D6F3B0}" ShortID="438598245"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="MonsterAttack" ID="{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"/>
+										<CustomState Name="" ID="{1E84EAE4-4426-4CCB-B3EF-BBDB5C517B2C}" ShortID="399658150">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{5155FA15-7B28-4963-90EC-674D25192707}"/>
+										<CustomState Name="" ID="{A3450E87-FCBF-4094-9A8A-47FA7EA8A14A}" ShortID="337882264"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
+										<CustomState Name="" ID="{AA0351A8-2E43-4771-993E-E29158533910}" ShortID="208337712">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{C2DA519C-45BA-41C2-AF5E-5D3CAF905A23}"/>
+									<MusicCue Name="Exit Cue" ID="{5C1B8C5B-5B65-4E83-859C-2F12D888CBD9}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="1000"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="MonsterClose" ID="{4CD75D18-FC02-4FD9-BC5F-4D859749B3B4}" ShortID="1002323427">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="196162.176870748"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Simple Pulse Ambience" ID="{6DDE7E97-91FC-4038-974C-DE9F8884907B}" ShortID="684784027">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{C0CCD4F4-4366-4BD9-BB4E-BFA471ED96B4}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Simple Pulse Ambience" ID="{991224C3-EC98-4766-A824-385CAEC6DF2A}">
+											<Language>SFX</Language>
+											<AudioFile>Simple Pulse Ambience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="555115316"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{5F060F50-7A98-4E12-815C-84465320F87E}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Simple Pulse Ambience" ID="{EEC87DA4-9AEB-4F04-914C-62D8F0CC1413}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="196162.176870748"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Simple Pulse Ambience" ID="{991224C3-EC98-4766-A824-385CAEC6DF2A}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"/>
+										<StateGroupInfo Name="" ID="{C22537E6-FCD3-4B58-9D49-1E9EEF9398F3}" ShortID="465831158"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
+										<CustomState Name="" ID="{8DF65862-FB05-446E-A826-CC682775EC70}" ShortID="781710210">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="MonsterAttack" ID="{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"/>
+										<CustomState Name="" ID="{7A3E42E6-72E2-41CF-98F4-8D43A3F068B2}" ShortID="656594636">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{5155FA15-7B28-4963-90EC-674D25192707}"/>
+										<CustomState Name="" ID="{A224D9A2-EB21-4423-AA67-638606CAFC3A}" ShortID="968799341"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
+										<CustomState Name="" ID="{E0E9588E-D75E-4955-A009-2927E60E111D}" ShortID="242227593"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{D19F370C-9AD2-4F6C-93EF-17032B61F94B}"/>
+									<MusicCue Name="Exit Cue" ID="{6B705ADF-28A7-4C25-9A49-9A187849D0F3}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="1000"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}"/>
+								<StateGroupInfo Name="" ID="{C6A029DF-0935-4B33-9AF7-555E0536031C}" ShortID="199345905"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="MainMusic" ID="{311ACBC1-7905-40AF-B223-1D900760043D}"/>
+								<CustomState Name="" ID="{CED041FD-5BB7-421A-89CF-DA2BAE2CCF8C}" ShortID="303882774"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="MonsterAttack" ID="{2F6F8C2F-A900-41B5-8DA0-13729D7BC664}"/>
+								<CustomState Name="" ID="{71CD5C60-2845-4CA0-A52D-DEF512D834BC}" ShortID="1007963111"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{5155FA15-7B28-4963-90EC-674D25192707}"/>
+								<CustomState Name="" ID="{A2720751-5FB3-4104-AB45-0EBEA8F05167}" ShortID="729066121"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="MonsterClose" ID="{784C9D85-C57E-4EDC-AA9E-7F59CD7DC9A7}"/>
+								<CustomState Name="" ID="{C4037F08-FB3C-4DE1-A4B0-6C21799506A1}" ShortID="56300633"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<PluginInnerObject Name="" ID="{1348C440-E5CD-4B00-8300-06D02C788036}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
+								<ReferenceList>
+									<Reference Name="Argument">
+										<ObjectRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}" WorkUnitID="{A64ADB50-DD78-4CC8-98EB-E9F81D6C75FA}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+						</ObjectList>
+						<ObjectList Name="Entries">
+							<MultiSwitchEntry Name="" ID="{84581244-1F28-43AD-B07E-B4B4BDFB8EE0}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="MonsterClose" ID="{4CD75D18-FC02-4FD9-BC5F-4D859749B3B4}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{3431E4DC-67C2-434F-B236-34FE24F5005F}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="MusicStates" ID="{613EB180-B421-4BED-BAE7-1EF7C1BB79AF}" WorkUnitID="{A64ADB50-DD78-4CC8-98EB-E9F81D6C75FA}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

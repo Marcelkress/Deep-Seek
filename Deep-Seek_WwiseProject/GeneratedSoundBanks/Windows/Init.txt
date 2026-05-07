@@ -1,3 +1,12 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MusicStates			
+	1145324063	MonsterClose	MusicStates			
+	2621508965	MonsterAttack	MusicStates			
+	3479155863	MainMusic	MusicStates			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
 
