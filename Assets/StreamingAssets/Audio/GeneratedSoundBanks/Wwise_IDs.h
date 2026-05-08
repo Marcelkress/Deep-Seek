@@ -34,14 +34,18 @@ namespace AK
         static const AkUniqueID PLAY_LANDINGSOUND = 525953352U;
         static const AkUniqueID PLAY_MONSTER_SOUND = 2033887548U;
         static const AkUniqueID PLAY_MONSTERHIT = 3193711535U;
+        static const AkUniqueID PLAY_MONSTERSWINGING = 922221622U;
         static const AkUniqueID PLAY_ORC_STARTANDLOOP = 1136330962U;
         static const AkUniqueID PLAY_ORC_STOP = 468325319U;
-        static const AkUniqueID PLAY_OXYGENTANKPICKUP = 287033506U;
+        static const AkUniqueID PLAY_OXYGENTANKPICKUP_01 = 1355208320U;
         static const AkUniqueID PLAY_PICKUPSCALESOUND = 4271838925U;
+        static const AkUniqueID PLAY_SIMPLE_PULSE_AMBIENCE = 522228961U;
         static const AkUniqueID PLAY_STATION_ENGINE_ON = 215042785U;
         static const AkUniqueID PLAY_UNDERWATER_AMBIENCE_B = 655760415U;
         static const AkUniqueID PLAY_UNDERWATER_SOUND = 1254934981U;
+        static const AkUniqueID PLAY_VALVERANDOM = 3981573521U;
         static const AkUniqueID STOP_A_DESPERATE_PRAYER = 2578586511U;
+        static const AkUniqueID STOP_SIMPLE_PULSE_AMBIENCE = 385922647U;
     } // namespace EVENTS
 
     namespace STATES

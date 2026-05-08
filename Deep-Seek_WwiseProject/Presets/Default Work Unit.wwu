@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C3169335-7BE5-40D3-87A7-C681BFF6A5D8}" SchemaVersion="133">
 	<Presets>
-		<WorkUnit Name="Default Work Unit" ID="{C3169335-7BE5-40D3-87A7-C681BFF6A5D8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C3169335-7BE5-40D3-87A7-C681BFF6A5D8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Lights on filter" ID="{67C90B39-6973-4392-8AEE-018290BF8EA8}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+						<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+						<Property Name="FrequencyBand1" Type="Real32" Value="97.14162"/>
+						<Property Name="FrequencyBand2" Type="Real32" Value="246.7684"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="568.5354"/>
+						<Property Name="GainBand2" Type="Real32" Value="-3.800905"/>
+						<Property Name="OnOffBand3" Type="bool" Value="True"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Presets>
 </WwiseDocument>

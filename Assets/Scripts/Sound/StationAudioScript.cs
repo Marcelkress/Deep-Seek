@@ -6,7 +6,7 @@ public class StationAudioScript : MonoBehaviour
    public AK.Wwise.Event stationActivatedEvent;
    public AK.Wwise.Event handleEvent;
    public AK.Wwise.Event valveEvent;
-   public AK.Wwise.Event stationFinishedEvent;
+   [SerializeField] private AK.Wwise.Event stationFinishedEvent;
  
    
 

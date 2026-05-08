@@ -18,6 +18,7 @@ public class StationTracker : MonoBehaviour
 
     [Header("Debug")] public bool enableTest;
     public InputActionReference testButton;
+    public AK.Wwise.Event extractionSound;
 
     private void Awake()
     {
@@ -72,6 +73,7 @@ public class StationTracker : MonoBehaviour
             {
                 Invoke(nameof(HideText), showTextTime);
                 StartCoroutine(decentSystem.Sequence(true));
+                extractionSound.Post(gameObject);
             });
         }
     }

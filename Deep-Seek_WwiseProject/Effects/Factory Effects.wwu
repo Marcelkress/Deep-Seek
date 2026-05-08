@@ -609,9 +609,20 @@
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
 										<Property Name="FrequencyBand1" Type="Real32" Value="97.14162"/>
-										<Property Name="FrequencyBand2" Type="Real32" Value="534.2755"/>
-										<Property Name="FrequencyBand3" Type="Real32" Value="768.8877"/>
-										<Property Name="GainBand2" Type="Real32" Value="-4.723982"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="246.7684"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="568.5354"/>
+										<Property Name="GainBand2" Type="Real32" Value="-3.800905"/>
+										<Property Name="OnOffBand3" Type="bool" Value="True"/>
+									</PropertyList>
+								</Effect>
+								<Effect Name="FlightLow" ID="{492E0B49-24E2-4DDB-B5B8-189E4F5C74B4}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="97.14162"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="221.8284"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="310.847"/>
+										<Property Name="GainBand2" Type="Real32" Value="0.05429864"/>
 										<Property Name="OnOffBand3" Type="bool" Value="True"/>
 									</PropertyList>
 								</Effect>

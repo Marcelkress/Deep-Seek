@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DecentSounds : MonoBehaviour
@@ -9,8 +10,14 @@ public class DecentSounds : MonoBehaviour
     [SerializeField] private AK.Wwise.Event ambientDecent;
 
 
+    public bool hasplayed;
 
-   
+
+    private void Start()
+    {
+        hasplayed = false;
+    }
+
 
     public void ImpactSound()
 
@@ -23,7 +30,11 @@ public class DecentSounds : MonoBehaviour
     public void DoorCloseSound()
 
     {
-        doorClose.Post(gameObject);
+        if (!hasplayed)
+        {
+            doorClose.Post(gameObject);    
+        }
+        
     }
 
     public void DoorOpenSound()
@@ -35,12 +46,23 @@ public class DecentSounds : MonoBehaviour
 
     public void AmbientDoorCloseSound()
     {
-        ambientDoorClose.Post(gameObject);
+        if (!hasplayed)
+        {
+            ambientDoorClose.Post(gameObject);  
+        }
+        
+        
     }
 
     public void AmbientDecentSound()
     {
-        ambientDecent.Post(gameObject);
+        if (!hasplayed)
+        {
+            ambientDecent.Post(gameObject);  
+            hasplayed = true;
+        }
+        
+        
     }
     
 

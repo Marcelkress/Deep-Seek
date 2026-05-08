@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1D996B7C-8506-41AA-BDA1-C95B98C54736}",
     "Language": "SFX",
-    "Hash": "{A5CC43E8-2E5E-45AA-A7E4-3D348117AD0F}",
+    "Hash": "{3A64AC45-3004-9D36-8D23-4EC379588EEB}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "LeverSwitchLow 56-BullSwitchOn_ZA01.104.wav",
-      "CachePath": "66/{66BE55E4-4423-4D4C-8490-CF9A4A5F3CA3}.wem"
+      "CachePath": "8D/{8D641939-0FDC-FB2D-46BC-AB19D22428C1}.wem"
      },
      {
       "Id": "98165099",
@@ -46,6 +46,14 @@
       "Location": "Memory",
       "ShortName": "DeepSeekImpact.wav",
       "CachePath": "43/{43C3037C-56C4-796A-E4A2-836DDADB080D}.wem"
+     },
+     {
+      "Id": "139416039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Simple Pulse Ambience.wav",
+      "CachePath": "02/{02F7565B-385C-34F3-E2D7-FE9D9A17FD46}.wem"
      },
      {
       "Id": "167899123",
@@ -86,14 +94,6 @@
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
       "CachePath": "8D/{8D1F18D9-0EC7-FADF-3E15-511DF2851DDF}.wem"
-     },
-     {
-      "Id": "237568392",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "freesound_community-pickupplasticobject-91036.wav",
-      "CachePath": "E3/{E3E42B78-C71D-A216-C2E7-CD67652144A3}.wem"
      },
      {
       "Id": "245202253",
@@ -184,6 +184,14 @@
       "CachePath": "AA/{AAFC4221-2973-3F2A-8883-79CE07BCBCC4}.wem"
      },
      {
+      "Id": "401233636",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "freesound_community-vault-2-100077.wav",
+      "CachePath": "E5/{E55925C4-CC13-6D30-A65E-E430250CC847}.wem"
+     },
+     {
       "Id": "405744936",
       "Language": "SFX",
       "Streaming": "false",
@@ -262,6 +270,14 @@
       "Location": "Memory",
       "ShortName": "virtualzero-mechanical-keyboard-typing-hd-372290.wav",
       "CachePath": "39/{392E6CBC-504A-3CE7-87B7-25697891760E}.wem"
+     },
+     {
+      "Id": "579445381",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MonsterPerimeter.wav",
+      "CachePath": "FC/{FC613C99-FEE8-8D42-8A54-D8CBB6569167}.wem"
      },
      {
       "Id": "593026888",
@@ -352,6 +368,14 @@
       "CachePath": "18/{18CE2842-3F1F-B01C-23D1-D21EBCAF2491}.wem"
      },
      {
+      "Id": "678737260",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "OxygenTankPickup.wav",
+      "CachePath": "F7/{F776A80A-D5FD-F518-5827-99DCADCC6402}.wem"
+     },
+     {
       "Id": "688102791",
       "Language": "SFX",
       "Streaming": "false",
@@ -381,7 +405,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Station Engine On.wav",
-      "CachePath": "4D/{4D8A3E47-1CBF-F026-3B41-14C268B4D79E}.wem"
+      "CachePath": "5B/{5BD648CA-E401-DE05-27C7-65F013E0F009}.wem"
      },
      {
       "Id": "732560770",
@@ -488,6 +512,14 @@
       "CachePath": "5D/{5DC93C16-03B3-7667-0F15-3D0C4C053CB2}.wem"
      },
      {
+      "Id": "964754654",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "alex_jauk-squeaky-gate-noise-227014.wav",
+      "CachePath": "DC/{DC36C04A-4224-9697-1248-C3DEFD22AD59}.wem"
+     },
+     {
       "Id": "966527518",
       "Language": "SFX",
       "Streaming": "false",
@@ -533,7 +565,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Underwater Ambience B.wav",
-      "CachePath": "D1/{D180EF04-7905-7F08-83A4-C3332FC9BC1C}.wem"
+      "CachePath": "99/{99B8AC83-E38D-17F0-700F-D425CBBFDF04}.wem"
      },
      {
       "Id": "1039488803",
@@ -542,6 +574,14 @@
       "Location": "Memory",
       "ShortName": "BreathingRun.wav",
       "CachePath": "77/{778A3998-79E1-FC86-3722-7DFB288B0522}.wem"
+     },
+     {
+      "Id": "1044263149",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "freesound_community-jet-engine-6753.wav",
+      "CachePath": "B2/{B295CC0B-1A78-A5DF-E53E-BE3300284A35}.wem"
      },
      {
       "Id": "1053762686",
@@ -1135,6 +1175,22 @@
       }
      },
      {
+      "Id": "922221622",
+      "Name": "Play_MonsterSwinging",
+      "ObjectPath": "\\Events\\Default Work Unit\\Monster\\Play_MonsterSwinging",
+      "GUID": "{9F093A3D-B8C8-400B-8C58-231CE99AABD0}",
+      "MaxAttenuation": "40",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "579445381"
+       },
+       {
+        "Id": "1044263149"
+       }
+      ]
+     },
+     {
       "Id": "1136330962",
       "Name": "Play_ORC_startAndLoop",
       "ObjectPath": "\\Events\\Default Work Unit\\ORC\\Play_ORC_startAndLoop",
@@ -1175,17 +1231,16 @@
       }
      },
      {
-      "Id": "287033506",
-      "Name": "Play_OxygentankPickup",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_OxygentankPickup",
-      "GUID": "{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}",
-      "MaxAttenuation": "100",
+      "Id": "1355208320",
+      "Name": "Play_OxygenTankPickup_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\ORC\\Play_OxygenTankPickup_01",
+      "GUID": "{B6516EC8-3D5C-4DC5-89C3-B5DA5349A8BF}",
       "DurationType": "OneShot",
-      "DurationMin": "1.2083218",
-      "DurationMax": "1.2083218",
+      "DurationMin": "3.8634906",
+      "DurationMax": "3.8634906",
       "MediaRefs": [
        {
-        "Id": "237568392"
+        "Id": "678737260"
        }
       ]
      },
@@ -1200,6 +1255,20 @@
       "MediaRefs": [
        {
         "Id": "1006756753"
+       }
+      ]
+     },
+     {
+      "Id": "522228961",
+      "Name": "Play_Simple_Pulse_Ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Play_Simple_Pulse_Ambience",
+      "GUID": "{2B1994B1-6503-4E16-B86E-8522422D0166}",
+      "DurationType": "OneShot",
+      "DurationMin": "196.16217",
+      "DurationMax": "196.16217",
+      "MediaRefs": [
+       {
+        "Id": "139416039"
        }
       ]
      },
@@ -1250,10 +1319,44 @@
       ]
      },
      {
+      "Id": "3981573521",
+      "Name": "Play_ValveRandom",
+      "ObjectPath": "\\Events\\Default Work Unit\\Valve\\Play_ValveRandom",
+      "GUID": "{C2FECF77-3687-4C33-8337-E1C38E072D37}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2930828",
+      "DurationMax": "1.3104233",
+      "MediaRefs": [
+       {
+        "Id": "401233636"
+       },
+       {
+        "Id": "964754654"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      }
+     },
+     {
       "Id": "2578586511",
       "Name": "Stop_A_Desperate_Prayer",
       "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Stop_A_Desperate_Prayer",
       "GUID": "{1DFCBFA8-6637-47FA-93F5-2C87B9FC3E42}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "385922647",
+      "Name": "Stop_Simple_Pulse_Ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\MainMenu\\Stop_Simple_Pulse_Ambience",
+      "GUID": "{6104D1F3-EB16-407A-A62D-5FD8AEA0A627}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -1290,6 +1393,6 @@
     ]
    }
   ],
-  "FileHash": "{FE1612B5-E51E-F3C7-50FD-B59B4AAA30E1}"
+  "FileHash": "{8727A1EA-0541-B856-021D-7869DC40C0C9}"
  }
 }

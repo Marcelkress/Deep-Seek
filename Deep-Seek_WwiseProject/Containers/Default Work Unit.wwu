@@ -17,6 +17,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Underwater Ambience B" ID="{B9E4EF77-3568-4BDF-8A0C-9DC8EF532F92}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="2.23268802349381"/>
+								<Property Name="LoopBegin" Type="Real64" Value="17.414"/>
+								<Property Name="LoopEnd" Type="Real64" Value="286.379"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="288.016742297748"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Underwater Ambience B.wav</AudioFile>
 							<MediaIDList>
@@ -1072,6 +1079,371 @@
 								<ActiveSource Name="MOnsterHit" ID="{0DA5A344-3340-4895-B802-40781B1B07C1}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<BlendContainer Name="MonsterSwinging" ID="{222BDE8F-5545-46B5-9EA5-3BD66A473569}" ShortID="151875880">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{37BE34B3-8CFA-49C2-8B23-C7E22D9661FB}" ShortID="171666405">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="40"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{A7348BCD-719F-4B55-8566-71144656958D}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																	<SegmentShape>Log3</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>40</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<DualShelfUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</DualShelfUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None">
+														<Curve Name="Spread" ID="{7809E883-FDC5-493B-92F3-0BC8603BFB45}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="1"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>100</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>40</XPos>
+																	<YPos>0</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None">
+														<Curve Name="Focus" ID="{D6010260-5664-4668-9B8A-B238E00C6D15}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="1"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>100</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>40</XPos>
+																	<YPos>0</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<ObstructionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionDSFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<OcclusionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionDSFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<DiffractionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionDSFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+												<TransmissionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionDSFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MonsterPerimeter" ID="{3F3612E0-1544-49A4-9A48-07F4CC6822A1}" ShortID="83039882">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<Custom>
+												<Attenuation Name="Attenuation (Custom)" ID="{1B31758C-10E2-4000-A87F-D948D8E35ECD}" ShortID="1043899233">
+													<PropertyList>
+														<Property Name="RadiusMax" Type="Real64" Value="40"/>
+													</PropertyList>
+													<CurveUsageInfoList>
+														<VolumeDryUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="VolumeDry" ID="{16AF0D83-4CD6-474B-ADF0-38909847F2A0}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>40</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeDryUsage>
+														<VolumeWetGameUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetGameUsage>
+														<VolumeWetUserUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetUserUsage>
+														<LowPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</LowPassFilterUsage>
+														<HighPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</HighPassFilterUsage>
+														<DualShelfUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</DualShelfUsage>
+														<SpreadUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</SpreadUsage>
+														<FocusUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</FocusUsage>
+														<ObstructionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionVolumeUsage>
+														<ObstructionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionLPFUsage>
+														<ObstructionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHPFUsage>
+														<ObstructionDSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionDSFUsage>
+														<OcclusionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionVolumeUsage>
+														<OcclusionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionLPFUsage>
+														<OcclusionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHPFUsage>
+														<OcclusionDSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionDSFUsage>
+														<DiffractionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionVolumeUsage>
+														<DiffractionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionLPFUsage>
+														<DiffractionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHPFUsage>
+														<DiffractionDSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionDSFUsage>
+														<TransmissionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionVolumeUsage>
+														<TransmissionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionLPFUsage>
+														<TransmissionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHPFUsage>
+														<TransmissionDSFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionDSFUsage>
+													</CurveUsageInfoList>
+												</Attenuation>
+											</Custom>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MonsterPerimeter" ID="{9E008CFA-9251-4577-8036-AB515BB8F2E9}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="361.571"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.91588632969303"/>
+												<Property Name="LoopEnd" Type="Real64" Value="13.1350253457338"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>MonsterPerimeter.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="579445381"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{A0880A11-4AA5-46C9-AEE4-44F9BB315AF5}" ShortID="361067686">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+											<EffectSlot Name="" ID="{270CD949-EDF8-4BEC-BF20-1AB530621D8E}" ShortID="188265827">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Aluminium_Tank" ID="{0D20C91A-F750-47E0-AE32-00E5F2AA1272}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="MonsterPerimeter" ID="{9E008CFA-9251-4577-8036-AB515BB8F2E9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="freesound_community-jet-engine-6753" ID="{992904D3-5B3E-41C7-B050-8DAC5861C80C}" ShortID="1010730708">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1700</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-23</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="freesound_community-jet-engine-6753" ID="{ED51AFB9-A976-4E03-9F1D-7B6A962C072E}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.22667841621525"/>
+												<Property Name="TrimEnd" Type="Real64" Value="9.05770610299295"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>freesound_community-jet-engine-6753.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1044263149"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{B4F380DD-5BD8-4B9A-9815-6E91D6188429}" ShortID="212141567">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="FlightLow" ID="{492E0B49-24E2-4DDB-B5B8-189E4F5C74B4}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="freesound_community-jet-engine-6753" ID="{ED51AFB9-A976-4E03-9F1D-7B6A962C072E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ORC" ID="{95005E24-CA08-497B-AF56-304CD62DEE76}" ShortID="1061940176">
@@ -1147,6 +1519,33 @@
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ORC startAndLoop" ID="{006895EB-EB2E-493F-8482-3A2D825BAF2C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="OxygenTankPickup" ID="{E2EEAF56-4157-42C6-9845-296E4F05CD77}" ShortID="109918863">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OxygenTankPickup" ID="{8B241FE2-2420-4241-88DF-7E78372E04F7}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.437196942324138"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.437196942324138"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>OxygenTankPickup.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="678737260"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="OxygenTankPickup" ID="{8B241FE2-2420-4241-88DF-7E78372E04F7}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -1855,6 +2254,28 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
+						<Sound Name="Simple Pulse Ambience" ID="{C7659AF5-A4F9-45AE-8C7C-85599194A2B3}" ShortID="365851797">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Simple Pulse Ambience" ID="{5D68A13B-FA81-4F39-884C-8D35C23F3028}">
+									<Language>SFX</Language>
+									<AudioFile>Simple Pulse Ambience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="139416039"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Simple Pulse Ambience" ID="{5D68A13B-FA81-4F39-884C-8D35C23F3028}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="DiverVoice" ID="{A5BE981F-5458-43CF-9E8F-9D68521CF8B5}" ShortID="271995148">
@@ -2809,7 +3230,7 @@
 				</Folder>
 				<Folder Name="StationAudio" ID="{31D2D296-E2C2-484C-B2AF-17237DFCA8D6}" ShortID="280648259">
 					<ChildrenList>
-						<Sound Name="LeverSwitchLow 57-BreakerSwitchOff_BWU" ID="{54CEFA97-9BDE-4819-9584-9EDD12EA9785}" ShortID="145190613">
+						<Sound Name="Lights on" ID="{54CEFA97-9BDE-4819-9584-9EDD12EA9785}" ShortID="145190613">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
@@ -2857,6 +3278,7 @@
 						<Sound Name="Station Engine On" ID="{E01C9455-DD7A-461B-9E7C-9C411D3A3360}" ShortID="1032594833">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -2864,6 +3286,11 @@
 									<Custom>
 										<Attenuation Name="Attenuation (Custom)" ID="{6C51DC83-522C-4A16-BFDB-26FBEA91BC1B}" ShortID="661687487">
 											<PropertyList>
+												<Property Name="ConeUse" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="RadiusMax" Type="Real64" Value="30"/>
 											</PropertyList>
 											<CurveUsageInfoList>
@@ -2904,7 +3331,25 @@
 													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
 												</DualShelfUsage>
 												<SpreadUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="Spread" ID="{592058B9-EB0C-4FF7-8677-E11118FD33F9}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="1"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>100</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>30</XPos>
+																	<YPos>0</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
 												</SpreadUsage>
 												<FocusUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
@@ -2972,7 +3417,7 @@
 								<AudioFileSource Name="Station Engine On" ID="{F998B151-E8A1-4E2F-9B5D-797871B3FD93}">
 									<PropertyList>
 										<Property Name="LoopBegin" Type="Real64" Value="12.593"/>
-										<Property Name="LoopEnd" Type="Real64" Value="20.43394"/>
+										<Property Name="LoopEnd" Type="Real64" Value="15.670317498985"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="0.680517500145001"/>
 										<Property Name="TrimEnd" Type="Real64" Value="22.0033982405689"/>
@@ -3131,6 +3576,131 @@
 								<ActiveSource Name="freesound_community-coded-message-sonar-72108" ID="{B58C8302-5394-4B60-9E0A-731673CF763F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Handle" ID="{4EF9D66D-2A83-4FD4-9C4F-3B9D69B6BD9F}" ShortID="8908599">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="LeverSwitchLow 56-BullSwitchOn_ZA01_104" ID="{27746D3C-AFF1-4082-A729-08A56E6DEB03}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0245574471700257"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0245574471700257"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>LeverSwitchLow 56-BullSwitchOn_ZA01.104.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="58943377"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{3046C8D3-A7DF-4423-864F-6B60F4F8C839}" ShortID="985014011">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="LeverSwitchLow 56-BullSwitchOn_ZA01_104" ID="{27746D3C-AFF1-4082-A729-08A56E6DEB03}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Valve" ID="{08CB657E-2B7A-42F8-82D5-27C2A764A92F}" ShortID="539028017">
+					<ChildrenList>
+						<RandomSequenceContainer Name="ValveRandom" ID="{D296E16B-3B79-414C-880D-CDDE2ADFCFDE}" ShortID="18197977">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="alex_jauk-squeaky-gate-noise-227014" ID="{09A71B47-6160-4787-AA61-4B26B8368BF7}" ShortID="510946110">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="alex_jauk-squeaky-gate-noise-227014" ID="{44D2A9C0-27A3-45F9-A2A2-48CC7BC2D956}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.31042322492368"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>alex_jauk-squeaky-gate-noise-227014.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="964754654"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="alex_jauk-squeaky-gate-noise-227014" ID="{44D2A9C0-27A3-45F9-A2A2-48CC7BC2D956}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="freesound_community-vault-2-100077" ID="{D217E96F-DE0F-4B0F-897D-16C004C3BFA4}" ShortID="346742505">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9BB30333-7FF7-4B54-9A84-248102D18DCC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{39E9C111-A537-4969-A361-ACA92C5A5F85}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="freesound_community-vault-2-100077" ID="{7F921F78-61A6-4D72-81C5-E7EDC1482227}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.29308287799688"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>freesound_community-vault-2-100077.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="401233636"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="freesound_community-vault-2-100077" ID="{7F921F78-61A6-4D72-81C5-E7EDC1482227}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{FFA8D38D-DFD1-464B-A7BA-BA535BEBE59D}" ShortID="629213073">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

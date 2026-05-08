@@ -14,17 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_OxygentankPickup" ID="{F33D1CE2-EACF-478C-B269-0DE0C3D31A73}">
-					<ChildrenList>
-						<Action Name="" ID="{80D37A99-84F6-413F-B279-37B62E29E182}" ShortID="46402925">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="OxygentankPickup" ID="{83252FF7-D0CB-4945-93F1-EF20DFED250F}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_PickupScaleSound" ID="{A41527E5-8F30-4E85-A1E8-5789AFFF52AC}">
 					<ChildrenList>
 						<Action Name="" ID="{CC06E444-5B16-45A9-A296-A146B2F488BA}" ShortID="926504432">
@@ -86,6 +75,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_MonsterSwinging" ID="{9F093A3D-B8C8-400B-8C58-231CE99AABD0}">
+							<ChildrenList>
+								<Action Name="" ID="{DE854715-E31A-466F-9F66-2D4EDF847977}" ShortID="223872288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MonsterSwinging" ID="{222BDE8F-5545-46B5-9EA5-3BD66A473569}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ORC" ID="{157620A0-98D1-445E-AD3F-FAD9D073FB26}" ShortID="591609874">
@@ -107,6 +107,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ORC startAndLoop" ID="{4C520F24-E813-47EF-B177-78FF81631C9E}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_OxygenTankPickup_01" ID="{B6516EC8-3D5C-4DC5-89C3-B5DA5349A8BF}">
+							<ChildrenList>
+								<Action Name="" ID="{207B671F-AF92-409B-B019-9DD748F6D536}" ShortID="536037277">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="OxygenTankPickup" ID="{E2EEAF56-4157-42C6-9845-296E4F05CD77}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -254,6 +265,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Simple_Pulse_Ambience" ID="{2B1994B1-6503-4E16-B86E-8522422D0166}">
+							<ChildrenList>
+								<Action Name="" ID="{3A521182-C885-47EE-911F-C3103DB346C8}" ShortID="466854665">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Simple Pulse Ambience" ID="{C7659AF5-A4F9-45AE-8C7C-85599194A2B3}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Simple_Pulse_Ambience" ID="{6104D1F3-EB16-407A-A62D-5FD8AEA0A627}">
+							<ChildrenList>
+								<Action Name="" ID="{6D20EDB0-337C-4874-AD34-93C1AD14C8D7}" ShortID="187990850">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Simple Pulse Ambience" ID="{C7659AF5-A4F9-45AE-8C7C-85599194A2B3}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="DiverVoice" ID="{2E3B153A-D3F0-4F76-B96F-D7510E1B4EA5}" ShortID="1060335737">
@@ -352,12 +389,12 @@
 				</Event>
 				<Folder Name="StationAudio" ID="{DB8CD028-95F9-40A4-A927-5768E7B1E418}" ShortID="600820711">
 					<ChildrenList>
-						<Event Name="StationHandle" ID="{1A736C52-678A-429D-933B-5721E85DDB96}">
+						<Event Name="LightsOn" ID="{1A736C52-678A-429D-933B-5721E85DDB96}">
 							<ChildrenList>
 								<Action Name="" ID="{64592B88-E18C-4803-8C5C-489BD195378B}" ShortID="1038094071">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="LeverSwitchLow 57-BreakerSwitchOff_BWU" ID="{54CEFA97-9BDE-4819-9584-9EDD12EA9785}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+											<ObjectRef Name="Lights on" ID="{54CEFA97-9BDE-4819-9584-9EDD12EA9785}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -380,6 +417,35 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Station Engine On" ID="{E01C9455-DD7A-461B-9E7C-9C411D3A3360}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Handle" ID="{601003AF-FF4F-44EC-815E-C4DF035087CE}">
+							<ChildrenList>
+								<Action Name="" ID="{CDCD8021-0D57-49C8-A848-63FC83B36BCE}" ShortID="967454235">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Handle" ID="{4EF9D66D-2A83-4FD4-9C4F-3B9D69B6BD9F}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Valve" ID="{6F698016-B211-415E-84F2-B86B303F15C3}" ShortID="133511608">
+					<ChildrenList>
+						<Event Name="Play_ValveRandom" ID="{C2FECF77-3687-4C33-8337-E1C38E072D37}">
+							<ChildrenList>
+								<Action Name="" ID="{C5BB85A7-087A-43A3-91AB-FB01BD4345E5}" ShortID="239636365">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ValveRandom" ID="{D296E16B-3B79-414C-880D-CDDE2ADFCFDE}" WorkUnitID="{CCFEF52E-F89A-4353-8526-6C9B723DA44B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

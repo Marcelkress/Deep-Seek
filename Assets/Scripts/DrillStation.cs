@@ -42,6 +42,8 @@ public class DrillStation : MonoBehaviour
     public UnityEvent FinishedStationEvent;
     public UnityEvent EvaluationLightEventCorrect;
     public UnityEvent EvaluationLightEventIncorrect;
+
+    public AK.Wwise.Event stationEngineOn;
     
     private bool completed;
     
@@ -172,6 +174,7 @@ public class DrillStation : MonoBehaviour
         if (seqIndex >= sequence.Count && !completed)
         {
             FinishedStationEvent.Invoke();
+            stationEngineOn.Post(gameObject);
             Debug.Log("Puzzle completed!!");
             topLigth.SetTrigger("Complete");
             completed = true;
